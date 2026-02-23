@@ -20,7 +20,7 @@ export function Navbar() {
     >
       <div className="font-heading font-[900] text-[1.4rem] tracking-[-0.02em]">
         <span className="text-text-primary">ZED </span>
-        <span className="text-db-lighter">Labs</span>
+        <span className="text-accent">Labs</span>
       </div>
       <div className="flex gap-8 items-center">
         {NAV_LINKS.map((link) => (

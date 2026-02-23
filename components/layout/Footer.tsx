@@ -4,7 +4,7 @@ export function Footer() {
       <div className="max-w-[1200px] mx-auto">
         <div className="font-heading font-[900] text-[1.2rem] mb-1.5">
           <span className="text-text-primary">ZED </span>
-          <span className="text-db-lighter">Labs</span>
+          <span className="text-accent">Labs</span>
         </div>
         <p className="text-text-dim text-[0.78rem]">
           Websites · Apps · AI · Digital Marketing
