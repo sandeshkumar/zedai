@@ -18,10 +18,10 @@ export function Navbar() {
       className="fixed top-0 w-full z-[200] px-5 lg:px-10 py-3.5 flex justify-between items-center bg-[rgba(8,12,20,0.85)] backdrop-blur-[20px] border-b border-border-subtle transition-shadow duration-300"
       style={{ boxShadow: scrolled ? "0 4px 30px rgba(0,0,0,0.4)" : "none" }}
     >
-      <div className="font-heading font-[900] text-[1.4rem] tracking-[-0.02em]">
+      <a href="/" className="font-heading font-[900] text-[1.4rem] tracking-[-0.02em]">
         <span className="text-text-primary">ZED </span>
         <span className="text-accent">Labs</span>
-      </div>
+      </a>
       <div className="flex gap-8 items-center">
         {NAV_LINKS.map((link) => (
           <a
