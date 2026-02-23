@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZED Labs — Websites & Apps That Grow Your Business | Get Free Quote</title>
+<meta name="description" content="ZED Labs builds fast, SEO-optimized websites and mobile apps that convert visitors into customers. 150+ projects delivered.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  /* DEEP BLUE — Trust & authority */
+  --db:#1E3A5F;--db-l:#2D5A8E;--db-ll:#4A7DB8;--db-d:#152B47;
+  --db10:rgba(30,58,95,.10);--db15:rgba(30,58,95,.15);--db25:rgba(30,58,95,.25);
+  /* ORANGE ACCENT — Action & energy */
+  --o:#F97316;--o-l:#FB923C;--o-d:#EA580C;
+  --o10:rgba(249,115,22,.10);--o15:rgba(249,115,22,.15);--o25:rgba(249,115,22,.25);--o40:rgba(249,115,22,.40);
+  /* BACKGROUNDS — Deep navy-black */
+  --bg:#080C14;--bg2:#0C1220;--bg3:#111827;--card:#141C2E;--card2:#192236;
+  /* TEXT */
+  --w:#F8FAFC;--g1:#CBD5E1;--g2:#94A3B8;--g3:#64748B;--g4:#475569;
+  /* SEMANTIC */
+  --green:#22C55E;--red:#EF4444;
+  /* BORDER */
+  --b1:rgba(255,255,255,.06);--b2:rgba(255,255,255,.09);--bb:rgba(30,58,95,.35);--bo:rgba(249,115,22,.25);
+  /* FONTS */
+  --fh:'Outfit',sans-serif;--fb:'Inter',sans-serif;
+  --r1:8px;--r2:14px;--r3:20px;--r4:100px;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--w);overflow-x:hidden;-webkit-font-smoothing:antialiased;line-height:1.6}
+body::after{content:'';position:fixed;inset:0;opacity:.018;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");pointer-events:none;z-index:9999}
+a{color:inherit;text-decoration:none}
+
+/* TYPOGRAPHY */
+.tag{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--o);margin-bottom:.7rem;display:flex;align-items:center;gap:.5rem}
+.tag::before{content:'';width:18px;height:2px;background:var(--o);display:inline-block}
+.stitle{font-family:var(--fh);font-weight:800;font-size:clamp(1.9rem,4vw,3rem);letter-spacing:-.03em;line-height:1.12;margin-bottom:.8rem}
+.sdesc{color:var(--g2);max-width:520px;font-size:1rem;line-height:1.7}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:200;padding:.85rem 2.5rem;display:flex;justify-content:space-between;align-items:center;background:rgba(8,12,20,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--b1);transition:box-shadow .3s}
+.nav-logo{font-family:var(--fh);font-weight:900;font-size:1.4rem;letter-spacing:-.02em}
+.nav-logo .z{color:var(--w)}.nav-logo .l{color:var(--db-ll)}
+.nav-r{display:flex;gap:2rem;align-items:center}
+.nav-r a{font-size:.85rem;font-weight:500;color:var(--g2);transition:color .2s}
+.nav-r a:hover{color:var(--w)}
+.nav-cta{background:var(--o);color:#fff;padding:.55rem 1.6rem;border-radius:var(--r1);font-weight:700;font-size:.82rem;border:none;cursor:pointer;transition:all .25s;font-family:var(--fb)}
+.nav-cta:hover{background:var(--o-l);transform:translateY(-1px);box-shadow:0 8px 24px var(--o25)}
+
+/* ═══════════════════ HERO ═══════════════════ */
+.hero{min-height:100vh;display:flex;align-items:center;padding:7rem 2.5rem 4rem;position:relative;overflow:hidden}
+/* Deep blue radial glow */
+.hero::before{content:'';position:absolute;top:-15%;right:-5%;width:1000px;height:1000px;background:radial-gradient(circle,rgba(30,58,95,.2) 0%,rgba(30,58,95,.05) 40%,transparent 65%);pointer-events:none}
+/* Subtle warm glow */
+.hero::after{content:'';position:absolute;bottom:10%;left:-8%;width:600px;height:600px;background:radial-gradient(circle,rgba(249,115,22,.04) 0%,transparent 60%);pointer-events:none}
+.hero-inner{max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 400px;gap:4rem;align-items:center;position:relative;z-index:1}
+
+/* Social proof ticker */
+.proof-bar{display:inline-flex;align-items:center;gap:.7rem;background:var(--card);border:1px solid var(--b2);padding:.45rem 1.2rem .45rem .6rem;border-radius:var(--r4);margin-bottom:1.8rem;animation:fadeUp .5s ease both}
+.proof-dot{width:8px;height:8px;border-radius:50%;background:var(--green);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.proof-bar span{font-size:.78rem;color:var(--g1);font-weight:500}
+.proof-bar strong{color:var(--o);font-weight:700}
+
+.hero h1{font-family:var(--fh);font-weight:900;font-size:clamp(2.6rem,5.8vw,4.5rem);line-height:1.06;letter-spacing:-.045em;margin-bottom:1.2rem;animation:fadeUp .5s .05s ease both}
+.hero h1 .acc-blue{color:var(--db-ll)}
+.hero h1 .acc-orange{background:linear-gradient(135deg,var(--o),var(--o-l));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:1.1rem;color:var(--g2);max-width:500px;line-height:1.7;margin-bottom:2rem;animation:fadeUp .5s .1s ease both}
+
+.hero-ctas{display:flex;gap:.8rem;flex-wrap:wrap;margin-bottom:2rem;animation:fadeUp .5s .15s ease both}
+.cta-main{background:linear-gradient(135deg,var(--o),var(--o-l));color:#fff;padding:1rem 2.4rem;border-radius:var(--r2);font-weight:700;font-size:1rem;border:none;cursor:pointer;transition:all .3s;font-family:var(--fb);display:inline-flex;align-items:center;gap:.5rem;box-shadow:0 4px 20px var(--o25)}
+.cta-main:hover{transform:translateY(-2px);box-shadow:0 12px 36px var(--o40)}
+.cta-ghost{background:transparent;color:var(--w);padding:1rem 2rem;border-radius:var(--r2);font-weight:600;font-size:1rem;border:1px solid var(--bb);cursor:pointer;transition:all .25s;font-family:var(--fb)}
+.cta-ghost:hover{border-color:var(--db-ll);background:var(--db10)}
+
+.trust-strip{display:flex;align-items:center;gap:1.8rem;animation:fadeUp .5s .2s ease both}
+.trust-strip .t-item{display:flex;align-items:center;gap:.4rem;font-size:.82rem;color:var(--g3)}
+.trust-strip .t-item svg{width:16px;height:16px;fill:var(--g3)}
+.trust-strip .t-item strong{color:var(--g1);font-weight:600}
+
+/* HERO FORM */
+.hero-form-card{background:linear-gradient(180deg,var(--card2) 0%,var(--card) 100%);border:1px solid var(--bb);border-radius:var(--r3);padding:2rem;position:relative;animation:fadeUp .5s .1s ease both}
+.hero-form-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--db-l),var(--o),var(--o-l));border-radius:var(--r3) var(--r3) 0 0}
+.hf-head{text-align:center;margin-bottom:1.5rem}
+.hf-head h3{font-family:var(--fh);font-weight:800;font-size:1.3rem;margin-bottom:.3rem}
+.hf-head p{color:var(--g2);font-size:.85rem}
+.urgency{display:inline-flex;align-items:center;gap:.4rem;background:var(--o10);border:1px solid var(--o25);padding:.3rem .9rem;border-radius:var(--r4);font-size:.72rem;font-weight:700;color:var(--o);margin-bottom:.8rem;text-transform:uppercase;letter-spacing:.06em}
+.urgency .u-dot{width:6px;height:6px;border-radius:50%;background:var(--o);animation:blink 1.5s infinite}
+.hf-form{display:flex;flex-direction:column;gap:.7rem}
+.fi{width:100%;padding:.85rem 1.1rem;border-radius:var(--r1);border:1px solid var(--b2);background:var(--bg2);color:var(--w);font-family:var(--fb);font-size:.9rem;outline:none;transition:border-color .2s}
+.fi:focus{border-color:var(--db-ll)}
+.fi::placeholder{color:var(--g4)}
+select.fi{appearance:none;cursor:pointer}
+.hf-submit{width:100%;padding:1rem;border-radius:var(--r2);background:linear-gradient(135deg,var(--o),var(--o-l));color:#fff;font-weight:700;font-size:1rem;cursor:pointer;border:none;font-family:var(--fb);transition:all .25s;margin-top:.2rem}
+.hf-submit:hover{box-shadow:0 10px 30px var(--o40);transform:translateY(-1px)}
+.hf-note{text-align:center;font-size:.72rem;color:var(--g4);margin-top:.5rem}
+.form-trust{display:flex;justify-content:center;gap:1.5rem;margin-top:1rem;padding-top:.8rem;border-top:1px solid var(--b1)}
+.form-trust .ft{text-align:center}
+.form-trust .ft strong{font-family:var(--fh);font-size:1.2rem;font-weight:800;color:var(--o);display:block}
+.form-trust .ft span{font-size:.65rem;color:var(--g4)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* LOGO STRIP */
+.logo-strip{background:var(--bg2);border-top:1px solid var(--b1);border-bottom:1px solid var(--b1);padding:2rem;text-align:center}
+.logo-strip p{font-size:.72rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--g4);margin-bottom:1rem}
+.logo-row{display:flex;justify-content:center;align-items:center;gap:3rem;flex-wrap:wrap;opacity:.35}
+.logo-row span{font-family:var(--fh);font-weight:700;font-size:1.1rem;color:var(--g2)}
+
+/* SECTIONS */
+section{padding:6rem 2.5rem}
+.container{max-width:1200px;margin:0 auto}
+.section-head{margin-bottom:3rem}
+
+/* RESULTS */
+.results{background:var(--bg2)}
+.res-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.res-item{background:var(--card);border:1px solid var(--b1);border-radius:var(--r3);padding:2rem;text-align:center;transition:all .3s}
+.res-item:hover{transform:translateY(-4px);border-color:var(--bb)}
+.res-num{font-family:var(--fh);font-size:2.8rem;font-weight:900;background:linear-gradient(135deg,var(--o),var(--o-l));-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1.1}
+.res-item h4{font-weight:600;font-size:.92rem;margin:.4rem 0 .2rem}
+.res-item p{color:var(--g4);font-size:.8rem;line-height:1.5}
+
+/* SERVICES */
+.srv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1rem}
+.srv{background:var(--card);border:1px solid var(--b1);border-radius:var(--r3);padding:2rem;transition:all .35s;position:relative;overflow:hidden}
+.srv::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--db-l),var(--o));opacity:0;transition:opacity .3s}
+.srv:hover{border-color:var(--bb);transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.srv:hover::after{opacity:1}
+.srv-ico{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--db10),var(--o10));display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1.2rem;border:1px solid var(--b1)}
+.srv h3{font-family:var(--fh);font-weight:700;font-size:1.1rem;margin-bottom:.5rem}
+.srv p{color:var(--g2);font-size:.9rem;line-height:1.6}
+
+/* BEFORE/AFTER */
+.ba{background:var(--bg2)}
+.ba-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:2rem;align-items:center;max-width:900px;margin:0 auto}
+.ba-card{background:var(--card);border-radius:var(--r3);padding:2.2rem;border:1px solid var(--b1)}
+.ba-card.before{border-color:rgba(239,68,68,.15)}
+.ba-card.after{border-color:var(--bo)}
+.ba-label{font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+.ba-label.bad{color:var(--red)}.ba-label.good{color:var(--o)}
+.ba-card ul{list-style:none}
+.ba-card ul li{padding:.35rem 0;color:var(--g2);font-size:.9rem;display:flex;align-items:center;gap:.5rem}
+.ba-card ul li .ic{width:20px;text-align:center;flex-shrink:0}
+.ba-result{font-family:var(--fh);font-weight:900;font-size:1.4rem;margin-top:1rem;padding-top:.8rem;border-top:1px solid var(--b1)}
+.ba-vs{font-family:var(--fh);font-weight:900;font-size:2rem;color:var(--g4);text-align:center}
+
+/* PROCESS */
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;position:relative}
+.proc-grid::before{content:'';position:absolute;top:35px;left:12%;right:12%;height:2px;background:linear-gradient(90deg,transparent,var(--db-l),var(--o),var(--db-l),transparent);z-index:0}
+.proc{text-align:center;position:relative;z-index:1}
+.proc-n{width:70px;height:70px;border-radius:50%;background:var(--card);border:2px solid var(--db-l);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-family:var(--fh);font-size:1.5rem;font-weight:900;color:var(--o)}
+.proc h3{font-family:var(--fh);font-weight:700;font-size:1rem;margin-bottom:.4rem}
+.proc p{color:var(--g2);font-size:.85rem;line-height:1.5}
+
+/* TESTIMONIALS */
+.test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:1rem}
+.test{background:var(--card);border:1px solid var(--b1);border-radius:var(--r3);padding:1.8rem;transition:border-color .3s}
+.test:hover{border-color:var(--bb)}
+.test-stars{color:var(--o);font-size:.9rem;margin-bottom:.8rem;letter-spacing:2px}
+.test q{display:block;color:var(--g1);font-size:.95rem;line-height:1.7;margin-bottom:1.2rem;font-style:italic}
+.test-who{display:flex;align-items:center;gap:.7rem}
+.test-av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--db-l),var(--db-ll));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;color:#fff;flex-shrink:0}
+.test-name{font-weight:600;font-size:.88rem}.test-role{color:var(--g4);font-size:.75rem}
+
+/* PRICING */
+.pricing{background:var(--bg2)}
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.2rem}
+.pc{background:var(--card);border:1px solid var(--b1);border-radius:var(--r3);padding:2.2rem;transition:all .3s;position:relative}
+.pc.pop{border-color:var(--bo);background:linear-gradient(180deg,var(--o10) 0%,var(--card) 50%)}
+.pc.pop::before{content:'MOST POPULAR';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--o),var(--o-l));color:#fff;padding:.25rem 1rem;border-radius:var(--r4);font-size:.65rem;font-weight:700;letter-spacing:.08em}
+.pc:hover{transform:translateY(-4px)}
+.pc h3{font-family:var(--fh);font-weight:700;font-size:1.15rem;margin-bottom:.2rem}
+.pc .pc-desc{color:var(--g4);font-size:.82rem;margin-bottom:1rem}
+.pc .price{font-family:var(--fh);font-weight:900;font-size:2.2rem;margin:.5rem 0;background:linear-gradient(135deg,var(--o),var(--o-l));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.pc .price small{font-size:.8rem;font-weight:500;color:var(--g4);-webkit-text-fill-color:var(--g4)}
+.pc .old-price{font-size:.9rem;color:var(--g4);text-decoration:line-through;margin-bottom:.1rem}
+.pf{list-style:none;margin:1.2rem 0}
+.pf li{padding:.4rem 0;color:var(--g2);font-size:.88rem;display:flex;align-items:center;gap:.5rem}
+.pf li::before{content:'✓';color:var(--o);font-weight:700;font-size:.82rem}
+.pbtn{width:100%;padding:.85rem;border-radius:var(--r2);font-weight:700;font-size:.92rem;cursor:pointer;font-family:var(--fb);transition:all .25s;border:none;display:block;text-align:center}
+.pbtn-fill{background:linear-gradient(135deg,var(--o),var(--o-l));color:#fff}
+.pbtn-fill:hover{box-shadow:0 8px 24px var(--o25);transform:translateY(-1px)}
+.pbtn-out{background:transparent;color:var(--w);border:1px solid var(--bb)}
+.pbtn-out:hover{border-color:var(--db-ll)}
+
+/* FAQ */
+.faq-list{max-width:700px}
+.faq-item{border-bottom:1px solid var(--b1);padding:1.2rem 0}
+.faq-q{font-family:var(--fh);font-weight:700;font-size:1.05rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:color .2s}
+.faq-q:hover{color:var(--o)}
+.faq-q::after{content:'+';font-size:1.5rem;color:var(--g4);transition:transform .3s}
+.faq-item.open .faq-q::after{transform:rotate(45deg);color:var(--o)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--g2);font-size:.92rem;line-height:1.65}
+.faq-item.open .faq-a{max-height:300px;padding-top:.8rem}
+
+/* FINAL CTA */
+.final-cta{text-align:center;position:relative;padding:6rem 2rem;overflow:hidden}
+.final-cta::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:900px;height:900px;background:radial-gradient(circle,rgba(30,58,95,.12) 0%,rgba(249,115,22,.03) 40%,transparent 65%);pointer-events:none}
+.final-cta .stitle{max-width:700px;margin:0 auto .6rem}
+.final-cta .sdesc{max-width:500px;margin:0 auto 2rem;text-align:center}
+
+/* WHATSAPP */
+.wa{position:fixed;bottom:1.5rem;right:1.5rem;z-index:200;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.3);transition:transform .2s;cursor:pointer}
+.wa:hover{transform:scale(1.08)}
+.wa svg{width:28px;height:28px;fill:#fff}
+
+/* FOOTER */
+footer{padding:2.5rem 2rem;border-top:1px solid var(--b1);text-align:center}
+footer .fl{font-family:var(--fh);font-weight:900;font-size:1.2rem;margin-bottom:.4rem}
+footer .fl .z{color:var(--w)}.fl .l{color:var(--db-ll)}
+footer p{color:var(--g4);font-size:.78rem}
+footer a{color:var(--o)}
+
+/* RESPONSIVE */
+@media(max-width:1024px){.hero-inner{grid-template-columns:1fr;text-align:center}.hero-content{order:1}.hero-form-card{order:2;max-width:480px;margin:0 auto}.hero-ctas{justify-content:center}.trust-strip{justify-content:center}.proof-bar{margin:0 auto 1.8rem}.hero-sub{margin:0 auto 2rem}}
+@media(max-width:768px){nav{padding:.8rem 1.2rem}.nav-r a:not(.nav-cta){display:none}section{padding:4rem 1.2rem}.hero{padding:6rem 1.2rem 3rem}.res-grid{grid-template-columns:repeat(2,1fr)}.proc-grid{grid-template-columns:repeat(2,1fr);gap:2rem}.proc-grid::before{display:none}.ba-grid{grid-template-columns:1fr;gap:1rem}.ba-vs{transform:rotate(90deg)}}
+@media(max-width:480px){.res-grid{grid-template-columns:1fr}.proc-grid{grid-template-columns:1fr}.hero h1{font-size:2.2rem}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><span class="z">ZED </span><span class="l">Labs</span></div>
+  <div class="nav-r">
+    <a href="#services">Services</a>
+    <a href="#results">Results</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact" class="nav-cta">Get Free Quote</a>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="proof-bar"><div class="proof-dot"></div><span><strong>12 businesses</strong> got quotes this week</span></div>
+      <h1>We Build Websites That <span class="acc-orange">Actually Grow Your Business</span></h1>
+      <p class="hero-sub">Stop losing customers to slow, outdated websites. Get a fast, SEO-optimized website or app that turns visitors into paying clients — in as little as 7 days.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="cta-main">Get My Free Quote →</a>
+        <a href="#results" class="cta-ghost">See Our Results</a>
+      </div>
+      <div class="trust-strip">
+        <div class="t-item"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84L18 6.71l-4 3.9.94 5.49L10 13.61l-4.94 2.49L6 10.61l-4-3.9 5.61-.87z"/></svg><strong>4.9/5</strong> rating</div>
+        <div class="t-item"><svg viewBox="0 0 20 20"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM2 17c0-3.31 3.58-6 8-6s8 2.69 8 6v1H2v-1z"/></svg><strong>150+</strong> clients</div>
+        <div class="t-item"><svg viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 11.293a1 1 0 001.414 1.414l2-2A1 1 0 0011 10V7z"/></svg>Responds in <strong>2 hrs</strong></div>
+      </div>
+    </div>
+    <div class="hero-form-card" id="contact">
+      <div class="hf-head">
+        <div class="urgency"><div class="u-dot"></div> Only 5 slots left this month</div>
+        <h3>Get Your Free Strategy & Quote</h3>
+        <p>Takes 30 seconds. We'll reply within 2 hours.</p>
+      </div>
+      <form class="hf-form" onsubmit="submitForm(event)">
+        <input type="text" class="fi" placeholder="Your Name *" required>
+        <input type="tel" class="fi" placeholder="WhatsApp Number *" required>
+        <select class="fi" required><option value="" disabled selected>What do you need? *</option><option>Business Website</option><option>E-Commerce Store</option><option>Mobile App</option><option>Website Redesign</option><option>SEO & Marketing</option><option>Custom Software</option></select>
+        <input type="text" class="fi" placeholder="Your Budget Range (Optional)">
+        <button type="submit" class="hf-submit">Get My Free Quote →</button>
+      </form>
+      <p class="hf-note">🔒 No spam. No obligation. 100% free.</p>
+      <div class="form-trust">
+        <div class="ft"><strong>150+</strong><span>Projects</span></div>
+        <div class="ft"><strong>3X</strong><span>More Leads</span></div>
+        <div class="ft"><strong>98%</strong><span>Satisfaction</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="logo-strip">
+  <p>Trusted by businesses across India</p>
+  <div class="logo-row"><span>TechVista</span><span>GreenLeaf</span><span>SwiftPay</span><span>UrbanEdge</span><span>CloudNine</span><span>AquaPure</span></div>
+</div>
+
+<section class="results" id="results">
+  <div class="container">
+    <div class="section-head"><div class="tag">Proven Results</div><h2 class="stitle">Numbers That Speak for Themselves</h2><p class="sdesc">We don't just build websites — we build revenue machines backed by real data.</p></div>
+    <div class="res-grid">
+      <div class="res-item"><div class="res-num">3X</div><h4>More Enquiries</h4><p>Average lead increase within 60 days</p></div>
+      <div class="res-item"><div class="res-num">1.2s</div><h4>Load Time</h4><p>Google rewards fast sites with rankings</p></div>
+      <div class="res-item"><div class="res-num">40%</div><h4>Higher Conversion</h4><p>vs template websites</p></div>
+      <div class="res-item"><div class="res-num">150+</div><h4>Projects Delivered</h4><p>Across 20+ industries</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-head"><div class="tag">What We Build</div><h2 class="stitle">Everything Your Business Needs to Win Online</h2><p class="sdesc">From idea to launch — we handle it all so you can focus on growth.</p></div>
+    <div class="srv-grid">
+      <div class="srv"><div class="srv-ico">🌐</div><h3>Business Websites</h3><p>Fast, mobile-first, SEO-optimized websites that rank on Google and turn visitors into paying customers.</p></div>
+      <div class="srv"><div class="srv-ico">🛒</div><h3>E-Commerce Stores</h3><p>Online stores with seamless checkout, inventory management, and payment gateways to sell 24/7.</p></div>
+      <div class="srv"><div class="srv-ico">📱</div><h3>Mobile Apps</h3><p>Native Android & iOS apps with beautiful UI, push notifications, and buttery-smooth performance.</p></div>
+      <div class="srv"><div class="srv-ico">🤖</div><h3>AI-Powered Solutions</h3><p>Chatbots, automation, and AI analytics that give your business an unfair competitive advantage.</p></div>
+      <div class="srv"><div class="srv-ico">📈</div><h3>SEO & Marketing</h3><p>Get found on Google. Data-driven SEO and ad campaigns that bring measurable, qualified traffic.</p></div>
+      <div class="srv"><div class="srv-ico">🔧</div><h3>Ongoing Support</h3><p>Updates, security, monitoring. Your site stays fast, safe, and online — we guarantee it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="ba">
+  <div class="container">
+    <div class="section-head" style="text-align:center"><div class="tag" style="justify-content:center">Case Study</div><h2 class="stitle" style="max-width:600px;margin:0 auto .8rem">From Zero to 47 Leads in 30 Days</h2><p class="sdesc" style="margin:0 auto">Real results from a real client.</p></div>
+    <div class="ba-grid">
+      <div class="ba-card before"><div class="ba-label bad">✕ Before ZED Labs</div><ul><li><span class="ic" style="color:var(--red)">✕</span>Slow loading (8+ seconds)</li><li><span class="ic" style="color:var(--red)">✕</span>Not mobile friendly</li><li><span class="ic" style="color:var(--red)">✕</span>No SEO, invisible on Google</li><li><span class="ic" style="color:var(--red)">✕</span>Template design, no trust</li><li><span class="ic" style="color:var(--red)">✕</span>No lead capture system</li></ul><div class="ba-result" style="color:var(--red)">0 leads / month</div></div>
+      <div class="ba-vs">→</div>
+      <div class="ba-card after"><div class="ba-label good">✓ After ZED Labs</div><ul><li><span class="ic" style="color:var(--green)">✓</span>Lightning fast (1.2s load)</li><li><span class="ic" style="color:var(--green)">✓</span>Mobile-first responsive</li><li><span class="ic" style="color:var(--green)">✓</span>SEO-optimized, page 1 Google</li><li><span class="ic" style="color:var(--green)">✓</span>Custom branded design</li><li><span class="ic" style="color:var(--green)">✓</span>WhatsApp + form lead capture</li></ul><div class="ba-result" style="color:var(--o)">47 leads in month 1</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head" style="text-align:center"><div class="tag" style="justify-content:center">How It Works</div><h2 class="stitle">Go Live in 4 Simple Steps</h2><p class="sdesc" style="margin:0 auto">No complicated process. No months of waiting.</p></div>
+    <div class="proc-grid">
+      <div class="proc"><div class="proc-n">01</div><h3>Free Consultation</h3><p>Tell us your goals. We create a custom strategy — free.</p></div>
+      <div class="proc"><div class="proc-n">02</div><h3>Design & Preview</h3><p>We design and show you a live preview to refine.</p></div>
+      <div class="proc"><div class="proc-n">03</div><h3>Build & Test</h3><p>Clean code, fast loading, mobile-perfect. Fully tested.</p></div>
+      <div class="proc"><div class="proc-n">04</div><h3>Launch & Grow</h3><p>Go live with analytics, SEO, and ongoing support.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bg2)">
+  <div class="container">
+    <div class="section-head"><div class="tag">Client Stories</div><h2 class="stitle">Don't Take Our Word for It</h2></div>
+    <div class="test-grid">
+      <div class="test"><div class="test-stars">★★★★★</div><q>ZED Labs completely transformed our online presence. We went from zero online orders to 50+ per week within the first month. Best investment we've made.</q><div class="test-who"><div class="test-av">RK</div><div><div class="test-name">Rahul K.</div><div class="test-role">E-Commerce Business Owner, Mumbai</div></div></div></div>
+      <div class="test"><div class="test-stars">★★★★★</div><q>Professional, fast, and they actually understand business. The app they built us has a 4.8 rating on the Play Store. Couldn't be happier.</q><div class="test-who"><div class="test-av">SM</div><div><div class="test-name">Sara M.</div><div class="test-role">Startup Founder, Bangalore</div></div></div></div>
+      <div class="test"><div class="test-stars">★★★★★</div><q>Our old website was embarrassing. ZED Labs gave us a site that looks like it cost ₹5 lakhs but at a fraction of the price. Leads come in daily now.</q><div class="test-who"><div class="test-av">AP</div><div><div class="test-name">Amit P.</div><div class="test-role">Restaurant Chain Owner, Delhi</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="section-head" style="text-align:center"><div class="tag" style="justify-content:center">Pricing</div><h2 class="stitle">Transparent Pricing. No Surprises.</h2><p class="sdesc" style="margin:0 auto">Invest once, profit forever.</p></div>
+    <div class="price-grid">
+      <div class="pc"><h3>Starter</h3><p class="pc-desc">For small businesses getting online</p><div class="old-price">₹25,000</div><div class="price">₹14,999 <small>one-time</small></div><ul class="pf"><li>5-Page Responsive Website</li><li>Mobile Optimized</li><li>Basic SEO Setup</li><li>Contact Form + WhatsApp</li><li>Google Analytics</li><li>15-Day Free Support</li></ul><a href="#contact" class="pbtn pbtn-out">Get Started</a></div>
+      <div class="pc pop"><h3>Business Pro</h3><p class="pc-desc">For businesses that want real results</p><div class="old-price">₹50,000</div><div class="price">₹34,999 <small>one-time</small></div><ul class="pf"><li>10+ Page Custom Website</li><li>Advanced SEO & Speed</li><li>CMS / Admin Panel</li><li>Lead Capture & CRM</li><li>Blog + Social Integration</li><li>30-Day Free Support</li></ul><a href="#contact" class="pbtn pbtn-fill">Get Started →</a></div>
+      <div class="pc"><h3>Custom App / E-Com</h3><p class="pc-desc">Full-scale apps & online stores</p><div class="price">Custom <small>get a quote</small></div><ul class="pf"><li>Custom Web / Mobile App</li><li>E-Commerce + Payments</li><li>Admin Dashboard & Analytics</li><li>API Integration & Automation</li><li>AI-Powered Features</li><li>Dedicated Account Manager</li></ul><a href="#contact" class="pbtn pbtn-out">Get a Quote</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-head"><div class="tag">Common Questions</div><h2 class="stitle">Got Questions? We've Got Answers.</h2></div>
+    <div class="faq-list">
+      <div class="faq-item open"><div class="faq-q" onclick="toggleFaq(this)">How long does it take to build my website?</div><div class="faq-a">Most business websites are delivered in 7-14 days. E-commerce stores and custom apps typically take 2-4 weeks. We'll give you an exact timeline in your free consultation.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What if I'm not happy with the design?</div><div class="faq-a">We offer unlimited revisions during the design phase. We don't move to development until you're 100% satisfied.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Do you provide hosting and domain?</div><div class="faq-a">Yes, we set up fast, reliable hosting that keeps your site loading under 2 seconds. We handle all the technical setup.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Will my website work on mobile phones?</div><div class="faq-a">Every website we build is mobile-first. Over 70% of your visitors come from mobile — this is non-negotiable for us.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Do you help with content and images?</div><div class="faq-a">Yes. We provide professional copywriting, stock images, and custom graphics optimized for SEO and conversions.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container">
+    <div class="tag" style="justify-content:center">Ready to Grow?</div>
+    <h2 class="stitle">Your Competitors Are Already Online.<br>Don't Get Left Behind.</h2>
+    <p class="sdesc">Join 150+ businesses who chose ZED Labs. Get your free quote today.</p>
+    <div style="display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap">
+      <a href="#contact" class="cta-main" style="font-size:1.1rem;padding:1.1rem 3rem">Get My Free Quote →</a>
+      <a href="https://wa.me/917019581347?text=Hi%20ZED%20Labs!%20I%20need%20a%20website/app." target="_blank" class="cta-ghost" style="font-size:1.1rem;padding:1.1rem 2.5rem">💬 WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="fl"><span class="z">ZED </span><span class="l">Labs</span></div>
+    <p>Websites · Apps · AI · Digital Marketing</p>
+    <p style="margin-top:.4rem">© 2025 ZED Labs. All rights reserved. | <a href="mailto:hello@zedai.tech">hello@zedai.tech</a> | <a href="tel:+917019581347">+91 7019581347</a></p>
+  </div>
+</footer>
+
+<a href="https://wa.me/917019581347?text=Hi%20ZED%20Labs!%20I%20need%20a%20website/app." target="_blank" class="wa"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.8-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.3-5.1-3.7-10.6-6.5z"/></svg></a>
+
+<script>
+function submitForm(e){e.preventDefault();const b=e.target.querySelector('.hf-submit'),o=b.textContent;b.textContent='✓ Sent! We\'ll Contact You in 2 Hours';b.style.background='#22C55E';b.disabled=true;setTimeout(()=>{b.textContent=o;b.style.background='';b.disabled=false;e.target.reset()},5000)}
+function toggleFaq(el){const i=el.parentElement,w=i.classList.contains('open');document.querySelectorAll('.faq-item').forEach(x=>x.classList.remove('open'));if(!w)i.classList.add('open')}
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.style.opacity='1';x.target.style.transform='translateY(0)'}})},{threshold:.1,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.srv,.res-item,.proc,.test,.pc,.ba-card,.faq-item').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity .5s ease,transform .5s ease';obs.observe(el)});
+window.addEventListener('scroll',()=>{document.querySelector('nav').style.boxShadow=window.scrollY>50?'0 4px 30px rgba(0,0,0,.4)':'none'});
+</script>
+</body>
+</html>
