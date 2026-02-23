@@ -29,7 +29,7 @@ export async function POST(request: NextRequest) {
     });
 
     await resend.emails.send({
-      from: "ZED Labs <onboarding@resend.dev>",
+      from: "ZED Labs <hello@zedai.tech>",
       to: "hello@zedai.tech",
       subject: `New Enquiry: ${serviceType} — ${name}`,
       html: `
