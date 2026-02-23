@@ -1,5 +1,11 @@
 "use client";
 
+declare global {
+  interface Window {
+    fbq?: (...args: unknown[]) => void;
+  }
+}
+
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { enquirySchema, type EnquiryFormData, SERVICE_OPTIONS } from "@/lib/validations/enquiry";
@@ -27,6 +33,9 @@ export function EnquiryForm() {
       });
       if (!res.ok) throw new Error("Failed to submit");
       setSubmitState("success");
+      if (typeof window !== "undefined" && typeof window.fbq === "function") {
+        window.fbq("track", "Lead", { content_name: data.serviceType });
+      }
       reset();
       setTimeout(() => setSubmitState("idle"), 5000);
     } catch {
