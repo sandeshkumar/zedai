@@ -14,6 +14,17 @@ export function Pricing() {
           description="Invest once, profit forever."
           centered
         />
+        <div className="mb-8 text-center">
+          <div className="inline-flex items-center gap-2 bg-linear-to-r from-[rgba(249,115,22,0.12)] to-[rgba(249,115,22,0.04)] border border-border-accent rounded-[var(--radius-full)] py-2.5 px-6">
+            <span className="text-[1.1rem]">🎁</span>
+            <span className="text-accent font-bold text-[0.85rem] tracking-wide uppercase" style={{ animation: "blink 2s ease-in-out infinite" }}>
+              Limited Offer
+            </span>
+            <span className="text-text-primary text-[0.88rem] font-medium">
+              — FREE Domain & Hosting for 1 Year with every plan!
+            </span>
+          </div>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {PRICING_TIERS.map((tier, i) => (
             <ScrollReveal key={tier.name} delay={i * 0.1}>
@@ -46,6 +57,9 @@ export function Pricing() {
                     </li>
                   ))}
                 </ul>
+                <div className="my-4 py-2.5 px-3 rounded-sm bg-linear-to-r from-[rgba(34,197,94,0.1)] to-[rgba(34,197,94,0.03)] border border-[rgba(34,197,94,0.2)] text-center">
+                  <span className="text-success font-bold text-[0.8rem]">🎁 FREE Domain & Hosting for 1 Year</span>
+                </div>
                 <a
                   href="#contact"
                   className={`block w-full py-3.5 rounded-[var(--radius-md)] font-bold text-[0.92rem] text-center transition-all duration-250 ${
