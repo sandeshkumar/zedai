@@ -45,7 +45,7 @@ export function EnquiryForm() {
   }
 
   const inputClass =
-    "w-full py-3.5 px-4 rounded-[var(--radius-sm)] border border-border-medium bg-bg-secondary text-text-primary font-[family-name:var(--font-body)] text-[0.9rem] outline-none transition-colors duration-200 focus:border-db-lighter placeholder:text-text-dim";
+    "w-full py-3.5 px-4 rounded-[var(--radius-sm)] border border-border-medium bg-bg-secondary text-text-primary font-[family-name:var(--font-body)] text-[0.9rem] outline-none transition-all duration-200 focus:border-db-lighter focus:shadow-[0_0_0_3px_rgba(30,58,95,0.2)] placeholder:text-text-dim";
 
   return (
     <div className="bg-linear-to-b from-card-alt to-card border border-border-blue rounded-[var(--radius-lg)] p-8 relative" id="contact">

@@ -6,9 +6,12 @@ export function LogoStrip() {
       <p className="text-[0.72rem] font-semibold tracking-[0.15em] uppercase text-text-dim mb-4">
         Trusted by businesses across India
       </p>
-      <div className="flex justify-center items-center gap-12 flex-wrap opacity-35">
+      <div className="flex flex-wrap items-center justify-center gap-8 opacity-35 px-5">
         {LOGO_NAMES.map((name) => (
-          <span key={name} className="font-heading font-bold text-[1.1rem] text-text-subtle">
+          <span
+            key={name}
+            className="font-heading font-bold text-[1.1rem] text-text-subtle whitespace-nowrap"
+          >
             {name}
           </span>
         ))}

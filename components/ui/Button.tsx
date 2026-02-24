@@ -1,4 +1,7 @@
-import { type AnchorHTMLAttributes, type ButtonHTMLAttributes } from "react";
+"use client";
+
+import { type ButtonHTMLAttributes, type ReactNode } from "react";
+import { motion, type HTMLMotionProps } from "framer-motion";
 
 type Variant = "primary" | "ghost" | "fill" | "outline";
 
@@ -13,34 +16,43 @@ const variantStyles: Record<Variant, string> = {
     "bg-transparent text-text-primary border border-border-blue hover:border-db-lighter",
 };
 
-interface ButtonLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+interface ButtonLinkProps {
   variant?: Variant;
   className?: string;
+  children: ReactNode;
+  href?: string;
+  target?: string;
 }
 
-export function ButtonLink({ variant = "primary", className = "", children, ...props }: ButtonLinkProps) {
+export function ButtonLink({ variant = "primary", className = "", children, href, target }: ButtonLinkProps) {
   return (
-    <a
+    <motion.a
+      href={href}
+      target={target}
+      whileTap={{ scale: 0.97 }}
+      transition={{ duration: 0.1 }}
       className={`inline-flex items-center justify-center gap-2 rounded-[var(--radius-md)] font-bold text-base cursor-pointer transition-all duration-250 font-[family-name:var(--font-body)] ${variantStyles[variant]} ${className}`}
-      {...props}
     >
       {children}
-    </a>
+    </motion.a>
   );
 }
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends Omit<HTMLMotionProps<"button">, "children"> {
   variant?: Variant;
   className?: string;
+  children: ReactNode;
 }
 
 export function Button({ variant = "primary", className = "", children, ...props }: ButtonProps) {
   return (
-    <button
+    <motion.button
+      whileTap={{ scale: 0.97 }}
+      transition={{ duration: 0.1 }}
       className={`inline-flex items-center justify-center gap-2 rounded-[var(--radius-md)] font-bold text-base cursor-pointer transition-all duration-250 font-[family-name:var(--font-body)] ${variantStyles[variant]} ${className}`}
       {...props}
     >
       {children}
-    </button>
+    </motion.button>
   );
 }

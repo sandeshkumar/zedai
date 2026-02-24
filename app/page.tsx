@@ -11,6 +11,7 @@ import { FAQ } from "@/components/sections/FAQ";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
+import { SectionDivider } from "@/components/ui/SectionDivider";
 import { FAQ_ITEMS, SERVICES } from "@/lib/constants";
 
 const jsonLd = {
@@ -83,13 +84,21 @@ export default function Home() {
       <main>
         <Hero />
         <LogoStrip />
+        <SectionDivider variant="blue" />
         <Results />
+        <SectionDivider variant="mixed" />
         <Services />
+        <SectionDivider variant="accent" />
         <BeforeAfter />
+        <SectionDivider variant="blue" />
         <Process />
+        <SectionDivider variant="mixed" />
         <Testimonials />
+        <SectionDivider variant="accent" />
         <Pricing />
+        <SectionDivider variant="blue" />
         <FAQ />
+        <SectionDivider variant="mixed" />
         <FinalCTA />
       </main>
       <Footer />

@@ -1,3 +1,5 @@
+"use client";
+
 import { ButtonLink } from "@/components/ui/Button";
 import { WHATSAPP_URL } from "@/lib/constants";
 

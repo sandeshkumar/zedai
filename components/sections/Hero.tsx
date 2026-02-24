@@ -12,7 +12,7 @@ const fadeUp = (delay: number) => ({
 
 export function Hero() {
   return (
-    <section className="min-h-screen flex items-center px-5 lg:px-10 pt-28 pb-16 relative overflow-hidden" id="home">
+    <section className="min-h-screen flex items-center px-5 lg:px-10 pt-36 pb-16 relative overflow-hidden" id="home">
       {/* Deep blue radial glow */}
       <div className="absolute -top-[15%] -right-[5%] w-[1000px] h-[1000px] bg-[radial-gradient(circle,rgba(30,58,95,0.2)_0%,rgba(30,58,95,0.05)_40%,transparent_65%)] pointer-events-none" />
       {/* Warm glow */}

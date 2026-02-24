@@ -6,10 +6,10 @@ export const NAV_LINKS = [
 ] as const;
 
 export const RESULTS = [
-  { value: "3X", label: "More Enquiries", description: "Average lead increase within 60 days" },
-  { value: "1.2s", label: "Load Time", description: "Google rewards fast sites with rankings" },
-  { value: "40%", label: "Higher Conversion", description: "vs template websites" },
-  { value: "150+", label: "Projects Delivered", description: "Across 20+ industries" },
+  { numValue: 3, suffix: "X", decimals: 0, label: "More Enquiries", description: "Average lead increase within 60 days" },
+  { numValue: 1.2, suffix: "s", decimals: 1, label: "Load Time", description: "Google rewards fast sites with rankings" },
+  { numValue: 40, suffix: "%", decimals: 0, label: "Higher Conversion", description: "vs template websites" },
+  { numValue: 150, suffix: "+", decimals: 0, label: "Projects Delivered", description: "Across 20+ industries" },
 ] as const;
 
 export const SERVICES = [

@@ -6,8 +6,16 @@ import { PRICING_TIERS } from "@/lib/constants";
 
 export function Pricing() {
   return (
-    <section className="py-16 lg:py-24 px-5 lg:px-10 bg-bg-secondary" id="pricing">
-      <div className="max-w-[1200px] mx-auto">
+    <section className="py-16 lg:py-24 px-5 lg:px-10 bg-bg-secondary relative overflow-hidden" id="pricing">
+      <div
+        aria-hidden="true"
+        className="absolute -bottom-[10%] -left-[8%] w-[500px] h-[500px] rounded-full opacity-[0.05] pointer-events-none"
+        style={{
+          background: "radial-gradient(circle, #1E3A5F 0%, transparent 70%)",
+          animation: "float-slower 12s ease-in-out infinite",
+        }}
+      />
+      <div className="max-w-[1200px] mx-auto relative z-[1]">
         <SectionHeader
           tag="Pricing"
           title="Transparent Pricing. No Surprises."
@@ -31,8 +39,8 @@ export function Pricing() {
               <div
                 className={`rounded-[var(--radius-lg)] p-9 transition-all duration-300 relative hover:-translate-y-1 ${
                   tier.popular
-                    ? "bg-linear-to-b from-[rgba(249,115,22,0.1)] to-card border border-border-accent"
-                    : "bg-card border border-border-subtle"
+                    ? "bg-linear-to-b from-[rgba(249,115,22,0.1)] to-card border border-border-accent hover:shadow-[0_0_40px_rgba(249,115,22,0.12)]"
+                    : "bg-card border border-border-subtle hover:shadow-[0_0_30px_rgba(249,115,22,0.08)]"
                 }`}
               >
                 {tier.popular && (
