@@ -150,4 +150,4 @@ export const FAQ_ITEMS = [
 
 export const LOGO_NAMES = ["TechVista", "GreenLeaf", "SwiftPay", "UrbanEdge", "CloudNine", "AquaPure"] as const;
 
-export const WHATSAPP_URL = "https://wa.me/917019581347?text=Hi%20ZED%20Labs!%20I%20need%20a%20website/app.";
+export const WHATSAPP_URL = "https://wa.me/919380341684?text=Hi%20ZED%20Labs!%20I%20need%20a%20website/app.";

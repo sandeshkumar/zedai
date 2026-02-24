@@ -15,8 +15,8 @@ export function Footer() {
             hello@zedai.tech
           </a>{" "}
           |{" "}
-          <a href="tel:+917019581347" className="text-accent hover:underline">
-            +91 7019581347
+          <a href="tel:+919380341684" className="text-accent hover:underline">
+            +91 9380341684
           </a>
         </p>
       </div>

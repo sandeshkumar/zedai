@@ -23,7 +23,7 @@ const jsonLd = {
       url: "https://zedai.tech",
       contactPoint: {
         "@type": "ContactPoint",
-        telephone: "+91-7019581347",
+        telephone: "+91-9380341684",
         contactType: "sales",
         availableLanguage: ["English", "Hindi"],
       },
