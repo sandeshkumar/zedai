@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ButtonLink } from "@/components/ui/Button";
 import { EnquiryForm } from "@/components/forms/EnquiryForm";
+import { WHATSAPP_URL } from "@/lib/constants";
 
 const fadeUp = (delay: number) => ({
   initial: { opacity: 0, y: 20 },
@@ -27,7 +28,7 @@ export function Hero() {
           >
             <div className="w-2 h-2 rounded-full bg-success animate-[blink_2s_infinite]" />
             <span className="text-[0.78rem] text-text-muted font-medium">
-              <strong className="text-accent font-bold">12 businesses</strong> got quotes this week
+              <strong className="text-accent font-bold">Powered by AI.</strong> Built for Growth.
             </span>
           </motion.div>
 
@@ -48,34 +49,18 @@ export function Hero() {
             Stop losing customers to slow, outdated websites. Get a fast, SEO-optimized website or app that turns visitors into paying clients — in as little as 7 days.
           </motion.p>
 
-          <motion.div {...fadeUp(0.15)} className="flex gap-3 flex-wrap mb-8 lg:justify-start justify-center">
+          <motion.div {...fadeUp(0.15)} className="flex gap-3 flex-wrap mb-5 lg:justify-start justify-center">
             <ButtonLink href="#contact" variant="primary" className="px-10 py-4 text-base shadow-[0_4px_20px_rgba(249,115,22,0.25)]">
               Get My Free Quote →
             </ButtonLink>
-            <ButtonLink href="#results" variant="ghost" className="px-8 py-4 text-base">
-              See Our Results
+            <ButtonLink href={WHATSAPP_URL} variant="ghost" className="px-8 py-4 text-base" target="_blank">
+              💬 WhatsApp Us
             </ButtonLink>
           </motion.div>
-
-          <motion.div {...fadeUp(0.2)} className="flex items-center gap-7 lg:justify-start justify-center">
-            <div className="flex items-center gap-1.5 text-[0.82rem] text-text-faint">
-              <svg viewBox="0 0 20 20" className="w-4 h-4 fill-text-faint">
-                <path d="M10 1l2.39 4.84L18 6.71l-4 3.9.94 5.49L10 13.61l-4.94 2.49L6 10.61l-4-3.9 5.61-.87z" />
-              </svg>
-              <strong className="text-text-muted font-semibold">4.9/5</strong> rating
-            </div>
-            <div className="flex items-center gap-1.5 text-[0.82rem] text-text-faint">
-              <svg viewBox="0 0 20 20" className="w-4 h-4 fill-text-faint">
-                <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM2 17c0-3.31 3.58-6 8-6s8 2.69 8 6v1H2v-1z" />
-              </svg>
-              <strong className="text-text-muted font-semibold">150+</strong> clients
-            </div>
-            <div className="flex items-center gap-1.5 text-[0.82rem] text-text-faint">
-              <svg viewBox="0 0 20 20" className="w-4 h-4 fill-text-faint">
-                <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 11.293a1 1 0 001.414 1.414l2-2A1 1 0 0011 10V7z" />
-              </svg>
-              Responds in <strong className="text-text-muted font-semibold">2 hrs</strong>
-            </div>
+          <motion.div {...fadeUp(0.2)} className="flex items-center gap-4 lg:justify-start justify-center">
+            <a href="tel:+919380341684" className="inline-flex items-center gap-2 text-[0.85rem] text-text-muted hover:text-accent transition-colors">
+              📞 <span className="font-semibold">+91 93803 41684</span>
+            </a>
           </motion.div>
         </div>
 

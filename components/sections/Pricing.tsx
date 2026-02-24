@@ -2,7 +2,7 @@
 
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { PRICING_TIERS } from "@/lib/constants";
+import { PRICING_TIERS, WHATSAPP_URL } from "@/lib/constants";
 
 export function Pricing() {
   return (
@@ -77,6 +77,13 @@ export function Pricing() {
                   }`}
                 >
                   {tier.ctaLabel}
+                </a>
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  className="block w-full py-2.5 mt-2 rounded-[var(--radius-md)] text-[0.82rem] text-center text-text-subtle hover:text-accent transition-colors"
+                >
+                  💬 Or WhatsApp Us
                 </a>
               </div>
             </ScrollReveal>

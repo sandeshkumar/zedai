@@ -55,7 +55,7 @@ export function EnquiryForm() {
       <div className="text-center mb-6">
         <div className="inline-flex items-center gap-1.5 bg-[rgba(249,115,22,0.1)] border border-[rgba(249,115,22,0.25)] py-1 px-3.5 rounded-[var(--radius-full)] text-[0.72rem] font-bold text-accent uppercase tracking-[0.06em] mb-3">
           <div className="w-1.5 h-1.5 rounded-full bg-accent animate-[blink_1.5s_infinite]" />
-          Only 5 slots left this month
+          Go online. Grow faster.
         </div>
         <h3 className="font-heading font-[800] text-[1.3rem] mb-1">
           Get Your Free Strategy & Quote

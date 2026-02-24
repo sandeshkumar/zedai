@@ -1,6 +1,5 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/sections/Hero";
-import { LogoStrip } from "@/components/sections/LogoStrip";
 import { Results } from "@/components/sections/Results";
 import { Services } from "@/components/sections/Services";
 import { BeforeAfter } from "@/components/sections/BeforeAfter";
@@ -83,7 +82,6 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <LogoStrip />
         <SectionDivider variant="blue" />
         <Results />
         <SectionDivider variant="mixed" />

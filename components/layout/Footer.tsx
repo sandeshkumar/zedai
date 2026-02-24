@@ -9,15 +9,19 @@ export function Footer() {
         <p className="text-text-dim text-[0.78rem]">
           Websites · Apps · AI · Digital Marketing
         </p>
-        <p className="text-text-dim text-[0.78rem] mt-1.5">
-          © {new Date().getFullYear()} ZED Labs. All rights reserved. |{" "}
-          <a href="mailto:hello@zedai.tech" className="text-accent hover:underline">
-            hello@zedai.tech
-          </a>{" "}
-          |{" "}
-          <a href="tel:+919380341684" className="text-accent hover:underline">
-            +91 9380341684
+        <div className="flex items-center justify-center gap-4 mt-3 flex-wrap">
+          <a href="tel:+919380341684" className="inline-flex items-center gap-1.5 text-[0.82rem] text-text-subtle hover:text-accent transition-colors font-medium">
+            📞 +91 93803 41684
           </a>
+          <a href="https://wa.me/919380341684" target="_blank" className="inline-flex items-center gap-1.5 text-[0.82rem] text-text-subtle hover:text-accent transition-colors font-medium">
+            💬 WhatsApp
+          </a>
+          <a href="mailto:hello@zedai.tech" className="inline-flex items-center gap-1.5 text-[0.82rem] text-text-subtle hover:text-accent transition-colors font-medium">
+            ✉️ hello@zedai.tech
+          </a>
+        </div>
+        <p className="text-text-dim text-[0.72rem] mt-3">
+          © {new Date().getFullYear()} ZED Labs. All rights reserved.
         </p>
       </div>
     </footer>
