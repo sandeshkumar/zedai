@@ -46,9 +46,9 @@ const jsonLd = {
       "@type": "WebPage",
       "@id": "https://zedai.tech/#webpage",
       url: "https://zedai.tech",
-      name: "ZED Labs — Websites & Apps That Grow Your Business",
+      name: "ZED Labs — Complete Software Solutions That Grow Your Business",
       description:
-        "ZED Labs builds fast, SEO-optimized websites and mobile apps that convert visitors into customers. 150+ projects delivered across 20+ industries.",
+        "ZED Labs builds custom websites, apps, ERP, CRM, POS systems, and AI solutions that grow your business. 150+ projects delivered across 20+ industries.",
       isPartOf: { "@id": "https://zedai.tech/#website" },
       about: { "@id": "https://zedai.tech/#organization" },
     },

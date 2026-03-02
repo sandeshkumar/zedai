@@ -11,7 +11,11 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { enquirySchema, type EnquiryFormData, SERVICE_OPTIONS } from "@/lib/validations/enquiry";
 import { useState } from "react";
 
-export function EnquiryForm() {
+interface EnquiryFormProps {
+  defaultService?: string;
+}
+
+export function EnquiryForm({ defaultService }: EnquiryFormProps = {}) {
   const [submitState, setSubmitState] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   const {
@@ -21,6 +25,7 @@ export function EnquiryForm() {
     formState: { errors },
   } = useForm<EnquiryFormData>({
     resolver: zodResolver(enquirySchema),
+    defaultValues: defaultService ? { serviceType: defaultService as EnquiryFormData["serviceType"] } : undefined,
   });
 
   async function onSubmit(data: EnquiryFormData) {
@@ -94,7 +99,7 @@ export function EnquiryForm() {
           <select
             {...register("serviceType")}
             className={`${inputClass} appearance-none cursor-pointer`}
-            defaultValue=""
+            defaultValue={defaultService || ""}
           >
             <option value="" disabled>
               What do you need? *

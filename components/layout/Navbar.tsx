@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { NAV_LINKS } from "@/lib/constants";
 
@@ -22,8 +23,8 @@ export function Navbar() {
   return (
     <header className="fixed top-0 w-full z-[200]">
       {/* Announcement Bar */}
-      <a
-        href="#pricing"
+      <Link
+        href="/#pricing"
         className="relative block w-full overflow-hidden bg-linear-to-r from-accent-dark via-accent to-accent-light text-white text-center py-2 px-4 text-[0.8rem] sm:text-[0.85rem] font-bold tracking-wide hover:brightness-110 transition-all duration-200"
       >
         <span className="relative z-[1]">
@@ -37,33 +38,33 @@ export function Navbar() {
             animation: "shimmer 3s linear infinite",
           }}
         />
-      </a>
+      </Link>
       <nav
         aria-label="Main navigation"
         className="w-full px-5 lg:px-10 py-3.5 flex justify-between items-center bg-[rgba(8,12,20,0.85)] backdrop-blur-[20px] border-b border-border-subtle transition-shadow duration-300"
         style={{ boxShadow: scrolled ? "0 4px 30px rgba(0,0,0,0.4)" : "none" }}
       >
-        <a href="/" className="font-heading font-[900] text-[1.4rem] tracking-[-0.02em]">
+        <Link href="/" className="font-heading font-[900] text-[1.4rem] tracking-[-0.02em]">
           <span className="text-text-primary">ZED </span>
           <span className="text-accent">Labs</span>
-        </a>
+        </Link>
         <div className="flex gap-8 items-center">
           {NAV_LINKS.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className="hidden md:inline-flex flex-col items-center relative text-[0.85rem] font-medium text-text-subtle hover:text-text-primary transition-colors duration-200 group"
             >
               {link.label}
               <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center" />
-            </a>
+            </Link>
           ))}
-          <a
-            href="#contact"
+          <Link
+            href="/#contact"
             className="hidden md:inline bg-accent text-white px-6 py-2 rounded-[var(--radius-sm)] font-bold text-[0.82rem] hover:bg-accent-light hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(249,115,22,0.25)] transition-all duration-250"
           >
             Get Free Quote
-          </a>
+          </Link>
           {/* Hamburger */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
@@ -103,7 +104,7 @@ export function Navbar() {
                 </motion.a>
               ))}
               <motion.a
-                href="#contact"
+                href="/#contact"
                 onClick={() => setMenuOpen(false)}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

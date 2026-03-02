@@ -19,21 +19,21 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://zedai.tech"),
-  title: "ZED Labs — Websites & Apps That Grow Your Business | Get Free Quote",
+  title: "ZED Labs — Complete Software Solutions That Grow Your Business | Get Free Quote",
   description:
-    "ZED Labs builds fast, SEO-optimized websites and mobile apps that convert visitors into customers. 150+ projects delivered across 20+ industries.",
+    "ZED Labs builds custom websites, apps, ERP, CRM, POS systems, and AI solutions that grow your business. 150+ projects delivered across 20+ industries.",
   keywords: [
     "web development",
     "website design",
     "mobile app development",
     "SEO services",
     "e-commerce website",
-    "business website",
+    "ERP software",
+    "CRM software",
+    "hospitality POS",
+    "AI solutions",
     "custom software development",
     "digital marketing",
-    "website redesign",
-    "React",
-    "Next.js",
     "India",
   ],
   authors: [{ name: "ZED Labs", url: "https://zedai.tech" }],
@@ -54,9 +54,9 @@ export const metadata: Metadata = {
     canonical: "https://zedai.tech",
   },
   openGraph: {
-    title: "ZED Labs — Websites & Apps That Grow Your Business",
+    title: "ZED Labs — Complete Software Solutions That Grow Your Business",
     description:
-      "Fast, SEO-optimized websites and mobile apps that convert visitors into customers. 150+ projects delivered.",
+      "Custom websites, apps, ERP, CRM, POS, and AI solutions that grow your business. 150+ projects delivered.",
     url: "https://zedai.tech",
     siteName: "ZED Labs",
     locale: "en_IN",
@@ -64,9 +64,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ZED Labs — Websites & Apps That Grow Your Business",
+    title: "ZED Labs — Complete Software Solutions That Grow Your Business",
     description:
-      "Fast, SEO-optimized websites and mobile apps that convert visitors into customers. 150+ projects delivered.",
+      "Custom websites, apps, ERP, CRM, POS, and AI solutions that grow your business. 150+ projects delivered.",
   },
 };
 

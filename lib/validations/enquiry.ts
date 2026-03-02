@@ -1,12 +1,18 @@
 import { z } from "zod";
 
 export const SERVICE_OPTIONS = [
-  "Business Website",
-  "E-Commerce Store",
+  "Custom Website",
+  "eCommerce Solution",
   "Mobile App",
-  "Website Redesign",
-  "SEO & Marketing",
-  "Custom Software",
+  "ERP System",
+  "CRM Software",
+  "Hospitality & POS",
+  "AI Solution",
+  "Digital Marketing",
+  "UI/UX Design",
+  "Cloud & DevOps",
+  "Maintenance & AMC",
+  "Cybersecurity",
 ] as const;
 
 export const enquirySchema = z.object({
