@@ -29,7 +29,7 @@ export function Pricing() {
               Limited Offer
             </span>
             <span className="text-text-primary text-[0.88rem] font-medium">
-              — FREE Domain & Hosting for 1 Year with every plan!
+              — FREE Domain & Hosting for 1 Year with website plans!
             </span>
           </div>
         </div>
@@ -65,9 +65,11 @@ export function Pricing() {
                     </li>
                   ))}
                 </ul>
-                <div className="my-4 py-2.5 px-3 rounded-sm bg-linear-to-r from-[rgba(34,197,94,0.1)] to-[rgba(34,197,94,0.03)] border border-[rgba(34,197,94,0.2)] text-center">
-                  <span className="text-success font-bold text-[0.8rem]">🎁 FREE Domain & Hosting for 1 Year</span>
-                </div>
+                {tier.freeDomain && (
+                  <div className="my-4 py-2.5 px-3 rounded-sm bg-linear-to-r from-[rgba(34,197,94,0.1)] to-[rgba(34,197,94,0.03)] border border-[rgba(34,197,94,0.2)] text-center">
+                    <span className="text-success font-bold text-[0.8rem]">🎁 FREE Domain & Hosting for 1 Year</span>
+                  </div>
+                )}
                 <a
                   href="#contact"
                   className={`block w-full py-3.5 rounded-[var(--radius-md)] font-bold text-[0.92rem] text-center transition-all duration-250 ${

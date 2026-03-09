@@ -104,6 +104,15 @@ a {
   100% { transform: translateX(-50%); }
 }
 
+/* ===== Partner Page Body Override ===== */
+body.partner-page-body {
+  background: #FFFFFF;
+  color: #334155;
+}
+body.partner-page-body::after {
+  display: none;
+}
+
 /* ===== Accessibility ===== */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
