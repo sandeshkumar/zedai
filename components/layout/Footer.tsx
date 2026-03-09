@@ -23,6 +23,12 @@ export function Footer() {
             </Link>
           ))}
         </div>
+        <Link
+          href="/zedlabs-partner-program"
+          className="inline-block mt-2 text-[0.8rem] text-accent font-semibold hover:text-accent-light transition-colors"
+        >
+          Become a Partner →
+        </Link>
         <div className="flex items-center justify-center gap-4 mt-3 flex-wrap">
           <a href="tel:+919380341684" className="inline-flex items-center gap-1.5 text-[0.82rem] text-text-subtle hover:text-accent transition-colors font-medium">
             📞 +91 93803 41684
