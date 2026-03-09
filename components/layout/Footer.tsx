@@ -24,7 +24,7 @@ export function Footer() {
           ))}
         </div>
         <Link
-          href="/zedlabs-partner-program"
+          href="/partner"
           className="inline-block mt-2 text-[0.8rem] text-accent font-semibold hover:text-accent-light transition-colors"
         >
           Become a Partner →

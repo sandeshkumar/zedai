@@ -22,13 +22,13 @@ export const metadata: Metadata = {
     "ZED Labs partner",
   ],
   alternates: {
-    canonical: "https://zedai.tech/zedlabs-partner-program",
+    canonical: "https://zedai.tech/partner",
   },
   openGraph: {
     title: "ZED Labs — Partner Program | Run Your Own Digital Agency",
     description:
       "Launch your own digital agency with zero investment. Earn ₹10,000–₹50,000+ per month in commissions.",
-    url: "https://zedai.tech/zedlabs-partner-program",
+    url: "https://zedai.tech/partner",
   },
 };
 

@@ -18,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...servicePages,
     {
-      url: "https://zedai.tech/zedlabs-partner-program",
+      url: "https://zedai.tech/partner",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
