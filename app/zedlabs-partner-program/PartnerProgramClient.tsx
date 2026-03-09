@@ -631,7 +631,7 @@ export function PartnerProgramClient({ fontClass }: { fontClass: string }) {
             {FAQ_DATA.map((item, i) => (
               <div
                 key={i}
-                className={`faq-item reveal ${openFaq === i ? "active" : ""}`}
+                className={`faq-item ${openFaq === i ? "active" : ""}`}
               >
                 <div
                   className="faq-question"
