@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import "./partner-program.css";
 
 const WA_LINK =
-  "https://wa.me/919380341684?text=Hi%20Sandesh,%20I'm%20interested%20in%20the%20ZED%20Labs%20Partner%20Program.%20Please%20share%20the%20details.";
+  "https://wa.me/919380341684?text=Hi,%20I'm%20interested%20in%20the%20ZED%20Labs%20Partner%20Program.%20Please%20share%20the%20details.";
 
 const WA_ICON = (
   <svg viewBox="0 0 24 24">
@@ -39,7 +39,7 @@ const FAQ_DATA = [
   },
   {
     q: "Who is ZED Labs?",
-    a: "ZED Labs is an MSME-registered web development and digital marketing agency based in Mangaluru, Karnataka. We build websites, mobile apps, e-commerce stores, and provide social media marketing and SEO services for businesses across India. Visit zedai.tech to see our portfolio.",
+    a: "ZED Labs is a web development and digital marketing agency. We build websites, mobile apps, e-commerce stores, and provide social media marketing and SEO services for businesses across India. Visit zedai.tech to see our portfolio.",
   },
 ];
 
@@ -694,7 +694,7 @@ export function PartnerProgramClient({ fontClass }: { fontClass: string }) {
             <span className="cta-detail">·</span>
             <span className="cta-detail">No lock-in</span>
             <span className="cta-detail">·</span>
-            <span className="cta-detail">MSME registered</span>
+            <span className="cta-detail">Pan India</span>
           </div>
         </div>
       </section>
