@@ -233,30 +233,61 @@ body.partner-page-body::after {
   width: 100%;
 }
 
+/* Table responsive wrapper — added via CSS overflow */
 .blog-content table {
+  display: block;
   width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   border-collapse: collapse;
   margin: 1.5rem 0;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+}
+
+.blog-content thead {
+  position: sticky;
+  top: 0;
 }
 
 .blog-content th {
-  background: var(--color-card);
-  color: var(--color-text-primary);
-  font-weight: 700;
+  background: #1a2438;
+  color: #f1f5f9;
+  font-weight: 600;
   text-align: left;
   padding: 0.75rem 1rem;
-  border: 1px solid var(--color-border-subtle);
+  border-bottom: 2px solid rgba(99, 179, 237, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  white-space: nowrap;
+}
+
+.blog-content th:last-child {
+  border-right: none;
 }
 
 .blog-content td {
-  color: var(--color-text-muted);
-  padding: 0.75rem 1rem;
-  border: 1px solid var(--color-border-subtle);
+  color: #cbd5e1;
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  min-width: 120px;
+}
+
+.blog-content td:last-child {
+  border-right: none;
 }
 
 .blog-content tr:nth-child(even) td {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.blog-content tr:hover td {
+  background: rgba(99, 179, 237, 0.06);
+}
+
+.blog-content tr:last-child td {
+  border-bottom: none;
 }
 
 /* First h2 needs less top margin */
