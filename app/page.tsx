@@ -8,7 +8,7 @@ import { Process } from "@/components/sections/Process";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { SectionDivider } from "@/components/ui/SectionDivider";
-import { FAQ_ITEMS, SERVICES } from "@/lib/constants";
+import { FAQ_ITEMS, SERVICES, TESTIMONIALS } from "@/lib/constants";
 import {
   wrapInGraph,
   generateOrganizationSchema,
@@ -16,6 +16,7 @@ import {
   generateWebSiteSchema,
   generateWebPageSchema,
   generateFAQSchema,
+  generateReviewSchema,
 } from "@/lib/schema";
 
 const Testimonials = dynamic(
@@ -55,6 +56,7 @@ const jsonLd = wrapInGraph(
     "ZED Labs builds custom websites, apps, ERP, CRM, POS systems, and AI solutions that grow your business. 150+ projects delivered across 20+ industries."
   ),
   generateFAQSchema(FAQ_ITEMS),
+  ...generateReviewSchema(TESTIMONIALS),
   ...SERVICES.map((service) => ({
     "@type": "Service" as const,
     provider: { "@id": "https://zedai.tech/#organization" },

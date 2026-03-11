@@ -5,6 +5,7 @@ import {
   wrapInGraph,
   generateServiceSchema,
   generateBreadcrumbSchema,
+  generateFAQSchema,
 } from "@/lib/schema";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -17,6 +18,7 @@ import { ServiceUseCases } from "@/components/sections/service-page/ServiceUseCa
 import { ServiceCTA } from "@/components/sections/service-page/ServiceCTA";
 import { ServiceBlogPosts } from "@/components/sections/service-page/ServiceBlogPosts";
 import { ServiceRelated } from "@/components/sections/service-page/ServiceRelated";
+import { ServiceFAQ } from "@/components/sections/service-page/ServiceFAQ";
 
 interface ServicePageProps {
   params: Promise<{ slug: string }>;
@@ -65,7 +67,8 @@ export default async function ServicePage({ params }: ServicePageProps) {
       { name: "Home", url: "https://zedai.tech" },
       { name: "Services", url: "https://zedai.tech/#services" },
       { name: service.title, url: `https://zedai.tech/services/${service.slug}` },
-    ])
+    ]),
+    ...(service.faqs.length > 0 ? [generateFAQSchema(service.faqs)] : [])
   );
 
   return (
@@ -84,6 +87,8 @@ export default async function ServicePage({ params }: ServicePageProps) {
         <SectionDivider variant="mixed" />
         <ServiceUseCases service={service} />
         <SectionDivider variant="blue" />
+        <ServiceFAQ faqs={service.faqs} serviceTitle={service.title} />
+        <SectionDivider variant="accent" />
         <ServiceBlogPosts service={service} />
         <ServiceRelated
           serviceSlugs={service.relatedServices}

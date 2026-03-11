@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
 
+export const runtime = "nodejs";
 export const alt = "ZED Labs — Complete Software Solutions That Grow Your Business";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";

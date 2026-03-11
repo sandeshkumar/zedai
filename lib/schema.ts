@@ -22,6 +22,12 @@ export function generateOrganizationSchema() {
       bestRating: "5",
       worstRating: "1",
     },
+    // TODO: Add your social media profile URLs here
+    sameAs: [
+      // "https://www.linkedin.com/company/zedlabs",
+      // "https://www.instagram.com/zedlabs",
+      // "https://www.facebook.com/zedlabs",
+    ],
   };
 }
 
@@ -158,6 +164,30 @@ export function generateHowToSchema(
       text: step.text,
     })),
   };
+}
+
+export function generateReviewSchema(
+  reviews: readonly {
+    stars: number;
+    quote: string;
+    name: string;
+    role: string;
+  }[]
+) {
+  return reviews.map((review) => ({
+    "@type": "Review",
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: review.stars.toString(),
+      bestRating: "5",
+    },
+    author: {
+      "@type": "Person",
+      name: review.name,
+    },
+    reviewBody: review.quote,
+    itemReviewed: { "@id": `${SITE_URL}/#organization` },
+  }));
 }
 
 export function wrapInGraph(...schemas: Record<string, unknown>[]) {

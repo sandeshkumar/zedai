@@ -78,6 +78,26 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
       <head>
+        {/* Google Analytics 4 */}
+        <Script
+          id="ga4"
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-GWTQN7W81N"
+        />
+        <Script
+          id="ga4-config"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-GWTQN7W81N');
+            `,
+          }}
+        />
+        {/* Google Search Console — Replace content with your verification code */}
+        <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
         <Script
           id="meta-pixel"
           strategy="afterInteractive"

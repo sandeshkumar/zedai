@@ -27,6 +27,7 @@ export interface ServiceItem {
   metaDescription: string;
   metaKeywords: string[];
   relatedServices: string[];
+  faqs: { question: string; answer: string }[];
 }
 
 export const SERVICES: ServiceItem[] = [
@@ -58,6 +59,11 @@ export const SERVICES: ServiceItem[] = [
     metaDescription: "Get a fast, mobile-first custom website that ranks on Google and converts visitors into customers. Built by ZED Labs with SEO, lead capture & modern design.",
     metaKeywords: ["custom website development", "website design India", "SEO website", "business website", "responsive website"],
     relatedServices: ["ecommerce-solutions", "digital-marketing", "ui-ux-design"],
+    faqs: [
+      { question: "How much does a custom website cost in India?", answer: "Custom websites start at ₹14,999 for a 5-page business site. Complex sites with CMS, e-commerce, or custom features range from ₹35,000-₹1,50,000 depending on requirements." },
+      { question: "How long does it take to build a custom website?", answer: "Most business websites are delivered in 7-14 days. E-commerce stores and complex applications take 2-4 weeks." },
+      { question: "Will my custom website rank on Google?", answer: "Yes. Every website we build includes on-page SEO, schema markup, fast Core Web Vitals, and mobile-first design — all factors Google uses for rankings." },
+    ],
   },
   {
     slug: "ecommerce-solutions",
@@ -87,6 +93,11 @@ export const SERVICES: ServiceItem[] = [
     metaDescription: "Build a powerful eCommerce store with Razorpay, UPI payments, inventory management, and mobile-first design. Sell online 24/7 with ZED Labs.",
     metaKeywords: ["ecommerce website", "online store development", "ecommerce India", "Razorpay integration", "shopping website"],
     relatedServices: ["custom-websites", "digital-marketing", "mobile-apps"],
+    faqs: [
+      { question: "How much does it cost to build an eCommerce website in India?", answer: "eCommerce stores start at ₹35,000 for basic setups. Feature-rich stores with inventory management, payment gateways, and multi-vendor support range from ₹75,000-₹2,50,000." },
+      { question: "Can I accept UPI and Razorpay payments on my online store?", answer: "Yes. We integrate Razorpay, PhonePe, UPI, credit/debit cards, and net banking so your customers can pay however they prefer." },
+      { question: "Do I need a mobile app or is an eCommerce website enough?", answer: "A mobile-optimized eCommerce website works for most businesses. We recommend an app only when you need push notifications, offline access, or loyalty features." },
+    ],
   },
   {
     slug: "mobile-apps",
@@ -116,6 +127,11 @@ export const SERVICES: ServiceItem[] = [
     metaDescription: "Build high-performance Android & iOS mobile apps with push notifications, offline support, and beautiful UI. Cross-platform development by ZED Labs.",
     metaKeywords: ["mobile app development", "Android app", "iOS app", "cross-platform app", "app development India"],
     relatedServices: ["ui-ux-design", "cloud-devops", "custom-websites"],
+    faqs: [
+      { question: "How much does mobile app development cost in India?", answer: "Simple apps start at ₹50,000. Feature-rich apps with backend, push notifications, and payment integration range from ₹1,50,000-₹5,00,000 depending on complexity." },
+      { question: "Should I build separate Android and iOS apps or one cross-platform app?", answer: "Cross-platform (React Native/Flutter) saves 40% cost and delivers to both platforms simultaneously. We recommend native only for graphics-heavy or hardware-intensive apps." },
+      { question: "How long does it take to publish an app on Play Store and App Store?", answer: "Development takes 4-8 weeks. Play Store approval takes 1-3 days, while App Store review takes 1-7 days. We handle the entire submission process." },
+    ],
   },
   {
     slug: "erp-systems",
@@ -145,6 +161,11 @@ export const SERVICES: ServiceItem[] = [
     metaDescription: "Build a custom ERP system for inventory, HR, finance, and production. GST-compliant, role-based access, real-time dashboards. Built by ZED Labs.",
     metaKeywords: ["ERP software", "custom ERP", "ERP development India", "inventory management", "business software"],
     relatedServices: ["crm-software", "ai-solutions", "cloud-devops"],
+    faqs: [
+      { question: "How much does custom ERP software cost in India?", answer: "Basic ERP modules start at ₹1,50,000. A full-featured ERP with inventory, HR, finance, and production modules ranges from ₹3,00,000-₹10,00,000 depending on complexity." },
+      { question: "How long does ERP implementation take?", answer: "A single-module ERP takes 4-6 weeks. Full enterprise ERP with multiple departments takes 3-6 months including data migration and training." },
+      { question: "Can a custom ERP replace Tally or SAP for my business?", answer: "Yes. A custom ERP can handle GST invoicing, inventory, and accounting like Tally while adding features specific to your workflow — at a fraction of SAP's cost." },
+    ],
   },
   {
     slug: "crm-software",
@@ -174,6 +195,11 @@ export const SERVICES: ServiceItem[] = [
     metaDescription: "Build a custom CRM with lead tracking, WhatsApp integration, automated follow-ups, and sales pipeline. Close more deals with ZED Labs CRM solutions.",
     metaKeywords: ["CRM software", "custom CRM", "CRM development India", "lead management", "sales CRM"],
     relatedServices: ["erp-systems", "ai-solutions", "digital-marketing"],
+    faqs: [
+      { question: "How much does custom CRM software cost in India?", answer: "Basic CRM with lead tracking starts at ₹75,000. Advanced CRM with WhatsApp integration, automation, and analytics ranges from ₹1,50,000-₹4,00,000." },
+      { question: "Can your CRM integrate with WhatsApp and Google Ads?", answer: "Yes. We build CRM systems with WhatsApp Business API integration for messaging and Google Ads lead sync so every enquiry is automatically captured." },
+      { question: "What is the difference between a custom CRM and Zoho or HubSpot?", answer: "A custom CRM is built around your exact sales process with no per-user fees. Off-the-shelf tools charge monthly per user and force you to adapt to their workflow." },
+    ],
   },
   {
     slug: "hospitality-pos",
@@ -203,6 +229,11 @@ export const SERVICES: ServiceItem[] = [
     metaDescription: "Smart POS and hotel management software with GST billing, kitchen display, booking system, and inventory tracking. Built for Indian hospitality by ZED Labs.",
     metaKeywords: ["restaurant POS", "hotel management software", "hospitality software", "POS system India", "billing software"],
     relatedServices: ["erp-systems", "mobile-apps", "custom-websites"],
+    faqs: [
+      { question: "How much does restaurant POS software cost in India?", answer: "Basic restaurant POS starts at ₹50,000. Full-featured systems with KOT, inventory tracking, and multi-branch support range from ₹1,00,000-₹3,00,000." },
+      { question: "Does your POS system support GST billing and UPI payments?", answer: "Yes. Our POS generates GST-compliant invoices automatically and accepts UPI, cards, cash, and digital wallets at checkout." },
+      { question: "Can your hotel software handle online bookings and OTA integration?", answer: "Yes. We build booking engines with real-time availability, online payments, and integration with OTAs like MakeMyTrip and Booking.com." },
+    ],
   },
   {
     slug: "ai-solutions",
@@ -232,6 +263,11 @@ export const SERVICES: ServiceItem[] = [
     metaDescription: "Build AI chatbots, automation workflows, and data analytics solutions. Cut costs, save time, and outperform competitors with ZED Labs AI solutions.",
     metaKeywords: ["AI solutions", "chatbot development", "AI automation", "machine learning India", "AI for business"],
     relatedServices: ["crm-software", "custom-websites", "digital-marketing"],
+    faqs: [
+      { question: "How much does an AI chatbot cost for my business?", answer: "Basic AI chatbots start at ₹40,000. Advanced chatbots with custom training, CRM integration, and multilingual support range from ₹1,00,000-₹3,00,000." },
+      { question: "Can AI automate my business processes without replacing employees?", answer: "Yes. AI automates repetitive tasks like data entry, report generation, and customer FAQs — freeing your team to focus on high-value work instead of replacing them." },
+      { question: "What kind of AI solutions work for small businesses in India?", answer: "WhatsApp chatbots, automated lead follow-ups, invoice processing, and customer support bots deliver the highest ROI for small businesses with minimal setup." },
+    ],
   },
   {
     slug: "digital-marketing",
@@ -261,6 +297,11 @@ export const SERVICES: ServiceItem[] = [
     metaDescription: "Data-driven SEO, Google Ads, and social media marketing that delivers measurable ROI. Track every lead from click to customer with ZED Labs.",
     metaKeywords: ["digital marketing India", "SEO services", "Google Ads", "social media marketing", "online marketing"],
     relatedServices: ["custom-websites", "ecommerce-solutions", "ai-solutions"],
+    faqs: [
+      { question: "How much does SEO cost per month in India?", answer: "SEO packages start at ₹10,000/month for local SEO. Comprehensive SEO with content marketing, link building, and technical optimization ranges from ₹25,000-₹75,000/month." },
+      { question: "How long does SEO take to show results?", answer: "Local SEO shows results in 2-3 months. Competitive keywords typically take 4-6 months to rank on page 1, with compounding traffic growth over time." },
+      { question: "Should I invest in Google Ads or SEO first?", answer: "Start with Google Ads for immediate leads while SEO builds momentum. Once organic rankings stabilize in 3-6 months, you can reduce ad spend as free traffic grows." },
+    ],
   },
   {
     slug: "ui-ux-design",
@@ -290,6 +331,11 @@ export const SERVICES: ServiceItem[] = [
     metaDescription: "Professional UI/UX design with wireframes, prototypes, and design systems. Research-driven design that converts users into customers. By ZED Labs.",
     metaKeywords: ["UI UX design", "user interface design", "UX design India", "wireframing", "prototyping", "design system"],
     relatedServices: ["custom-websites", "mobile-apps", "ecommerce-solutions"],
+    faqs: [
+      { question: "How much does UI/UX design cost in India?", answer: "UI/UX design for a simple app or website starts at ₹30,000. Full design projects with research, wireframes, prototyping, and design systems range from ₹75,000-₹3,00,000." },
+      { question: "What is the difference between UI and UX design?", answer: "UX (User Experience) focuses on how the product works — structure, flow, and ease of use. UI (User Interface) focuses on how it looks — colors, typography, and visual design." },
+      { question: "Do I need UI/UX design before development starts?", answer: "Yes. Designing before coding saves 30-50% on development costs by catching usability issues early, reducing revisions, and giving developers a clear blueprint to follow." },
+    ],
   },
   {
     slug: "cloud-devops",
@@ -319,6 +365,11 @@ export const SERVICES: ServiceItem[] = [
     metaDescription: "Enterprise-grade cloud infrastructure on AWS, Azure, and GCP. CI/CD pipelines, auto-scaling, monitoring, and cost optimization by ZED Labs.",
     metaKeywords: ["cloud services India", "DevOps", "AWS", "Azure", "CI/CD", "cloud migration", "infrastructure"],
     relatedServices: ["cybersecurity", "maintenance-amc", "erp-systems"],
+    faqs: [
+      { question: "How much do cloud hosting and DevOps services cost in India?", answer: "Cloud setup and CI/CD pipeline configuration starts at ₹50,000. Ongoing managed cloud services range from ₹15,000-₹75,000/month depending on infrastructure size." },
+      { question: "Should I use AWS, Azure, or Google Cloud for my application?", answer: "AWS is best for flexibility and largest service catalog. Azure integrates well with Microsoft tools. GCP excels at data and AI workloads. We help you choose based on your needs." },
+      { question: "How do I reduce my cloud hosting bill without losing performance?", answer: "We right-size instances, implement auto-scaling, use reserved pricing, and optimize storage — typically reducing cloud bills by 30-50% while maintaining performance." },
+    ],
   },
   {
     slug: "maintenance-amc",
@@ -348,6 +399,11 @@ export const SERVICES: ServiceItem[] = [
     metaDescription: "Annual maintenance contracts for websites and software. Security updates, monitoring, bug fixes, and priority support. Keep your software running with ZED Labs.",
     metaKeywords: ["website maintenance", "AMC", "annual maintenance contract", "website support", "software maintenance India"],
     relatedServices: ["cloud-devops", "cybersecurity", "custom-websites"],
+    faqs: [
+      { question: "How much does a website maintenance AMC cost in India?", answer: "Basic maintenance AMCs start at ₹5,000/month for small websites. Comprehensive AMCs with priority support, security updates, and monitoring range from ₹10,000-₹30,000/month." },
+      { question: "What is included in an annual maintenance contract for software?", answer: "AMCs typically include security patches, bug fixes, uptime monitoring, daily backups, content updates, performance optimization, and priority support with defined response times." },
+      { question: "Do I need a maintenance plan after my website is launched?", answer: "Yes. Without regular updates and security patches, websites become vulnerable to attacks and performance degradation. An AMC ensures your site stays fast, secure, and up-to-date." },
+    ],
   },
   {
     slug: "cybersecurity",
@@ -377,6 +433,11 @@ export const SERVICES: ServiceItem[] = [
     metaDescription: "Comprehensive cybersecurity — audits, penetration testing, compliance, and 24/7 threat monitoring. Protect your business from cyber threats with ZED Labs.",
     metaKeywords: ["cybersecurity India", "security audit", "penetration testing", "data protection", "compliance", "GDPR"],
     relatedServices: ["cloud-devops", "maintenance-amc", "erp-systems"],
+    faqs: [
+      { question: "How much does a cybersecurity audit cost in India?", answer: "Basic security audits start at ₹50,000. Comprehensive audits with penetration testing, compliance review, and remediation support range from ₹1,50,000-₹5,00,000." },
+      { question: "Does my small business really need cybersecurity?", answer: "Yes. 43% of cyber attacks target small businesses, and most lack recovery resources. Basic measures like security audits, SSL, and access controls are affordable and essential." },
+      { question: "What compliance standards does my business need to follow in India?", answer: "Most businesses need IT Act 2000 compliance. If you handle payments, PCI-DSS applies. For EU customers, GDPR is required. Healthcare and finance have additional sector-specific regulations." },
+    ],
   },
 ];
 

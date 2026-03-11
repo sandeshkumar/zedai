@@ -48,7 +48,22 @@ export function Footer() {
             ✉️ hello@zedai.tech
           </a>
         </div>
-        <p className="text-text-dim text-[0.72rem] mt-3">
+        <div className="flex items-center justify-center gap-4 mt-3">
+          <Link
+            href="/privacy"
+            className="text-[0.72rem] text-text-dim hover:text-accent transition-colors"
+          >
+            Privacy Policy
+          </Link>
+          <span className="text-text-dim text-[0.72rem]">·</span>
+          <Link
+            href="/terms"
+            className="text-[0.72rem] text-text-dim hover:text-accent transition-colors"
+          >
+            Terms of Service
+          </Link>
+        </div>
+        <p className="text-text-dim text-[0.72rem] mt-2">
           © {new Date().getFullYear()} ZED Labs. All rights reserved.
         </p>
       </div>

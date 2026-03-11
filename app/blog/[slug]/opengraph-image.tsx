@@ -1,6 +1,7 @@
 import { ImageResponse } from "next/og";
 import { getPostBySlug } from "@/lib/blog";
 
+export const runtime = "nodejs";
 export const alt = "ZED Labs Blog";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";

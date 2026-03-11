@@ -1,6 +1,7 @@
 import { ImageResponse } from "next/og";
 import { getServiceBySlug } from "@/lib/constants";
 
+export const runtime = "nodejs";
 export const alt = "ZED Labs Service";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
