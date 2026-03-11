@@ -88,12 +88,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <Navbar />
       <main className="pt-32 pb-20 px-5">
         <div className="max-w-[1100px] mx-auto">
-          <div className="lg:grid lg:grid-cols-[1fr_240px] lg:gap-12">
-            <article className="min-w-0">
+          <div className="lg:grid lg:grid-cols-[1fr_220px] lg:gap-16">
+            <article className="min-w-0 max-w-[720px]">
               <BlogHeader post={post} />
-              <div className="prose-custom">
-                <MDXContent compiledSource={compiledSource} />
-              </div>
+              <MDXContent compiledSource={compiledSource} />
               <RelatedServices serviceSlugs={post.relatedServices} />
             </article>
             <aside className="hidden lg:block">

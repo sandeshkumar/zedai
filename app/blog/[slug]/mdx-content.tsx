@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { run } from "@mdx-js/mdx";
 import * as runtime from "react/jsx-runtime";
-import { mdxComponents } from "@/components/blog/MDXComponents";
 
 interface MDXContentProps {
   compiledSource: string;
@@ -16,7 +15,6 @@ export function MDXContent({ compiledSource }: MDXContentProps) {
     (async () => {
       const { default: MDXComponent } = await run(compiledSource, {
         ...runtime,
-        useMDXComponents: () => mdxComponents,
         baseUrl: import.meta.url,
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } as any);
@@ -26,5 +24,9 @@ export function MDXContent({ compiledSource }: MDXContentProps) {
 
   if (!Content) return null;
 
-  return <Content />;
+  return (
+    <div className="blog-content">
+      <Content />
+    </div>
+  );
 }
