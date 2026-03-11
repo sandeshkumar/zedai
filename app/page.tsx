@@ -1,76 +1,67 @@
+import dynamic from "next/dynamic";
 import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { Results } from "@/components/sections/Results";
 import { Services } from "@/components/sections/Services";
 import { BeforeAfter } from "@/components/sections/BeforeAfter";
 import { Process } from "@/components/sections/Process";
-import { Testimonials } from "@/components/sections/Testimonials";
-import { Pricing } from "@/components/sections/Pricing";
-import { FAQ } from "@/components/sections/FAQ";
-import { FinalCTA } from "@/components/sections/FinalCTA";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import { FAQ_ITEMS, SERVICES } from "@/lib/constants";
+import {
+  wrapInGraph,
+  generateOrganizationSchema,
+  generateLocalBusinessSchema,
+  generateWebSiteSchema,
+  generateWebPageSchema,
+  generateFAQSchema,
+} from "@/lib/schema";
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://zedai.tech/#organization",
-      name: "ZED Labs",
-      url: "https://zedai.tech",
-      contactPoint: {
-        "@type": "ContactPoint",
-        telephone: "+91-9380341684",
-        contactType: "sales",
-        availableLanguage: ["English", "Hindi"],
-      },
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.9",
-        reviewCount: "150",
-        bestRating: "5",
-        worstRating: "1",
-      },
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://zedai.tech/#website",
-      url: "https://zedai.tech",
-      name: "ZED Labs",
-      publisher: { "@id": "https://zedai.tech/#organization" },
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://zedai.tech/#webpage",
-      url: "https://zedai.tech",
-      name: "ZED Labs — Complete Software Solutions That Grow Your Business",
-      description:
-        "ZED Labs builds custom websites, apps, ERP, CRM, POS systems, and AI solutions that grow your business. 150+ projects delivered across 20+ industries.",
-      isPartOf: { "@id": "https://zedai.tech/#website" },
-      about: { "@id": "https://zedai.tech/#organization" },
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: FAQ_ITEMS.map((item) => ({
-        "@type": "Question",
-        name: item.question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: item.answer,
-        },
-      })),
-    },
-    ...SERVICES.map((service) => ({
-      "@type": "Service",
-      provider: { "@id": "https://zedai.tech/#organization" },
-      name: service.title,
-      description: service.description,
+const Testimonials = dynamic(
+  () =>
+    import("@/components/sections/Testimonials").then((m) => ({
+      default: m.Testimonials,
     })),
-  ],
-};
+  { ssr: true }
+);
+const Pricing = dynamic(
+  () =>
+    import("@/components/sections/Pricing").then((m) => ({
+      default: m.Pricing,
+    })),
+  { ssr: true }
+);
+const FAQ = dynamic(
+  () =>
+    import("@/components/sections/FAQ").then((m) => ({ default: m.FAQ })),
+  { ssr: true }
+);
+const FinalCTA = dynamic(
+  () =>
+    import("@/components/sections/FinalCTA").then((m) => ({
+      default: m.FinalCTA,
+    })),
+  { ssr: true }
+);
+
+const jsonLd = wrapInGraph(
+  generateOrganizationSchema(),
+  generateLocalBusinessSchema(),
+  generateWebSiteSchema(),
+  generateWebPageSchema(
+    "https://zedai.tech",
+    "ZED Labs — Complete Software Solutions That Grow Your Business",
+    "ZED Labs builds custom websites, apps, ERP, CRM, POS systems, and AI solutions that grow your business. 150+ projects delivered across 20+ industries."
+  ),
+  generateFAQSchema(FAQ_ITEMS),
+  ...SERVICES.map((service) => ({
+    "@type": "Service" as const,
+    provider: { "@id": "https://zedai.tech/#organization" },
+    name: service.title,
+    description: service.description,
+  }))
+);
 
 export default function Home() {
   return (

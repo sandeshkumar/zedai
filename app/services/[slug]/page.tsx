@@ -1,6 +1,11 @@
 import { type Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getServiceBySlug, getAllServiceSlugs } from "@/lib/constants";
+import {
+  wrapInGraph,
+  generateServiceSchema,
+  generateBreadcrumbSchema,
+} from "@/lib/schema";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
@@ -10,6 +15,8 @@ import { ServiceFeatures } from "@/components/sections/service-page/ServiceFeatu
 import { ServiceBenefits } from "@/components/sections/service-page/ServiceBenefits";
 import { ServiceUseCases } from "@/components/sections/service-page/ServiceUseCases";
 import { ServiceCTA } from "@/components/sections/service-page/ServiceCTA";
+import { ServiceBlogPosts } from "@/components/sections/service-page/ServiceBlogPosts";
+import { ServiceRelated } from "@/components/sections/service-page/ServiceRelated";
 
 interface ServicePageProps {
   params: Promise<{ slug: string }>;
@@ -52,20 +59,14 @@ export default async function ServicePage({ params }: ServicePageProps) {
   const service = getServiceBySlug(slug);
   if (!service) notFound();
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    provider: {
-      "@type": "Organization",
-      name: "ZED Labs",
-      url: "https://zedai.tech",
-    },
-    name: service.title,
-    description: service.heroDescription,
-    url: `https://zedai.tech/services/${service.slug}`,
-    areaServed: "IN",
-    serviceType: service.title,
-  };
+  const jsonLd = wrapInGraph(
+    generateServiceSchema(service),
+    generateBreadcrumbSchema([
+      { name: "Home", url: "https://zedai.tech" },
+      { name: "Services", url: "https://zedai.tech/#services" },
+      { name: service.title, url: `https://zedai.tech/services/${service.slug}` },
+    ])
+  );
 
   return (
     <>
@@ -83,6 +84,12 @@ export default async function ServicePage({ params }: ServicePageProps) {
         <SectionDivider variant="mixed" />
         <ServiceUseCases service={service} />
         <SectionDivider variant="blue" />
+        <ServiceBlogPosts service={service} />
+        <ServiceRelated
+          serviceSlugs={service.relatedServices}
+          currentSlug={service.slug}
+        />
+        <SectionDivider variant="mixed" />
         <ServiceCTA service={service} />
       </main>
       <Footer />

@@ -1,6 +1,6 @@
 export const NAV_LINKS = [
   { label: "Services", href: "/#services" },
-  { label: "Results", href: "/#results" },
+  { label: "Blog", href: "/blog" },
   { label: "Pricing", href: "/#pricing" },
   { label: "FAQ", href: "/#faq" },
 ] as const;
@@ -26,6 +26,7 @@ export interface ServiceItem {
   metaTitle: string;
   metaDescription: string;
   metaKeywords: string[];
+  relatedServices: string[];
 }
 
 export const SERVICES: ServiceItem[] = [
@@ -56,6 +57,7 @@ export const SERVICES: ServiceItem[] = [
     metaTitle: "Custom Website Development India | SEO-Optimized | ZED Labs",
     metaDescription: "Get a fast, mobile-first custom website that ranks on Google and converts visitors into customers. Built by ZED Labs with SEO, lead capture & modern design.",
     metaKeywords: ["custom website development", "website design India", "SEO website", "business website", "responsive website"],
+    relatedServices: ["ecommerce-solutions", "digital-marketing", "ui-ux-design"],
   },
   {
     slug: "ecommerce-solutions",
@@ -84,6 +86,7 @@ export const SERVICES: ServiceItem[] = [
     metaTitle: "eCommerce Website Development India | Online Store | ZED Labs",
     metaDescription: "Build a powerful eCommerce store with Razorpay, UPI payments, inventory management, and mobile-first design. Sell online 24/7 with ZED Labs.",
     metaKeywords: ["ecommerce website", "online store development", "ecommerce India", "Razorpay integration", "shopping website"],
+    relatedServices: ["custom-websites", "digital-marketing", "mobile-apps"],
   },
   {
     slug: "mobile-apps",
@@ -112,6 +115,7 @@ export const SERVICES: ServiceItem[] = [
     metaTitle: "Mobile App Development India | Android & iOS | ZED Labs",
     metaDescription: "Build high-performance Android & iOS mobile apps with push notifications, offline support, and beautiful UI. Cross-platform development by ZED Labs.",
     metaKeywords: ["mobile app development", "Android app", "iOS app", "cross-platform app", "app development India"],
+    relatedServices: ["ui-ux-design", "cloud-devops", "custom-websites"],
   },
   {
     slug: "erp-systems",
@@ -140,6 +144,7 @@ export const SERVICES: ServiceItem[] = [
     metaTitle: "Custom ERP Software Development India | ZED Labs",
     metaDescription: "Build a custom ERP system for inventory, HR, finance, and production. GST-compliant, role-based access, real-time dashboards. Built by ZED Labs.",
     metaKeywords: ["ERP software", "custom ERP", "ERP development India", "inventory management", "business software"],
+    relatedServices: ["crm-software", "ai-solutions", "cloud-devops"],
   },
   {
     slug: "crm-software",
@@ -168,6 +173,7 @@ export const SERVICES: ServiceItem[] = [
     metaTitle: "Custom CRM Software Development India | ZED Labs",
     metaDescription: "Build a custom CRM with lead tracking, WhatsApp integration, automated follow-ups, and sales pipeline. Close more deals with ZED Labs CRM solutions.",
     metaKeywords: ["CRM software", "custom CRM", "CRM development India", "lead management", "sales CRM"],
+    relatedServices: ["erp-systems", "ai-solutions", "digital-marketing"],
   },
   {
     slug: "hospitality-pos",
@@ -196,6 +202,7 @@ export const SERVICES: ServiceItem[] = [
     metaTitle: "Hotel & Restaurant POS Software India | ZED Labs",
     metaDescription: "Smart POS and hotel management software with GST billing, kitchen display, booking system, and inventory tracking. Built for Indian hospitality by ZED Labs.",
     metaKeywords: ["restaurant POS", "hotel management software", "hospitality software", "POS system India", "billing software"],
+    relatedServices: ["erp-systems", "mobile-apps", "custom-websites"],
   },
   {
     slug: "ai-solutions",
@@ -224,6 +231,7 @@ export const SERVICES: ServiceItem[] = [
     metaTitle: "AI Solutions & Chatbot Development India | ZED Labs",
     metaDescription: "Build AI chatbots, automation workflows, and data analytics solutions. Cut costs, save time, and outperform competitors with ZED Labs AI solutions.",
     metaKeywords: ["AI solutions", "chatbot development", "AI automation", "machine learning India", "AI for business"],
+    relatedServices: ["crm-software", "custom-websites", "digital-marketing"],
   },
   {
     slug: "digital-marketing",
@@ -252,6 +260,7 @@ export const SERVICES: ServiceItem[] = [
     metaTitle: "Digital Marketing Services India | SEO & Google Ads | ZED Labs",
     metaDescription: "Data-driven SEO, Google Ads, and social media marketing that delivers measurable ROI. Track every lead from click to customer with ZED Labs.",
     metaKeywords: ["digital marketing India", "SEO services", "Google Ads", "social media marketing", "online marketing"],
+    relatedServices: ["custom-websites", "ecommerce-solutions", "ai-solutions"],
   },
   {
     slug: "ui-ux-design",
@@ -280,6 +289,7 @@ export const SERVICES: ServiceItem[] = [
     metaTitle: "UI/UX Design Services India | User Interface Design | ZED Labs",
     metaDescription: "Professional UI/UX design with wireframes, prototypes, and design systems. Research-driven design that converts users into customers. By ZED Labs.",
     metaKeywords: ["UI UX design", "user interface design", "UX design India", "wireframing", "prototyping", "design system"],
+    relatedServices: ["custom-websites", "mobile-apps", "ecommerce-solutions"],
   },
   {
     slug: "cloud-devops",
@@ -308,6 +318,7 @@ export const SERVICES: ServiceItem[] = [
     metaTitle: "Cloud & DevOps Services India | AWS Azure GCP | ZED Labs",
     metaDescription: "Enterprise-grade cloud infrastructure on AWS, Azure, and GCP. CI/CD pipelines, auto-scaling, monitoring, and cost optimization by ZED Labs.",
     metaKeywords: ["cloud services India", "DevOps", "AWS", "Azure", "CI/CD", "cloud migration", "infrastructure"],
+    relatedServices: ["cybersecurity", "maintenance-amc", "erp-systems"],
   },
   {
     slug: "maintenance-amc",
@@ -336,6 +347,7 @@ export const SERVICES: ServiceItem[] = [
     metaTitle: "Website Maintenance & AMC Services India | ZED Labs",
     metaDescription: "Annual maintenance contracts for websites and software. Security updates, monitoring, bug fixes, and priority support. Keep your software running with ZED Labs.",
     metaKeywords: ["website maintenance", "AMC", "annual maintenance contract", "website support", "software maintenance India"],
+    relatedServices: ["cloud-devops", "cybersecurity", "custom-websites"],
   },
   {
     slug: "cybersecurity",
@@ -364,6 +376,7 @@ export const SERVICES: ServiceItem[] = [
     metaTitle: "Cybersecurity Services India | Security Audits | ZED Labs",
     metaDescription: "Comprehensive cybersecurity — audits, penetration testing, compliance, and 24/7 threat monitoring. Protect your business from cyber threats with ZED Labs.",
     metaKeywords: ["cybersecurity India", "security audit", "penetration testing", "data protection", "compliance", "GDPR"],
+    relatedServices: ["cloud-devops", "maintenance-amc", "erp-systems"],
   },
 ];
 
