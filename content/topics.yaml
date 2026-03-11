@@ -1,5 +1,4 @@
 nextCategoryIndex: 0
-
 categoryRotation:
   - custom-websites
   - ai-solutions
@@ -13,796 +12,862 @@ categoryRotation:
   - cybersecurity
   - hospitality-pos
   - maintenance-amc
-
 topics:
-  # ── CUSTOM WEBSITES (4 topics) ──────────────────────────────────────
-
   - id: cw-001
     category: custom-websites
     title: "Website Development Cost in India 2026: Complete Pricing Guide"
-    targetKeyword: "website development cost in India"
+    targetKeyword: website development cost in India
     secondaryKeywords:
-      - "custom website price India"
-      - "web development charges India"
-      - "website design cost Bangalore"
+      - custom website price India
+      - web development charges India
+      - website design cost Bangalore
     contentType: cost-guide
     schemaType: Article
-    relatedServices: ["custom-websites", "ui-ux-design"]
-    indiaAngle: "INR pricing tiers from ₹25K to ₹10L+, GST implications, city-wise rate comparison (Bangalore, Mumbai, Delhi)"
-    status: planned
-    publishedAt: null
+    relatedServices:
+      - custom-websites
+      - ui-ux-design
+    indiaAngle: INR pricing tiers from ₹25K to ₹10L+, GST implications, city-wise rate comparison (Bangalore, Mumbai, Delhi)
+    status: published
+    publishedAt: "2026-03-11"
     slug: website-development-cost-india-2026
-
   - id: cw-002
     category: custom-websites
     title: "Website Launch Checklist 2026: 40 Things to Check Before Going Live"
-    targetKeyword: "website launch checklist"
+    targetKeyword: website launch checklist
     secondaryKeywords:
-      - "website go live checklist"
-      - "new website checklist India"
-      - "website testing checklist"
+      - website go live checklist
+      - new website checklist India
+      - website testing checklist
     contentType: checklist
     schemaType: Article
-    relatedServices: ["custom-websites", "cybersecurity"]
-    indiaAngle: "Indian hosting providers, .in domain considerations, RBI compliance for payment pages, GSTIN display requirements"
+    relatedServices:
+      - custom-websites
+      - cybersecurity
+    indiaAngle: Indian hosting providers, .in domain considerations, RBI compliance for payment pages, GSTIN display requirements
     status: planned
     publishedAt: null
     slug: website-launch-checklist-2026
-
   - id: cw-003
     category: custom-websites
     title: "How to Choose a Web Development Company in India: 12 Red Flags to Watch"
-    targetKeyword: "web development company India"
+    targetKeyword: web development company India
     secondaryKeywords:
-      - "choose website developer India"
-      - "best web development company"
-      - "hire web developer India"
+      - choose website developer India
+      - best web development company
+      - hire web developer India
     contentType: listicle
     schemaType: Article
-    relatedServices: ["custom-websites", "maintenance-amc"]
-    indiaAngle: "Freelancer vs agency comparison in Indian market, typical scams, MSME verification tips, portfolio evaluation"
+    relatedServices:
+      - custom-websites
+      - maintenance-amc
+    indiaAngle: Freelancer vs agency comparison in Indian market, typical scams, MSME verification tips, portfolio evaluation
     status: planned
     publishedAt: null
     slug: choose-web-development-company-india
-
   - id: cw-004
     category: custom-websites
-    title: "10 Website Mistakes That Are Costing Indian Businesses Lakhs Every Year"
-    targetKeyword: "website mistakes Indian business"
+    title: 10 Website Mistakes That Are Costing Indian Businesses Lakhs Every Year
+    targetKeyword: website mistakes Indian business
     secondaryKeywords:
-      - "website design mistakes"
-      - "common website errors"
-      - "website conversion mistakes"
+      - website design mistakes
+      - common website errors
+      - website conversion mistakes
     contentType: listicle
     schemaType: Article
-    relatedServices: ["custom-websites", "digital-marketing"]
-    indiaAngle: "Real examples from Indian SMEs, revenue impact in INR, mobile-first India stats (75%+ mobile traffic)"
+    relatedServices:
+      - custom-websites
+      - digital-marketing
+    indiaAngle: Real examples from Indian SMEs, revenue impact in INR, mobile-first India stats (75%+ mobile traffic)
     status: planned
     publishedAt: null
     slug: website-mistakes-costing-indian-businesses
-
-  # ── AI SOLUTIONS (4 topics) ─────────────────────────────────────────
-
   - id: ai-001
     category: ai-solutions
     title: "AI for Small Business in India: 15 Practical Use Cases That Save Money"
-    targetKeyword: "AI for small business India"
+    targetKeyword: AI for small business India
     secondaryKeywords:
-      - "AI solutions Indian SME"
-      - "artificial intelligence small business"
-      - "AI automation India"
+      - AI solutions Indian SME
+      - artificial intelligence small business
+      - AI automation India
     contentType: listicle
     schemaType: Article
-    relatedServices: ["ai-solutions", "crm-software"]
-    indiaAngle: "Use cases for Indian SMEs — inventory prediction, WhatsApp automation, GST invoice processing, regional language support"
+    relatedServices:
+      - ai-solutions
+      - crm-software
+    indiaAngle: >-
+      Use cases for Indian SMEs — inventory prediction, WhatsApp automation, GST invoice processing, regional language
+      support
     status: planned
     publishedAt: null
     slug: ai-for-small-business-india
-
   - id: ai-002
     category: ai-solutions
     title: "AI Chatbot Development Cost in India 2026: What to Expect"
-    targetKeyword: "AI chatbot development cost India"
+    targetKeyword: AI chatbot development cost India
     secondaryKeywords:
-      - "chatbot price India"
-      - "WhatsApp chatbot cost"
-      - "build AI chatbot India"
+      - chatbot price India
+      - WhatsApp chatbot cost
+      - build AI chatbot India
     contentType: cost-guide
     schemaType: Article
-    relatedServices: ["ai-solutions", "custom-websites"]
-    indiaAngle: "WhatsApp Business API pricing in India, Hindi/regional language chatbot costs, comparison with hiring support staff"
+    relatedServices:
+      - ai-solutions
+      - custom-websites
+    indiaAngle: >-
+      WhatsApp Business API pricing in India, Hindi/regional language chatbot costs, comparison with hiring support
+      staff
     status: planned
     publishedAt: null
     slug: ai-chatbot-development-cost-india-2026
-
   - id: ai-003
     category: ai-solutions
     title: "How to Automate Your Business With AI: A Step-by-Step Guide for Indian Companies"
-    targetKeyword: "automate business with AI India"
+    targetKeyword: automate business with AI India
     secondaryKeywords:
-      - "AI automation guide"
-      - "business process automation India"
-      - "AI workflow automation"
+      - AI automation guide
+      - business process automation India
+      - AI workflow automation
     contentType: how-to
     schemaType: HowTo
-    relatedServices: ["ai-solutions", "erp-systems"]
-    indiaAngle: "GST return automation, invoice processing, Tally integration, Indian regulatory compliance automation"
+    relatedServices:
+      - ai-solutions
+      - erp-systems
+    indiaAngle: GST return automation, invoice processing, Tally integration, Indian regulatory compliance automation
     status: planned
     publishedAt: null
     slug: automate-business-ai-india-guide
-
   - id: ai-004
     category: ai-solutions
     title: "Machine Learning in Indian Manufacturing: Real Applications and ROI"
-    targetKeyword: "machine learning manufacturing India"
+    targetKeyword: machine learning manufacturing India
     secondaryKeywords:
-      - "AI in manufacturing India"
-      - "ML applications factory"
-      - "predictive maintenance India"
+      - AI in manufacturing India
+      - ML applications factory
+      - predictive maintenance India
     contentType: how-to
     schemaType: Article
-    relatedServices: ["ai-solutions", "erp-systems"]
-    indiaAngle: "Make in India context, textile and pharma manufacturing examples, quality control in Indian factories, ROI in INR"
+    relatedServices:
+      - ai-solutions
+      - erp-systems
+    indiaAngle: Make in India context, textile and pharma manufacturing examples, quality control in Indian factories, ROI in INR
     status: planned
     publishedAt: null
     slug: machine-learning-indian-manufacturing
-
-  # ── DIGITAL MARKETING (4 topics) ────────────────────────────────────
-
   - id: dm-001
     category: digital-marketing
     title: "Digital Marketing Cost in India 2026: Complete Budget Guide for Businesses"
-    targetKeyword: "digital marketing cost India"
+    targetKeyword: digital marketing cost India
     secondaryKeywords:
-      - "digital marketing pricing India"
-      - "online marketing budget"
-      - "digital marketing packages India"
+      - digital marketing pricing India
+      - online marketing budget
+      - digital marketing packages India
     contentType: cost-guide
     schemaType: Article
-    relatedServices: ["digital-marketing", "custom-websites"]
-    indiaAngle: "INR pricing for SEO, PPC, social media; agency vs freelancer costs in Indian market; city-wise comparison"
+    relatedServices:
+      - digital-marketing
+      - custom-websites
+    indiaAngle: INR pricing for SEO, PPC, social media; agency vs freelancer costs in Indian market; city-wise comparison
     status: planned
     publishedAt: null
     slug: digital-marketing-cost-india-2026
-
   - id: dm-002
     category: digital-marketing
     title: "SEO for Indian Businesses: How to Rank #1 on Google India in 2026"
-    targetKeyword: "SEO for Indian business"
+    targetKeyword: SEO for Indian business
     secondaryKeywords:
-      - "SEO India guide"
-      - "Google ranking India"
-      - "local SEO India"
+      - SEO India guide
+      - Google ranking India
+      - local SEO India
     contentType: how-to
     schemaType: HowTo
-    relatedServices: ["digital-marketing", "custom-websites"]
-    indiaAngle: "Google.co.in ranking factors, local SEO for Indian cities, Google My Business India, Hindi content SEO, Indian backlink strategies"
+    relatedServices:
+      - digital-marketing
+      - custom-websites
+    indiaAngle: >-
+      Google.co.in ranking factors, local SEO for Indian cities, Google My Business India, Hindi content SEO, Indian
+      backlink strategies
     status: planned
     publishedAt: null
     slug: seo-for-indian-businesses-rank-google-2026
-
   - id: dm-003
     category: digital-marketing
     title: "Google Ads for Indian Businesses: Complete Setup Checklist and Budget Guide"
-    targetKeyword: "Google Ads India guide"
+    targetKeyword: Google Ads India guide
     secondaryKeywords:
-      - "Google Ads cost India"
-      - "PPC advertising India"
-      - "Google Ads setup checklist"
+      - Google Ads cost India
+      - PPC advertising India
+      - Google Ads setup checklist
     contentType: checklist
     schemaType: Article
-    relatedServices: ["digital-marketing", "ecommerce-solutions"]
-    indiaAngle: "Indian CPC benchmarks by industry, INR budget recommendations, GST on Google Ads billing, regional targeting tips"
+    relatedServices:
+      - digital-marketing
+      - ecommerce-solutions
+    indiaAngle: Indian CPC benchmarks by industry, INR budget recommendations, GST on Google Ads billing, regional targeting tips
     status: planned
     publishedAt: null
     slug: google-ads-india-setup-checklist-budget
-
   - id: dm-004
     category: digital-marketing
     title: "Social Media Marketing Strategy for Indian Brands: Platform-by-Platform Guide"
-    targetKeyword: "social media marketing India"
+    targetKeyword: social media marketing India
     secondaryKeywords:
-      - "social media strategy Indian brands"
-      - "Instagram marketing India"
-      - "social media for business India"
+      - social media strategy Indian brands
+      - Instagram marketing India
+      - social media for business India
     contentType: how-to
     schemaType: Article
-    relatedServices: ["digital-marketing", "ui-ux-design"]
-    indiaAngle: "Instagram Reels India, WhatsApp Status marketing, regional language content, festive season campaigns (Diwali, Holi)"
+    relatedServices:
+      - digital-marketing
+      - ui-ux-design
+    indiaAngle: >-
+      Instagram Reels India, WhatsApp Status marketing, regional language content, festive season campaigns (Diwali,
+      Holi)
     status: planned
     publishedAt: null
     slug: social-media-marketing-strategy-india
-
-  # ── ERP SYSTEMS (4 topics) ──────────────────────────────────────────
-
   - id: erp-001
     category: erp-systems
     title: "ERP Software Cost in India 2026: Complete Pricing Breakdown"
-    targetKeyword: "ERP software cost India"
+    targetKeyword: ERP software cost India
     secondaryKeywords:
-      - "ERP price India"
-      - "custom ERP development cost"
-      - "ERP implementation cost"
+      - ERP price India
+      - custom ERP development cost
+      - ERP implementation cost
     contentType: cost-guide
     schemaType: Article
-    relatedServices: ["erp-systems", "crm-software"]
-    indiaAngle: "SAP Business One India pricing, custom ERP in INR, GST module costs, Tally integration fees, cloud vs on-premise in India"
+    relatedServices:
+      - erp-systems
+      - crm-software
+    indiaAngle: >-
+      SAP Business One India pricing, custom ERP in INR, GST module costs, Tally integration fees, cloud vs on-premise
+      in India
     status: planned
     publishedAt: null
     slug: erp-software-cost-india-2026
-
   - id: erp-002
     category: erp-systems
     title: "SAP vs Custom ERP: Which Is Right for Your Indian Business?"
-    targetKeyword: "SAP vs custom ERP India"
+    targetKeyword: SAP vs custom ERP India
     secondaryKeywords:
-      - "SAP alternative India"
-      - "custom ERP vs SAP"
-      - "ERP comparison India"
+      - SAP alternative India
+      - custom ERP vs SAP
+      - ERP comparison India
     contentType: comparison
     schemaType: Article
-    relatedServices: ["erp-systems", "cloud-devops"]
-    indiaAngle: "Indian mid-market business needs, GST compliance comparison, Tally migration path, TCO in INR over 5 years"
+    relatedServices:
+      - erp-systems
+      - cloud-devops
+    indiaAngle: Indian mid-market business needs, GST compliance comparison, Tally migration path, TCO in INR over 5 years
     status: planned
     publishedAt: null
     slug: sap-vs-custom-erp-india
-
   - id: erp-003
     category: erp-systems
     title: "How to Implement ERP Successfully: 8-Step Guide for Indian Manufacturers"
-    targetKeyword: "ERP implementation guide India"
+    targetKeyword: ERP implementation guide India
     secondaryKeywords:
-      - "ERP implementation steps"
-      - "ERP for manufacturing India"
-      - "ERP project plan"
+      - ERP implementation steps
+      - ERP for manufacturing India
+      - ERP project plan
     contentType: how-to
     schemaType: HowTo
-    relatedServices: ["erp-systems", "maintenance-amc"]
-    indiaAngle: "Indian manufacturing challenges, multi-plant setups, GST compliance from day one, employee training in Indian context"
+    relatedServices:
+      - erp-systems
+      - maintenance-amc
+    indiaAngle: >-
+      Indian manufacturing challenges, multi-plant setups, GST compliance from day one, employee training in Indian
+      context
     status: planned
     publishedAt: null
     slug: erp-implementation-guide-indian-manufacturers
-
   - id: erp-004
     category: erp-systems
     title: "ERP for Textile and Garment Industry in India: Features You Actually Need"
-    targetKeyword: "ERP textile industry India"
+    targetKeyword: ERP textile industry India
     secondaryKeywords:
-      - "garment ERP India"
-      - "textile manufacturing software"
-      - "ERP for apparel industry"
+      - garment ERP India
+      - textile manufacturing software
+      - ERP for apparel industry
     contentType: how-to
     schemaType: Article
-    relatedServices: ["erp-systems", "ai-solutions"]
-    indiaAngle: "Tirupur, Surat, Ludhiana textile hubs, GST for textile sector, export documentation, BIS compliance"
+    relatedServices:
+      - erp-systems
+      - ai-solutions
+    indiaAngle: Tirupur, Surat, Ludhiana textile hubs, GST for textile sector, export documentation, BIS compliance
     status: planned
     publishedAt: null
     slug: erp-textile-garment-industry-india
-
-  # ── MOBILE APPS (4 topics) ─────────────────────────────────────────
-
   - id: ma-001
     category: mobile-apps
     title: "Mobile App Development Cost in India 2026: Detailed Pricing Guide"
-    targetKeyword: "app development cost India"
+    targetKeyword: app development cost India
     secondaryKeywords:
-      - "mobile app price India"
-      - "Android app development cost"
-      - "iOS app development cost India"
+      - mobile app price India
+      - Android app development cost
+      - iOS app development cost India
     contentType: cost-guide
     schemaType: Article
-    relatedServices: ["mobile-apps", "ui-ux-design"]
-    indiaAngle: "INR pricing tiers by app complexity, Android-first India market, UPI integration costs, Play Store listing fees"
+    relatedServices:
+      - mobile-apps
+      - ui-ux-design
+    indiaAngle: INR pricing tiers by app complexity, Android-first India market, UPI integration costs, Play Store listing fees
     status: planned
     publishedAt: null
     slug: mobile-app-development-cost-india-2026
-
   - id: ma-002
     category: mobile-apps
     title: "Native vs Cross-Platform App Development: What Indian Startups Should Choose"
-    targetKeyword: "native vs cross-platform app India"
+    targetKeyword: native vs cross-platform app India
     secondaryKeywords:
-      - "React Native vs Flutter India"
-      - "cross-platform app development"
-      - "mobile app framework comparison"
+      - React Native vs Flutter India
+      - cross-platform app development
+      - mobile app framework comparison
     contentType: comparison
     schemaType: Article
-    relatedServices: ["mobile-apps", "custom-websites"]
-    indiaAngle: "Indian device fragmentation (low-end Android), network conditions, offline-first needs, Jio phone compatibility"
+    relatedServices:
+      - mobile-apps
+      - custom-websites
+    indiaAngle: Indian device fragmentation (low-end Android), network conditions, offline-first needs, Jio phone compatibility
     status: planned
     publishedAt: null
     slug: native-vs-cross-platform-app-india
-
   - id: ma-003
     category: mobile-apps
     title: "From App Idea to Launch: Complete Guide for Indian Entrepreneurs"
-    targetKeyword: "app idea to launch India"
+    targetKeyword: app idea to launch India
     secondaryKeywords:
-      - "build mobile app India"
-      - "app development process"
-      - "launch app India guide"
+      - build mobile app India
+      - app development process
+      - launch app India guide
     contentType: how-to
     schemaType: HowTo
-    relatedServices: ["mobile-apps", "ui-ux-design"]
-    indiaAngle: "Indian startup ecosystem, funding considerations, Play Store India requirements, UPI/Paytm integration, data localization"
+    relatedServices:
+      - mobile-apps
+      - ui-ux-design
+    indiaAngle: >-
+      Indian startup ecosystem, funding considerations, Play Store India requirements, UPI/Paytm integration, data
+      localization
     status: planned
     publishedAt: null
     slug: app-idea-to-launch-guide-india
-
   - id: ma-004
     category: mobile-apps
     title: "Top Mobile App Development Frameworks in 2026: Which One Fits Your Project?"
-    targetKeyword: "best mobile app framework 2026"
+    targetKeyword: best mobile app framework 2026
     secondaryKeywords:
-      - "Flutter vs React Native 2026"
-      - "app development technology"
-      - "mobile framework comparison"
+      - Flutter vs React Native 2026
+      - app development technology
+      - mobile framework comparison
     contentType: comparison
     schemaType: Article
-    relatedServices: ["mobile-apps", "cloud-devops"]
-    indiaAngle: "Framework adoption trends in Indian dev market, hiring availability in Indian cities, community size in India"
+    relatedServices:
+      - mobile-apps
+      - cloud-devops
+    indiaAngle: Framework adoption trends in Indian dev market, hiring availability in Indian cities, community size in India
     status: planned
     publishedAt: null
     slug: top-mobile-app-frameworks-2026
-
-  # ── ECOMMERCE SOLUTIONS (4 topics) ──────────────────────────────────
-
   - id: ec-001
     category: ecommerce-solutions
     title: "eCommerce Website Cost in India 2026: From Basic Store to Enterprise"
-    targetKeyword: "ecommerce website cost India"
+    targetKeyword: ecommerce website cost India
     secondaryKeywords:
-      - "online store development cost"
-      - "ecommerce development India"
-      - "Shopify store cost India"
+      - online store development cost
+      - ecommerce development India
+      - Shopify store cost India
     contentType: cost-guide
     schemaType: Article
-    relatedServices: ["ecommerce-solutions", "custom-websites"]
-    indiaAngle: "INR pricing for WooCommerce, Shopify, custom builds; payment gateway fees (Razorpay, PayU); GST on ecommerce"
+    relatedServices:
+      - ecommerce-solutions
+      - custom-websites
+    indiaAngle: INR pricing for WooCommerce, Shopify, custom builds; payment gateway fees (Razorpay, PayU); GST on ecommerce
     status: planned
     publishedAt: null
     slug: ecommerce-website-cost-india-2026
-
   - id: ec-002
     category: ecommerce-solutions
     title: "Shopify vs Custom eCommerce: Which Is Better for Indian Sellers?"
-    targetKeyword: "Shopify vs custom ecommerce India"
+    targetKeyword: Shopify vs custom ecommerce India
     secondaryKeywords:
-      - "Shopify India review"
-      - "custom ecommerce website"
-      - "best ecommerce platform India"
+      - Shopify India review
+      - custom ecommerce website
+      - best ecommerce platform India
     contentType: comparison
     schemaType: Article
-    relatedServices: ["ecommerce-solutions", "digital-marketing"]
-    indiaAngle: "Shopify India pricing in INR, payment gateway integration, COD handling, Indian shipping API integration (Shiprocket, Delhivery)"
+    relatedServices:
+      - ecommerce-solutions
+      - digital-marketing
+    indiaAngle: >-
+      Shopify India pricing in INR, payment gateway integration, COD handling, Indian shipping API integration
+      (Shiprocket, Delhivery)
     status: planned
     publishedAt: null
     slug: shopify-vs-custom-ecommerce-india
-
   - id: ec-003
     category: ecommerce-solutions
     title: "How to Launch an Online Store in India: Complete Step-by-Step Guide"
-    targetKeyword: "launch online store India"
+    targetKeyword: launch online store India
     secondaryKeywords:
-      - "start ecommerce business India"
-      - "online selling India guide"
-      - "ecommerce setup India"
+      - start ecommerce business India
+      - online selling India guide
+      - ecommerce setup India
     contentType: how-to
     schemaType: HowTo
-    relatedServices: ["ecommerce-solutions", "digital-marketing"]
-    indiaAngle: "FSSAI/Drug license requirements, GST registration for ecommerce, COD vs prepaid strategy, Indian logistics partners"
+    relatedServices:
+      - ecommerce-solutions
+      - digital-marketing
+    indiaAngle: >-
+      FSSAI/Drug license requirements, GST registration for ecommerce, COD vs prepaid strategy, Indian logistics
+      partners
     status: planned
     publishedAt: null
     slug: launch-online-store-india-guide
-
   - id: ec-004
     category: ecommerce-solutions
     title: "eCommerce SEO Checklist for Indian Online Stores: 30 Must-Do Items"
-    targetKeyword: "ecommerce SEO checklist India"
+    targetKeyword: ecommerce SEO checklist India
     secondaryKeywords:
-      - "online store SEO"
-      - "ecommerce SEO India"
-      - "product page optimization"
+      - online store SEO
+      - ecommerce SEO India
+      - product page optimization
     contentType: checklist
     schemaType: Article
-    relatedServices: ["ecommerce-solutions", "digital-marketing"]
-    indiaAngle: "Google Shopping India, regional language product listings, Indian marketplace SEO (Amazon.in, Flipkart competitor strategy)"
+    relatedServices:
+      - ecommerce-solutions
+      - digital-marketing
+    indiaAngle: >-
+      Google Shopping India, regional language product listings, Indian marketplace SEO (Amazon.in, Flipkart competitor
+      strategy)
     status: planned
     publishedAt: null
     slug: ecommerce-seo-checklist-india
-
-  # ── CRM SOFTWARE (4 topics) ────────────────────────────────────────
-
   - id: crm-001
     category: crm-software
     title: "CRM Software Cost in India 2026: Salesforce vs Custom vs Open Source"
-    targetKeyword: "CRM software cost India"
+    targetKeyword: CRM software cost India
     secondaryKeywords:
-      - "CRM price India"
-      - "Salesforce cost India"
-      - "custom CRM development cost"
+      - CRM price India
+      - Salesforce cost India
+      - custom CRM development cost
     contentType: cost-guide
     schemaType: Article
-    relatedServices: ["crm-software", "erp-systems"]
-    indiaAngle: "Salesforce India pricing in INR, Zoho CRM comparison, custom CRM for Indian sales workflows, WhatsApp CRM integration costs"
+    relatedServices:
+      - crm-software
+      - erp-systems
+    indiaAngle: >-
+      Salesforce India pricing in INR, Zoho CRM comparison, custom CRM for Indian sales workflows, WhatsApp CRM
+      integration costs
     status: planned
     publishedAt: null
     slug: crm-software-cost-india-2026
-
   - id: crm-002
     category: crm-software
     title: "Salesforce vs Custom CRM: What Growing Indian Businesses Should Know"
-    targetKeyword: "Salesforce vs custom CRM India"
+    targetKeyword: Salesforce vs custom CRM India
     secondaryKeywords:
-      - "Salesforce alternative India"
-      - "custom CRM vs Salesforce"
-      - "best CRM for Indian business"
+      - Salesforce alternative India
+      - custom CRM vs Salesforce
+      - best CRM for Indian business
     contentType: comparison
     schemaType: Article
-    relatedServices: ["crm-software", "ai-solutions"]
-    indiaAngle: "Indian sales cycle differences, WhatsApp integration needs, INR TCO comparison, Indian data residency compliance"
+    relatedServices:
+      - crm-software
+      - ai-solutions
+    indiaAngle: Indian sales cycle differences, WhatsApp integration needs, INR TCO comparison, Indian data residency compliance
     status: planned
     publishedAt: null
     slug: salesforce-vs-custom-crm-india
-
   - id: crm-003
     category: crm-software
     title: "How to Choose the Right CRM for Your Indian Business: Decision Framework"
-    targetKeyword: "choose CRM Indian business"
+    targetKeyword: choose CRM Indian business
     secondaryKeywords:
-      - "CRM selection guide"
-      - "best CRM India"
-      - "CRM for SME India"
+      - CRM selection guide
+      - best CRM India
+      - CRM for SME India
     contentType: how-to
     schemaType: Article
-    relatedServices: ["crm-software", "digital-marketing"]
-    indiaAngle: "Indian SME requirements, multi-language support, WhatsApp/IVR integration, team adoption challenges in Indian companies"
+    relatedServices:
+      - crm-software
+      - digital-marketing
+    indiaAngle: >-
+      Indian SME requirements, multi-language support, WhatsApp/IVR integration, team adoption challenges in Indian
+      companies
     status: planned
     publishedAt: null
     slug: choose-crm-indian-business-guide
-
   - id: crm-004
     category: crm-software
-    title: "12 CRM Features Every Indian SME Needs (and 5 They Don't)"
-    targetKeyword: "CRM features Indian SME"
+    title: 12 CRM Features Every Indian SME Needs (and 5 They Don't)
+    targetKeyword: CRM features Indian SME
     secondaryKeywords:
-      - "CRM features list"
-      - "small business CRM India"
-      - "CRM must-have features"
+      - CRM features list
+      - small business CRM India
+      - CRM must-have features
     contentType: listicle
     schemaType: Article
-    relatedServices: ["crm-software", "mobile-apps"]
-    indiaAngle: "WhatsApp lead capture, JustDial integration, India-specific pipeline stages, festival campaign management"
+    relatedServices:
+      - crm-software
+      - mobile-apps
+    indiaAngle: WhatsApp lead capture, JustDial integration, India-specific pipeline stages, festival campaign management
     status: planned
     publishedAt: null
     slug: crm-features-indian-sme
-
-  # ── UI/UX DESIGN (4 topics) ────────────────────────────────────────
-
   - id: ux-001
     category: ui-ux-design
     title: "UI/UX Design Cost in India 2026: What to Budget for Great Design"
-    targetKeyword: "UI UX design cost India"
+    targetKeyword: UI UX design cost India
     secondaryKeywords:
-      - "website design charges India"
-      - "UX design pricing"
-      - "UI designer cost India"
+      - website design charges India
+      - UX design pricing
+      - UI designer cost India
     contentType: cost-guide
     schemaType: Article
-    relatedServices: ["ui-ux-design", "custom-websites"]
-    indiaAngle: "INR pricing for freelance vs agency, Bangalore/Mumbai design hub rates, international quality at Indian prices"
+    relatedServices:
+      - ui-ux-design
+      - custom-websites
+    indiaAngle: INR pricing for freelance vs agency, Bangalore/Mumbai design hub rates, international quality at Indian prices
     status: planned
     publishedAt: null
     slug: ui-ux-design-cost-india-2026
-
   - id: ux-002
     category: ui-ux-design
     title: "How to Improve Website Conversion Rate: 15 UX Changes That Actually Work"
-    targetKeyword: "improve website conversion rate"
+    targetKeyword: improve website conversion rate
     secondaryKeywords:
-      - "website conversion optimization"
-      - "UX for conversion"
-      - "increase website leads"
+      - website conversion optimization
+      - UX for conversion
+      - increase website leads
     contentType: listicle
     schemaType: Article
-    relatedServices: ["ui-ux-design", "custom-websites"]
-    indiaAngle: "Indian user behavior patterns, mobile-first optimization (75%+ mobile users), WhatsApp CTA buttons, trust signals for Indian buyers"
+    relatedServices:
+      - ui-ux-design
+      - custom-websites
+    indiaAngle: >-
+      Indian user behavior patterns, mobile-first optimization (75%+ mobile users), WhatsApp CTA buttons, trust signals
+      for Indian buyers
     status: planned
     publishedAt: null
     slug: improve-website-conversion-rate-ux
-
   - id: ux-003
     category: ui-ux-design
     title: "Website UI Audit Checklist: 25 Things to Review Before Your Next Redesign"
-    targetKeyword: "website UI audit checklist"
+    targetKeyword: website UI audit checklist
     secondaryKeywords:
-      - "UI review checklist"
-      - "website design review"
-      - "UX audit guide"
+      - UI review checklist
+      - website design review
+      - UX audit guide
     contentType: checklist
     schemaType: Article
-    relatedServices: ["ui-ux-design", "maintenance-amc"]
-    indiaAngle: "Accessibility for Indian languages, right-to-left for Urdu, slow network optimization, mobile data saver mode compatibility"
+    relatedServices:
+      - ui-ux-design
+      - maintenance-amc
+    indiaAngle: >-
+      Accessibility for Indian languages, right-to-left for Urdu, slow network optimization, mobile data saver mode
+      compatibility
     status: planned
     publishedAt: null
     slug: website-ui-audit-checklist
-
   - id: ux-004
     category: ui-ux-design
     title: "Design Agency vs Freelance Designer in India: How to Decide"
-    targetKeyword: "design agency vs freelancer India"
+    targetKeyword: design agency vs freelancer India
     secondaryKeywords:
-      - "hire UI designer India"
-      - "design agency India"
-      - "freelance designer cost India"
+      - hire UI designer India
+      - design agency India
+      - freelance designer cost India
     contentType: comparison
     schemaType: Article
-    relatedServices: ["ui-ux-design", "custom-websites"]
-    indiaAngle: "Indian freelancer platforms (Upwork India, Toptal), agency rates in Bangalore/Mumbai, IP ownership under Indian law"
+    relatedServices:
+      - ui-ux-design
+      - custom-websites
+    indiaAngle: >-
+      Indian freelancer platforms (Upwork India, Toptal), agency rates in Bangalore/Mumbai, IP ownership under Indian
+      law
     status: planned
     publishedAt: null
     slug: design-agency-vs-freelancer-india
-
-  # ── CLOUD & DEVOPS (4 topics) ──────────────────────────────────────
-
   - id: cd-001
     category: cloud-devops
     title: "Cloud Hosting Cost in India 2026: AWS vs Azure vs Google Cloud"
-    targetKeyword: "cloud hosting cost India"
+    targetKeyword: cloud hosting cost India
     secondaryKeywords:
-      - "AWS pricing India"
-      - "Azure cost India"
-      - "cloud server India"
+      - AWS pricing India
+      - Azure cost India
+      - cloud server India
     contentType: cost-guide
     schemaType: Article
-    relatedServices: ["cloud-devops", "cybersecurity"]
-    indiaAngle: "Mumbai/Hyderabad region pricing, INR billing options, Indian data residency laws, comparison with Indian hosts (DigitalOcean Mumbai)"
+    relatedServices:
+      - cloud-devops
+      - cybersecurity
+    indiaAngle: >-
+      Mumbai/Hyderabad region pricing, INR billing options, Indian data residency laws, comparison with Indian hosts
+      (DigitalOcean Mumbai)
     status: planned
     publishedAt: null
     slug: cloud-hosting-cost-india-aws-azure-gcp
-
   - id: cd-002
     category: cloud-devops
     title: "How to Migrate Your Business to the Cloud: Step-by-Step Guide for Indian Companies"
-    targetKeyword: "cloud migration India guide"
+    targetKeyword: cloud migration India guide
     secondaryKeywords:
-      - "move to cloud India"
-      - "cloud migration steps"
-      - "cloud for Indian business"
+      - move to cloud India
+      - cloud migration steps
+      - cloud for Indian business
     contentType: how-to
     schemaType: HowTo
-    relatedServices: ["cloud-devops", "erp-systems"]
-    indiaAngle: "Indian data protection bill compliance, migrating from on-premise to cloud in Indian IT infrastructure, Tally cloud migration"
+    relatedServices:
+      - cloud-devops
+      - erp-systems
+    indiaAngle: >-
+      Indian data protection bill compliance, migrating from on-premise to cloud in Indian IT infrastructure, Tally
+      cloud migration
     status: planned
     publishedAt: null
     slug: cloud-migration-guide-india
-
   - id: cd-003
     category: cloud-devops
     title: "AWS vs Azure for Indian Businesses: Which Cloud Platform Should You Choose?"
-    targetKeyword: "AWS vs Azure India"
+    targetKeyword: AWS vs Azure India
     secondaryKeywords:
-      - "cloud platform comparison India"
-      - "best cloud provider India"
-      - "AWS Azure Google Cloud India"
+      - cloud platform comparison India
+      - best cloud provider India
+      - AWS Azure Google Cloud India
     contentType: comparison
     schemaType: Article
-    relatedServices: ["cloud-devops", "maintenance-amc"]
-    indiaAngle: "Indian region availability, INR billing and tax implications, Indian enterprise adoption trends, Mumbai region latency"
+    relatedServices:
+      - cloud-devops
+      - maintenance-amc
+    indiaAngle: >-
+      Indian region availability, INR billing and tax implications, Indian enterprise adoption trends, Mumbai region
+      latency
     status: planned
     publishedAt: null
     slug: aws-vs-azure-india-comparison
-
   - id: cd-004
     category: cloud-devops
     title: "DevOps Readiness Checklist: Is Your Indian IT Team Ready for CI/CD?"
-    targetKeyword: "DevOps readiness checklist"
+    targetKeyword: DevOps readiness checklist
     secondaryKeywords:
-      - "DevOps India"
-      - "CI CD implementation"
-      - "DevOps for Indian companies"
+      - DevOps India
+      - CI CD implementation
+      - DevOps for Indian companies
     contentType: checklist
     schemaType: Article
-    relatedServices: ["cloud-devops", "maintenance-amc"]
-    indiaAngle: "Indian IT team skill gaps, DevOps hiring market in Bangalore/Hyderabad, cost of DevOps transformation in INR"
+    relatedServices:
+      - cloud-devops
+      - maintenance-amc
+    indiaAngle: Indian IT team skill gaps, DevOps hiring market in Bangalore/Hyderabad, cost of DevOps transformation in INR
     status: planned
     publishedAt: null
     slug: devops-readiness-checklist-india
-
-  # ── CYBERSECURITY (4 topics) ───────────────────────────────────────
-
   - id: cs-001
     category: cybersecurity
     title: "Cybersecurity Cost for Indian Businesses 2026: What to Budget"
-    targetKeyword: "cybersecurity cost India"
+    targetKeyword: cybersecurity cost India
     secondaryKeywords:
-      - "cyber security pricing India"
-      - "security audit cost India"
-      - "website security cost"
+      - cyber security pricing India
+      - security audit cost India
+      - website security cost
     contentType: cost-guide
     schemaType: Article
-    relatedServices: ["cybersecurity", "cloud-devops"]
-    indiaAngle: "CERT-In compliance costs, Indian data protection act budget, INR pricing for security audits, insurance costs in India"
+    relatedServices:
+      - cybersecurity
+      - cloud-devops
+    indiaAngle: >-
+      CERT-In compliance costs, Indian data protection act budget, INR pricing for security audits, insurance costs in
+      India
     status: planned
     publishedAt: null
     slug: cybersecurity-cost-india-2026
-
   - id: cs-002
     category: cybersecurity
     title: "How to Secure Your Business Website: Complete Guide for Indian Companies"
-    targetKeyword: "secure business website India"
+    targetKeyword: secure business website India
     secondaryKeywords:
-      - "website security guide"
-      - "protect website from hackers"
-      - "website security checklist"
+      - website security guide
+      - protect website from hackers
+      - website security checklist
     contentType: how-to
     schemaType: HowTo
-    relatedServices: ["cybersecurity", "custom-websites"]
-    indiaAngle: "CERT-In reporting requirements, Indian payment security (PCI DSS for Razorpay/PayU), SSL for .in domains"
+    relatedServices:
+      - cybersecurity
+      - custom-websites
+    indiaAngle: CERT-In reporting requirements, Indian payment security (PCI DSS for Razorpay/PayU), SSL for .in domains
     status: planned
     publishedAt: null
     slug: secure-business-website-india-guide
-
   - id: cs-003
     category: cybersecurity
-    title: "Security Audit Checklist for Indian Websites and Web Applications"
-    targetKeyword: "security audit checklist website"
+    title: Security Audit Checklist for Indian Websites and Web Applications
+    targetKeyword: security audit checklist website
     secondaryKeywords:
-      - "web application security"
-      - "VAPT checklist India"
-      - "website vulnerability assessment"
+      - web application security
+      - VAPT checklist India
+      - website vulnerability assessment
     contentType: checklist
     schemaType: Article
-    relatedServices: ["cybersecurity", "maintenance-amc"]
-    indiaAngle: "CERT-In guidelines, Indian banking/fintech security requirements, DPDP Act compliance checks"
+    relatedServices:
+      - cybersecurity
+      - maintenance-amc
+    indiaAngle: CERT-In guidelines, Indian banking/fintech security requirements, DPDP Act compliance checks
     status: planned
     publishedAt: null
     slug: security-audit-checklist-indian-websites
-
   - id: cs-004
     category: cybersecurity
-    title: "Top 10 Cyber Threats Targeting Indian SMEs in 2026 (and How to Stop Them)"
-    targetKeyword: "cyber threats Indian SME"
+    title: Top 10 Cyber Threats Targeting Indian SMEs in 2026 (and How to Stop Them)
+    targetKeyword: cyber threats Indian SME
     secondaryKeywords:
-      - "cybersecurity threats India"
-      - "SME cyber attacks India"
-      - "ransomware India"
+      - cybersecurity threats India
+      - SME cyber attacks India
+      - ransomware India
     contentType: listicle
     schemaType: Article
-    relatedServices: ["cybersecurity", "cloud-devops"]
-    indiaAngle: "UPI fraud trends, WhatsApp phishing in India, ransomware attacks on Indian companies, CERT-In reported incidents"
+    relatedServices:
+      - cybersecurity
+      - cloud-devops
+    indiaAngle: UPI fraud trends, WhatsApp phishing in India, ransomware attacks on Indian companies, CERT-In reported incidents
     status: planned
     publishedAt: null
     slug: cyber-threats-indian-sme-2026
-
-  # ── HOSPITALITY & POS (4 topics) ───────────────────────────────────
-
   - id: hp-001
     category: hospitality-pos
     title: "POS System Cost in India 2026: Complete Guide for Restaurants and Retail"
-    targetKeyword: "POS system cost India"
+    targetKeyword: POS system cost India
     secondaryKeywords:
-      - "restaurant POS price India"
-      - "billing software cost India"
-      - "POS machine India"
+      - restaurant POS price India
+      - billing software cost India
+      - POS machine India
     contentType: cost-guide
     schemaType: Article
-    relatedServices: ["hospitality-pos", "mobile-apps"]
-    indiaAngle: "GST billing compliance, UPI QR integration costs, Swiggy/Zomato POS integration, Indian POS hardware options"
+    relatedServices:
+      - hospitality-pos
+      - mobile-apps
+    indiaAngle: GST billing compliance, UPI QR integration costs, Swiggy/Zomato POS integration, Indian POS hardware options
     status: planned
     publishedAt: null
     slug: pos-system-cost-india-2026
-
   - id: hp-002
     category: hospitality-pos
     title: "How to Set Up a Restaurant POS System in India: Complete Guide"
-    targetKeyword: "restaurant POS system India"
+    targetKeyword: restaurant POS system India
     secondaryKeywords:
-      - "restaurant billing software India"
-      - "POS setup restaurant"
-      - "best POS for restaurant India"
+      - restaurant billing software India
+      - POS setup restaurant
+      - best POS for restaurant India
     contentType: how-to
     schemaType: HowTo
-    relatedServices: ["hospitality-pos", "ecommerce-solutions"]
-    indiaAngle: "FSSAI compliance, Swiggy/Zomato integration, GST-compliant billing, KOT management for Indian restaurants"
+    relatedServices:
+      - hospitality-pos
+      - ecommerce-solutions
+    indiaAngle: FSSAI compliance, Swiggy/Zomato integration, GST-compliant billing, KOT management for Indian restaurants
     status: planned
     publishedAt: null
     slug: restaurant-pos-setup-india-guide
-
   - id: hp-003
     category: hospitality-pos
     title: "Best POS Systems for Indian Businesses 2026: Compared and Reviewed"
-    targetKeyword: "best POS system India"
+    targetKeyword: best POS system India
     secondaryKeywords:
-      - "POS software comparison India"
-      - "billing software India"
-      - "retail POS India"
+      - POS software comparison India
+      - billing software India
+      - retail POS India
     contentType: comparison
     schemaType: Article
-    relatedServices: ["hospitality-pos", "crm-software"]
-    indiaAngle: "Pine Labs, Petpooja, POSist comparison, UPI integration, multi-outlet management for Indian chains"
+    relatedServices:
+      - hospitality-pos
+      - crm-software
+    indiaAngle: Pine Labs, Petpooja, POSist comparison, UPI integration, multi-outlet management for Indian chains
     status: planned
     publishedAt: null
     slug: best-pos-systems-india-2026
-
   - id: hp-004
     category: hospitality-pos
     title: "Hotel Management Software in India: Features, Pricing, and How to Choose"
-    targetKeyword: "hotel management software India"
+    targetKeyword: hotel management software India
     secondaryKeywords:
-      - "hotel PMS India"
-      - "hotel booking software"
-      - "hospitality software India"
+      - hotel PMS India
+      - hotel booking software
+      - hospitality software India
     contentType: how-to
     schemaType: Article
-    relatedServices: ["hospitality-pos", "ai-solutions"]
-    indiaAngle: "OTA integration (MakeMyTrip, Goibibo), GST for hospitality, seasonal pricing for Indian tourism, multi-property management"
+    relatedServices:
+      - hospitality-pos
+      - ai-solutions
+    indiaAngle: >-
+      OTA integration (MakeMyTrip, Goibibo), GST for hospitality, seasonal pricing for Indian tourism, multi-property
+      management
     status: planned
     publishedAt: null
     slug: hotel-management-software-india
-
-  # ── MAINTENANCE & AMC (4 topics) ───────────────────────────────────
-
   - id: amc-001
     category: maintenance-amc
     title: "Website AMC Cost in India 2026: What Should You Pay for Maintenance?"
-    targetKeyword: "website AMC cost India"
+    targetKeyword: website AMC cost India
     secondaryKeywords:
-      - "website maintenance cost India"
-      - "annual maintenance contract website"
-      - "website support pricing"
+      - website maintenance cost India
+      - annual maintenance contract website
+      - website support pricing
     contentType: cost-guide
     schemaType: Article
-    relatedServices: ["maintenance-amc", "custom-websites"]
-    indiaAngle: "AMC pricing in INR by website type, Indian agency vs freelancer maintenance rates, SLA expectations in Indian market"
+    relatedServices:
+      - maintenance-amc
+      - custom-websites
+    indiaAngle: >-
+      AMC pricing in INR by website type, Indian agency vs freelancer maintenance rates, SLA expectations in Indian
+      market
     status: planned
     publishedAt: null
     slug: website-amc-cost-india-2026
-
   - id: amc-002
     category: maintenance-amc
     title: "How to Choose a Website Maintenance Plan: Guide for Indian Business Owners"
-    targetKeyword: "website maintenance plan India"
+    targetKeyword: website maintenance plan India
     secondaryKeywords:
-      - "choose website support"
-      - "website maintenance services"
-      - "AMC plan selection"
+      - choose website support
+      - website maintenance services
+      - AMC plan selection
     contentType: how-to
     schemaType: Article
-    relatedServices: ["maintenance-amc", "cybersecurity"]
-    indiaAngle: "Indian business expectations for response time, festival season traffic preparation, government compliance updates"
+    relatedServices:
+      - maintenance-amc
+      - cybersecurity
+    indiaAngle: Indian business expectations for response time, festival season traffic preparation, government compliance updates
     status: planned
     publishedAt: null
     slug: choose-website-maintenance-plan-india
-
   - id: amc-003
     category: maintenance-amc
     title: "Website Maintenance Checklist 2026: Monthly, Quarterly, and Annual Tasks"
-    targetKeyword: "website maintenance checklist"
+    targetKeyword: website maintenance checklist
     secondaryKeywords:
-      - "website upkeep checklist"
-      - "monthly website maintenance"
-      - "website health check"
+      - website upkeep checklist
+      - monthly website maintenance
+      - website health check
     contentType: checklist
     schemaType: Article
-    relatedServices: ["maintenance-amc", "cybersecurity"]
-    indiaAngle: "SSL renewal for .in domains, Indian hosting provider maintenance windows, pre-festive season performance checks"
+    relatedServices:
+      - maintenance-amc
+      - cybersecurity
+    indiaAngle: SSL renewal for .in domains, Indian hosting provider maintenance windows, pre-festive season performance checks
     status: planned
     publishedAt: null
     slug: website-maintenance-checklist-2026
-
   - id: amc-004
     category: maintenance-amc
-    title: "7 Reasons Your Website Keeps Breaking (and How to Fix Each One)"
-    targetKeyword: "website keeps breaking fix"
+    title: 7 Reasons Your Website Keeps Breaking (and How to Fix Each One)
+    targetKeyword: website keeps breaking fix
     secondaryKeywords:
-      - "website downtime causes"
-      - "website errors fix"
-      - "website performance issues"
+      - website downtime causes
+      - website errors fix
+      - website performance issues
     contentType: listicle
     schemaType: Article
-    relatedServices: ["maintenance-amc", "cloud-devops"]
-    indiaAngle: "Indian shared hosting issues, traffic spikes during sales/festivals, server location impact on Indian users"
+    relatedServices:
+      - maintenance-amc
+      - cloud-devops
+    indiaAngle: Indian shared hosting issues, traffic spikes during sales/festivals, server location impact on Indian users
     status: planned
     publishedAt: null
     slug: reasons-website-keeps-breaking-fix
