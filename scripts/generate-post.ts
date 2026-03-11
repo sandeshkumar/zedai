@@ -1,4 +1,4 @@
-import Anthropic from "@anthropic-ai/sdk";
+import { GoogleGenAI } from "@google/genai";
 import fs from "fs";
 import path from "path";
 import yaml from "js-yaml";
@@ -83,7 +83,6 @@ function saveTopics(data: TopicsFile): void {
 }
 
 function stripCodeFences(text: string): string {
-  // Remove leading ```mdx or ``` and trailing ```
   let cleaned = text.trim();
   if (cleaned.startsWith("```")) {
     const firstNewline = cleaned.indexOf("\n");
@@ -105,7 +104,6 @@ interface ValidationResult {
 function validatePost(content: string, topic: Topic): ValidationResult {
   const errors: string[] = [];
 
-  // Parse frontmatter
   let parsed;
   try {
     parsed = matter(content);
@@ -158,7 +156,6 @@ function validatePost(content: string, topic: Topic): ValidationResult {
   // Target keyword in first 200 chars
   const first200 = body.slice(0, 200).toLowerCase();
   if (!first200.includes(topic.targetKeyword.toLowerCase())) {
-    // Relaxed check: keyword words appear in first 300 chars
     const keywordWords = topic.targetKeyword.toLowerCase().split(/\s+/);
     const first300 = body.slice(0, 300).toLowerCase();
     const found = keywordWords.filter((w) => first300.includes(w));
@@ -173,9 +170,9 @@ function validatePost(content: string, topic: Topic): ValidationResult {
 // ── Main ───────────────────────────────────────────────────────────────
 
 async function main() {
-  const apiKey = process.env.ANTHROPIC_API_KEY;
+  const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
-    console.error("Error: ANTHROPIC_API_KEY environment variable is not set");
+    console.error("Error: GEMINI_API_KEY environment variable is not set");
     process.exit(1);
   }
 
@@ -200,8 +197,8 @@ async function main() {
   const systemPrompt = buildSystemPrompt();
   const userPrompt = buildUserPrompt(nextTopic, existingPosts, SERVICES);
 
-  // Call Claude API
-  const client = new Anthropic({ apiKey });
+  // Call Gemini API
+  const ai = new GoogleGenAI({ apiKey });
 
   let mdxContent: string | null = null;
   let attempt = 0;
@@ -211,35 +208,43 @@ async function main() {
     attempt++;
     console.log(`Attempt ${attempt}/${maxAttempts}...`);
 
-    const messages: Anthropic.MessageParam[] = [{ role: "user", content: userPrompt }];
+    const contents: { role: string; parts: { text: string }[] }[] = [
+      { role: "user", parts: [{ text: userPrompt }] },
+    ];
 
     // If retry, add correction message
     if (attempt > 1 && mdxContent) {
       const validation = validatePost(mdxContent, nextTopic);
-      messages.push(
-        { role: "assistant", content: mdxContent },
+      contents.push(
+        { role: "model", parts: [{ text: mdxContent }] },
         {
           role: "user",
-          content: `The generated post has validation errors:\n${validation.errors.map((e) => `- ${e}`).join("\n")}\n\nPlease fix these issues and output the complete corrected MDX file.`,
+          parts: [
+            {
+              text: `The generated post has validation errors:\n${validation.errors.map((e) => `- ${e}`).join("\n")}\n\nPlease fix these issues and output the complete corrected MDX file.`,
+            },
+          ],
         }
       );
     }
 
-    const response = await client.messages.create({
-      model: "claude-sonnet-4-20250514",
-      max_tokens: 8192,
-      system: systemPrompt,
-      messages,
+    const response = await ai.models.generateContent({
+      model: "gemini-2.0-flash",
+      config: {
+        systemInstruction: systemPrompt,
+        maxOutputTokens: 8192,
+        temperature: 0.7,
+      },
+      contents,
     });
 
-    // Extract text content
-    const textBlock = response.content.find((b) => b.type === "text");
-    if (!textBlock || textBlock.type !== "text") {
+    const text = response.text;
+    if (!text) {
       console.error("No text content in response");
       continue;
     }
 
-    mdxContent = stripCodeFences(textBlock.text);
+    mdxContent = stripCodeFences(text);
 
     // Validate
     const validation = validatePost(mdxContent, nextTopic);
