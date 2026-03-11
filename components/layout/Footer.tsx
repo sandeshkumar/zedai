@@ -10,7 +10,7 @@ export function Footer() {
           <span className="text-accent">Labs</span>
         </div>
         <p className="text-text-dim text-[0.78rem]">
-          Websites · Apps · ERP · CRM · AI · Digital Marketing
+          AI-Powered Software · Chatbots · Websites · Apps · ERP · CRM
         </p>
         <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 mt-4 mb-4">
           {SERVICES.map((s) => (

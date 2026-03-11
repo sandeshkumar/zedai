@@ -6,10 +6,10 @@ export const NAV_LINKS = [
 ] as const;
 
 export const RESULTS = [
-  { numValue: 3, suffix: "X", decimals: 0, label: "More Enquiries", description: "Average lead increase within 60 days" },
-  { numValue: 1.2, suffix: "s", decimals: 1, label: "Load Time", description: "Google rewards fast sites with rankings" },
-  { numValue: 40, suffix: "%", decimals: 0, label: "Higher Conversion", description: "vs template websites" },
-  { numValue: 150, suffix: "+", decimals: 0, label: "Projects Delivered", description: "Across 20+ industries" },
+  { numValue: 3, suffix: "X", decimals: 0, label: "More Enquiries", description: "AI-optimized funnels drive 3X leads in 60 days" },
+  { numValue: 80, suffix: "%", decimals: 0, label: "Queries Automated", description: "AI chatbots handle support around the clock" },
+  { numValue: 40, suffix: "%", decimals: 0, label: "Higher Conversion", description: "AI-personalized experiences vs templates" },
+  { numValue: 150, suffix: "+", decimals: 0, label: "Projects Delivered", description: "AI-powered solutions across 20+ industries" },
 ] as const;
 
 export interface ServiceItem {
@@ -453,23 +453,23 @@ export const BEFORE_ITEMS = [
   "Slow loading (8+ seconds)",
   "Not mobile friendly",
   "No SEO, invisible on Google",
-  "Template design, no trust",
-  "No lead capture system",
+  "Manual support, missed enquiries",
+  "No lead capture or automation",
 ] as const;
 
 export const AFTER_ITEMS = [
   "Lightning fast (1.2s load)",
   "Mobile-first responsive",
   "SEO-optimized, page 1 Google",
-  "Custom branded design",
-  "WhatsApp + form lead capture",
+  "AI chatbot handles 80% queries 24/7",
+  "AI-powered lead capture & scoring",
 ] as const;
 
 export const PROCESS_STEPS = [
-  { number: "01", title: "Free Consultation", description: "Tell us your goals. We create a custom strategy — free." },
-  { number: "02", title: "Design & Preview", description: "We design and show you a live preview to refine." },
-  { number: "03", title: "Build & Test", description: "Clean code, fast loading, mobile-perfect. Fully tested." },
-  { number: "04", title: "Launch & Grow", description: "Go live with analytics, SEO, and ongoing support." },
+  { number: "01", title: "AI Strategy Call", description: "We analyse your business and identify where AI can drive the biggest impact — free." },
+  { number: "02", title: "AI-Assisted Design", description: "Smart wireframes and prototypes, refined with your feedback until perfect." },
+  { number: "03", title: "Build with AI", description: "AI-powered code, smart integrations, chatbots, and automation — fully tested." },
+  { number: "04", title: "Launch & Scale", description: "Go live with AI analytics, SEO, chatbots, and continuous optimisation." },
 ] as const;
 
 export const TESTIMONIALS = [
@@ -559,23 +559,23 @@ export const PRICING_TIERS = [
 export const FAQ_ITEMS = [
   {
     question: "How long does it take to build my website?",
-    answer: "Most business websites are delivered in 7-14 days. E-commerce stores and custom apps typically take 2-4 weeks. We'll give you an exact timeline in your free consultation.",
+    answer: "Most business websites are delivered in 7-14 days. E-commerce stores and custom apps typically take 2-4 weeks. We'll give you an exact timeline in your free AI strategy call.",
   },
   {
-    question: "What if I'm not happy with the design?",
-    answer: "We offer unlimited revisions during the design phase. We don't move to development until you're 100% satisfied.",
+    question: "What kind of AI do you integrate?",
+    answer: "We build AI chatbots, smart lead scoring, automated customer support, predictive analytics, and AI-powered content systems — all tailored to your business needs and budget.",
   },
   {
-    question: "Do you provide hosting and domain?",
-    answer: "Yes, we set up fast, reliable hosting that keeps your site loading under 2 seconds. We handle all the technical setup.",
+    question: "Do I need a big budget for AI features?",
+    answer: "Not at all. We build AI features that start small and scale. A WhatsApp AI chatbot can cost less than one month's salary of a support executive — and it works 24/7.",
   },
   {
     question: "Will my website work on mobile phones?",
     answer: "Every website we build is mobile-first. Over 70% of your visitors come from mobile — this is non-negotiable for us.",
   },
   {
-    question: "Do you help with content and images?",
-    answer: "Yes. We provide professional copywriting, stock images, and custom graphics optimized for SEO and conversions.",
+    question: "Do you provide hosting and ongoing support?",
+    answer: "Yes. We set up fast, reliable hosting and offer ongoing support including AI model updates, performance monitoring, and continuous optimisation.",
   },
 ] as const;
 

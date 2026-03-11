@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "nodejs";
-export const alt = "ZED Labs — Complete Software Solutions That Grow Your Business";
+export const alt = "ZED Labs — AI-Powered Software Solutions That Grow Your Business";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -44,7 +44,7 @@ export default function OGImage() {
             marginBottom: "24px",
           }}
         >
-          Complete Software Solutions That Grow Your Business
+          AI-Powered Software That Grows Your Business
         </div>
         <div
           style={{
@@ -53,7 +53,7 @@ export default function OGImage() {
             lineHeight: 1.5,
           }}
         >
-          Websites · Apps · ERP · CRM · AI · Digital Marketing
+          AI Chatbots · Smart Websites · Apps · ERP · CRM · Automation
         </div>
         <div
           style={{

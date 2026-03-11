@@ -36,7 +36,7 @@ export function Hero() {
             {...fadeUp(0.05)}
             className="font-heading font-[900] text-[clamp(2.2rem,5.8vw,4.5rem)] leading-[1.06] tracking-[-0.045em] mb-5"
           >
-            We Build Software That{" "}
+            AI-Powered Software That{" "}
             <span className="bg-linear-to-br from-accent to-accent-light bg-clip-text text-transparent">
               Actually Grows Your Business
             </span>
@@ -46,7 +46,7 @@ export function Hero() {
             {...fadeUp(0.1)}
             className="text-[1.1rem] text-text-subtle max-w-[500px] leading-[1.7] mb-8 lg:mx-0 mx-auto"
           >
-            Custom websites, apps, ERP, CRM, and AI solutions — built to convert visitors into customers and streamline your operations.
+            We inject AI into every product we build — websites that convert, apps that learn, chatbots that sell, and systems that automate your operations.
           </motion.p>
 
           <motion.div {...fadeUp(0.15)} className="flex gap-3 flex-wrap mb-5 lg:justify-start justify-center">

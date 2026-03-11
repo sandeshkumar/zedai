@@ -19,19 +19,20 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://zedai.tech"),
-  title: "ZED Labs — Complete Software Solutions That Grow Your Business | Get Free Quote",
+  title: "ZED Labs — AI-Powered Software Solutions That Grow Your Business | Get Free Quote",
   description:
-    "ZED Labs builds custom websites, apps, ERP, CRM, POS systems, and AI solutions that grow your business. 150+ projects delivered across 20+ industries.",
+    "ZED Labs builds AI-powered websites, apps, ERP, CRM, chatbots, and automation systems that grow your business. 150+ projects delivered across 20+ industries.",
   keywords: [
-    "web development",
+    "AI software company India",
+    "AI-powered web development",
+    "AI chatbot development",
     "website design",
     "mobile app development",
     "SEO services",
     "e-commerce website",
     "ERP software",
     "CRM software",
-    "hospitality POS",
-    "AI solutions",
+    "AI automation",
     "custom software development",
     "digital marketing",
     "India",
@@ -54,9 +55,9 @@ export const metadata: Metadata = {
     canonical: "https://zedai.tech",
   },
   openGraph: {
-    title: "ZED Labs — Complete Software Solutions That Grow Your Business",
+    title: "ZED Labs — AI-Powered Software Solutions That Grow Your Business",
     description:
-      "Custom websites, apps, ERP, CRM, POS, and AI solutions that grow your business. 150+ projects delivered.",
+      "AI-powered websites, apps, ERP, CRM, chatbots, and automation systems that grow your business. 150+ projects delivered.",
     url: "https://zedai.tech",
     siteName: "ZED Labs",
     locale: "en_IN",
@@ -64,9 +65,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ZED Labs — Complete Software Solutions That Grow Your Business",
+    title: "ZED Labs — AI-Powered Software Solutions That Grow Your Business",
     description:
-      "Custom websites, apps, ERP, CRM, POS, and AI solutions that grow your business. 150+ projects delivered.",
+      "AI-powered websites, apps, ERP, CRM, chatbots, and automation systems that grow your business. 150+ projects delivered.",
   },
 };
 

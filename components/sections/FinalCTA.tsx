@@ -15,12 +15,12 @@ export function FinalCTA() {
           Ready to Grow?
         </div>
         <h2 className="font-heading font-[800] text-[clamp(1.9rem,4vw,3rem)] tracking-[-0.03em] leading-[1.12] max-w-[700px] mx-auto mb-2.5">
-          Your Competitors Are Already Online.
+          Your Competitors Are Already Using AI.
           <br />
           Don&apos;t Get Left Behind.
         </h2>
         <p className="text-text-subtle max-w-[500px] mx-auto text-base leading-[1.7] mb-8">
-          Join 150+ businesses who chose ZED Labs. Get your free quote today.
+          Join 150+ businesses running on AI-powered software by ZED Labs. Get your free AI strategy call today.
         </p>
         <div className="flex gap-3 justify-center flex-wrap">
           <ButtonLink href="#contact" variant="primary" className="text-[1.1rem] py-4.5 px-12">

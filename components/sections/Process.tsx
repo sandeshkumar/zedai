@@ -10,8 +10,8 @@ export function Process() {
       <div className="max-w-[1200px] mx-auto">
         <SectionHeader
           tag="How It Works"
-          title="Go Live in 4 Simple Steps"
-          description="No complicated process. No months of waiting."
+          title="From AI Strategy to Launch in 4 Steps"
+          description="We embed AI at every stage — from planning to deployment."
           centered
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">

@@ -10,9 +10,9 @@ export function Results() {
     <section className="py-16 lg:py-24 px-5 lg:px-10 bg-bg-secondary" id="results">
       <div className="max-w-[1200px] mx-auto">
         <SectionHeader
-          tag="Proven Results"
-          title="Numbers That Speak for Themselves"
-          description="We don't just build websites — we build revenue machines backed by real data."
+          tag="AI-Driven Results"
+          title="What Happens When AI Powers Your Business"
+          description="Real numbers from real clients — powered by AI automation, smart analytics, and intelligent systems."
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {RESULTS.map((item, i) => (
