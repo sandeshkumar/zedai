@@ -9,6 +9,9 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  // Ensure consistent URLs — no trailing slashes
+  trailingSlash: false,
+
   async headers() {
     return [
       {
@@ -19,6 +22,14 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // www → non-www (canonical domain)
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.zedai.tech" }],
+        destination: "https://zedai.tech/:path*",
+        permanent: true,
+      },
+      // Old partner program URL
       {
         source: "/zedlabs-partner-program",
         destination: "/partner",
