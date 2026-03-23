@@ -61,8 +61,8 @@ topics:
       - custom-websites
       - maintenance-amc
     indiaAngle: Freelancer vs agency comparison in Indian market, typical scams, MSME verification tips, portfolio evaluation
-    status: planned
-    publishedAt: null
+    status: published
+    publishedAt: "2026-03-23"
     slug: choose-web-development-company-india
   - id: cw-004
     category: custom-websites
