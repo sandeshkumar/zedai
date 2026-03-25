@@ -705,7 +705,7 @@ export function PartnerProgramClient({ fontClass }: { fontClass: string }) {
           ZED <span>Labs</span>
         </div>
         <p>
-          <a href="https://zedai.tech">zedai.tech</a> · +91 93803 41684 · hello@zedai.tech
+          <a href="https://zedai.tech">zedai.tech</a> · +91 93803 41684 · contact@zedai.tech
         </p>
         <p>© 2026 ZED Labs</p>
       </footer>

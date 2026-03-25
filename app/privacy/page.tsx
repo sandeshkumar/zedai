@@ -111,10 +111,10 @@ export default function PrivacyPage() {
           <p className="mb-4">
             If you have questions about this privacy policy, contact us at{" "}
             <a
-              href="mailto:hello@zedai.tech"
+              href="mailto:contact@zedai.tech"
               className="text-accent hover:text-accent-light transition-colors"
             >
-              hello@zedai.tech
+              contact@zedai.tech
             </a>{" "}
             or call{" "}
             <a

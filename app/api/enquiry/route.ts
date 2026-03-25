@@ -29,8 +29,8 @@ export async function POST(request: NextRequest) {
     });
 
     await resend.emails.send({
-      from: "ZED Labs <hello@zedai.tech>",
-      to: ["hello@zedai.tech", "sandeshkumard@gmail.com"],
+      from: "ZED Labs <contact@zedai.tech>",
+      to: ["contact@zedai.tech", "sandeshkumard@gmail.com"],
       subject: `New Enquiry: ${serviceType} — ${name}`,
       html: `
         <div style="font-family: 'Segoe UI', Arial, sans-serif; max-width: 520px; margin: 0 auto; background: #080C14; color: #F8FAFC; padding: 32px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.06);">

@@ -44,8 +44,8 @@ export function Footer() {
           <a href="https://wa.me/919380341684" target="_blank" className="inline-flex items-center gap-1.5 text-[0.82rem] text-text-subtle hover:text-accent transition-colors font-medium">
             💬 WhatsApp
           </a>
-          <a href="mailto:hello@zedai.tech" className="inline-flex items-center gap-1.5 text-[0.82rem] text-text-subtle hover:text-accent transition-colors font-medium">
-            ✉️ hello@zedai.tech
+          <a href="mailto:contact@zedai.tech" className="inline-flex items-center gap-1.5 text-[0.82rem] text-text-subtle hover:text-accent transition-colors font-medium">
+            ✉️ contact@zedai.tech
           </a>
         </div>
         <div className="flex items-center justify-center gap-4 mt-3">

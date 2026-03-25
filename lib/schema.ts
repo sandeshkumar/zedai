@@ -37,7 +37,7 @@ export function generateLocalBusinessSchema() {
     "@id": `${SITE_URL}/#localbusiness`,
     name: "ZED Labs",
     telephone: "+91-9380341684",
-    email: "hello@zedai.tech",
+    email: "contact@zedai.tech",
     url: SITE_URL,
     address: {
       "@type": "PostalAddress",

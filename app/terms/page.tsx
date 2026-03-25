@@ -129,10 +129,10 @@ export default function TermsPage() {
           <p className="mb-4">
             For questions about these terms, contact us at{" "}
             <a
-              href="mailto:hello@zedai.tech"
+              href="mailto:contact@zedai.tech"
               className="text-accent hover:text-accent-light transition-colors"
             >
-              hello@zedai.tech
+              contact@zedai.tech
             </a>{" "}
             or call{" "}
             <a
