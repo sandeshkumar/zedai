@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import GithubSlugger from "github-slugger";
 
 interface TocItem {
   id: string;
@@ -15,15 +16,13 @@ interface TableOfContentsProps {
 function extractHeadings(content: string): TocItem[] {
   const headingRegex = /^#{2,3}\s+(.+)$/gm;
   const items: TocItem[] = [];
+  const slugger = new GithubSlugger();
   let match;
 
   while ((match = headingRegex.exec(content)) !== null) {
     const text = match[1].trim();
     const level = match[0].indexOf(" ");
-    const id = text
-      .toLowerCase()
-      .replace(/[^a-z0-9\s-]/g, "")
-      .replace(/\s+/g, "-");
+    const id = slugger.slug(text);
     items.push({ id, text, level });
   }
 
@@ -56,6 +55,15 @@ export function TableOfContents({ content }: TableOfContentsProps) {
 
   if (items.length < 2) return null;
 
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      history.pushState(null, "", `#${id}`);
+    }
+  };
+
   return (
     <nav className="sticky top-32">
       <h4 className="text-[0.72rem] font-bold tracking-[0.15em] uppercase text-text-dim mb-4">
@@ -66,6 +74,7 @@ export function TableOfContents({ content }: TableOfContentsProps) {
           <li key={item.id}>
             <a
               href={`#${item.id}`}
+              onClick={(e) => handleClick(e, item.id)}
               className={`block text-[0.8rem] leading-[1.5] transition-colors duration-200 border-l-2 -ml-px ${
                 item.level === 3 ? "pl-6" : "pl-4"
               } ${
