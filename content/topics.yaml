@@ -78,8 +78,8 @@ topics:
       - custom-websites
       - digital-marketing
     indiaAngle: Real examples from Indian SMEs, revenue impact in INR, mobile-first India stats (75%+ mobile traffic)
-    status: planned
-    publishedAt: null
+    status: published
+    publishedAt: "2026-03-29"
     slug: website-mistakes-costing-indian-businesses
   - id: ai-001
     category: ai-solutions
@@ -97,8 +97,8 @@ topics:
     indiaAngle: >-
       Use cases for Indian SMEs — inventory prediction, WhatsApp automation, GST invoice processing, regional language
       support
-    status: planned
-    publishedAt: null
+    status: published
+    publishedAt: "2026-03-29"
     slug: ai-for-small-business-india
   - id: ai-002
     category: ai-solutions
@@ -116,8 +116,8 @@ topics:
     indiaAngle: >-
       WhatsApp Business API pricing in India, Hindi/regional language chatbot costs, comparison with hiring support
       staff
-    status: planned
-    publishedAt: null
+    status: published
+    publishedAt: "2026-03-29"
     slug: ai-chatbot-development-cost-india-2026
   - id: ai-003
     category: ai-solutions
@@ -133,8 +133,8 @@ topics:
       - ai-solutions
       - erp-systems
     indiaAngle: GST return automation, invoice processing, Tally integration, Indian regulatory compliance automation
-    status: planned
-    publishedAt: null
+    status: published
+    publishedAt: "2026-03-29"
     slug: automate-business-ai-india-guide
   - id: ai-004
     category: ai-solutions
@@ -150,8 +150,8 @@ topics:
       - ai-solutions
       - erp-systems
     indiaAngle: Make in India context, textile and pharma manufacturing examples, quality control in Indian factories, ROI in INR
-    status: planned
-    publishedAt: null
+    status: published
+    publishedAt: "2026-03-29"
     slug: machine-learning-indian-manufacturing
   - id: dm-001
     category: digital-marketing
