@@ -130,16 +130,16 @@ function validatePost(content: string, topic: Topic): ValidationResult {
     errors.push(`Invalid category "${fm.category}" — must be a valid service slug`);
   }
 
-  // Word count check
+  // Word count check (raised to 2000 for comprehensive content)
   const wordCount = body.split(/\s+/).filter(Boolean).length;
-  if (wordCount < 1500) {
-    errors.push(`Word count too low: ${wordCount} (minimum 1500)`);
+  if (wordCount < 2000) {
+    errors.push(`Word count too low: ${wordCount} (minimum 2000)`);
   }
 
-  // H2 heading check (at least 3)
+  // H2 heading check (at least 6 for depth)
   const h2Matches = body.match(/^## /gm);
-  if (!h2Matches || h2Matches.length < 3) {
-    errors.push(`Too few H2 headings: ${h2Matches?.length || 0} (minimum 3)`);
+  if (!h2Matches || h2Matches.length < 5) {
+    errors.push(`Too few H2 headings: ${h2Matches?.length || 0} (minimum 5)`);
   }
 
   // No H1 in body
@@ -148,20 +148,38 @@ function validatePost(content: string, topic: Topic): ValidationResult {
     errors.push("Body contains H1 heading — only H2 and below allowed");
   }
 
-  // Service link check
-  if (!body.includes("/services/")) {
-    errors.push("No internal links to service pages found");
+  // Service link check (need at least 2)
+  const serviceLinks = body.match(/\]\(\/services\//g);
+  if (!serviceLinks || serviceLinks.length < 2) {
+    errors.push(`Too few service page links: ${serviceLinks?.length || 0} (minimum 2)`);
   }
 
-  // Target keyword in first 200 chars
-  const first200 = body.slice(0, 200).toLowerCase();
-  if (!first200.includes(topic.targetKeyword.toLowerCase())) {
+  // Blog link check (need at least 1)
+  const blogLinks = body.match(/\]\(\/blog\//g);
+  if (!blogLinks || blogLinks.length < 1) {
+    errors.push("No internal links to other blog posts found");
+  }
+
+  // Table check (need at least 1)
+  const tableMatches = body.match(/\|.*\|.*\|/g);
+  if (!tableMatches || tableMatches.length < 3) {
+    errors.push("No markdown table found (need at least 1 table)");
+  }
+
+  // Target keyword in first 250 chars
+  const first250 = body.slice(0, 250).toLowerCase();
+  if (!first250.includes(topic.targetKeyword.toLowerCase())) {
     const keywordWords = topic.targetKeyword.toLowerCase().split(/\s+/);
-    const first300 = body.slice(0, 300).toLowerCase();
-    const found = keywordWords.filter((w) => first300.includes(w));
+    const first400 = body.slice(0, 400).toLowerCase();
+    const found = keywordWords.filter((w) => first400.includes(w));
     if (found.length < keywordWords.length * 0.6) {
       errors.push("Target keyword not found near the beginning of the post");
     }
+  }
+
+  // INR/₹ check for India-specific content
+  if (!body.includes("₹") && !body.toLowerCase().includes("inr")) {
+    errors.push("No INR pricing found — Indian content must include ₹ amounts");
   }
 
   return { valid: errors.length === 0, errors };
@@ -232,7 +250,7 @@ async function main() {
       model: "gemini-2.0-flash",
       config: {
         systemInstruction: systemPrompt,
-        maxOutputTokens: 8192,
+        maxOutputTokens: 16384,
         temperature: 0.7,
       },
       contents,
