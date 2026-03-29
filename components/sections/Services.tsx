@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { CardGlow } from "@/components/ui/CardGlow";
 import { SERVICES } from "@/lib/constants";
 
 export function Services() {
@@ -24,19 +25,25 @@ export function Services() {
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {SERVICES.map((srv, i) => (
-            <ScrollReveal key={srv.slug} delay={i * 0.06}>
+            <ScrollReveal
+              key={srv.slug}
+              delay={i * 0.05}
+              variant={i % 3 === 0 ? "scale-up" : i % 3 === 1 ? "fade-up" : "blur-up"}
+            >
               <Link href={`/services/${srv.slug}`}>
-                <div className="group bg-card/80 backdrop-blur-sm border border-border-subtle rounded-[var(--radius-lg)] p-7 transition-all duration-350 relative overflow-hidden hover:border-border-blue hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(0,0,0,0.4),0_0_30px_rgba(249,115,22,0.06)] h-full">
-                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-linear-to-r from-db-light to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="w-11 h-11 rounded-xl bg-linear-to-br from-[rgba(30,58,95,0.1)] to-[rgba(249,115,22,0.1)] flex items-center justify-center text-[1.2rem] mb-4 border border-border-subtle">
-                    {srv.icon}
+                <CardGlow>
+                  <div className="group bg-card/80 backdrop-blur-sm border border-border-subtle rounded-[var(--radius-lg)] p-7 transition-all duration-350 relative overflow-hidden hover:border-border-blue hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(0,0,0,0.4),0_0_30px_rgba(249,115,22,0.06)] h-full hover:scale-[1.02]">
+                    <div className="absolute top-0 left-0 right-0 h-[2px] bg-linear-to-r from-db-light to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="w-11 h-11 rounded-xl bg-linear-to-br from-[rgba(30,58,95,0.1)] to-[rgba(249,115,22,0.1)] flex items-center justify-center text-[1.2rem] mb-4 border border-border-subtle">
+                      {srv.icon}
+                    </div>
+                    <h3 className="font-heading font-bold text-[1rem] mb-1.5">{srv.title}</h3>
+                    <p className="text-text-subtle text-[0.84rem] leading-[1.55]">{srv.description}</p>
+                    <span className="text-accent text-[0.8rem] font-semibold mt-3 inline-flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                      Learn more →
+                    </span>
                   </div>
-                  <h3 className="font-heading font-bold text-[1rem] mb-1.5">{srv.title}</h3>
-                  <p className="text-text-subtle text-[0.84rem] leading-[1.55]">{srv.description}</p>
-                  <span className="text-accent text-[0.8rem] font-semibold mt-3 inline-flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                    Learn more →
-                  </span>
-                </div>
+                </CardGlow>
               </Link>
             </ScrollReveal>
           ))}

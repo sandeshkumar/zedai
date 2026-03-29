@@ -14,7 +14,7 @@ export function Testimonials() {
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {TESTIMONIALS.map((t, i) => (
-            <ScrollReveal key={t.name} delay={i * 0.1}>
+            <ScrollReveal key={t.name} delay={i * 0.1} variant="blur-up">
               <div className="bg-card border border-border-subtle rounded-[var(--radius-lg)] p-7 transition-all duration-300 hover:border-border-blue hover:shadow-[0_0_25px_rgba(249,115,22,0.06)]">
                 <div className="text-accent text-[0.9rem] mb-3 tracking-[2px]">
                   {"★".repeat(t.stars)}
