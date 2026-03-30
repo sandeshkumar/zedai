@@ -12,29 +12,29 @@
   --color-accent-light: #FB923C;
   --color-accent-dark: #EA580C;
 
-  /* ===== Backgrounds ===== */
-  --color-bg-primary: #080C14;
-  --color-bg-secondary: #0C1220;
-  --color-bg-tertiary: #111827;
-  --color-card: #141C2E;
-  --color-card-alt: #192236;
+  /* ===== Backgrounds — warmer, richer depth ===== */
+  --color-bg-primary: #06090F;
+  --color-bg-secondary: #0A0F1A;
+  --color-bg-tertiary: #0E1525;
+  --color-card: #121A2C;
+  --color-card-alt: #162032;
 
-  /* ===== Text ===== */
-  --color-text-primary: #F8FAFC;
-  --color-text-muted: #CBD5E1;
-  --color-text-subtle: #94A3B8;
-  --color-text-faint: #64748B;
-  --color-text-dim: #475569;
+  /* ===== Text — crisper contrast ===== */
+  --color-text-primary: #F1F5F9;
+  --color-text-muted: #C8D2E0;
+  --color-text-subtle: #8B9CB8;
+  --color-text-faint: #5E7291;
+  --color-text-dim: #3F5573;
 
   /* ===== Semantic ===== */
   --color-success: #22C55E;
   --color-error: #EF4444;
 
-  /* ===== Borders ===== */
-  --color-border-subtle: rgba(255, 255, 255, 0.06);
-  --color-border-medium: rgba(255, 255, 255, 0.09);
-  --color-border-blue: rgba(30, 58, 95, 0.35);
-  --color-border-accent: rgba(249, 115, 22, 0.25);
+  /* ===== Borders — more visible structure ===== */
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
+  --color-border-medium: rgba(255, 255, 255, 0.12);
+  --color-border-blue: rgba(30, 58, 95, 0.45);
+  --color-border-accent: rgba(249, 115, 22, 0.3);
 
   /* ===== Fonts ===== */
   --font-heading: var(--font-outfit), "Outfit", sans-serif;
