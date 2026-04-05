@@ -515,7 +515,6 @@ export const PRICING_TIERS = [
     ],
     ctaLabel: "Get Started",
     ctaVariant: "outline" as const,
-    freeDomain: true,
   },
   {
     name: "Growth",
@@ -535,7 +534,6 @@ export const PRICING_TIERS = [
     ],
     ctaLabel: "Get Started →",
     ctaVariant: "fill" as const,
-    freeDomain: true,
   },
   {
     name: "Enterprise",
@@ -555,7 +553,6 @@ export const PRICING_TIERS = [
     ],
     ctaLabel: "Get a Quote →",
     ctaVariant: "outline" as const,
-    freeDomain: false,
   },
 ] as const;
 
