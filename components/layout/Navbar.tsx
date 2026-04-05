@@ -28,7 +28,7 @@ export function Navbar() {
         className="relative block w-full overflow-hidden bg-linear-to-r from-accent-dark via-accent to-accent-light text-white text-center py-2 px-4 text-[0.8rem] sm:text-[0.85rem] font-bold tracking-wide hover:brightness-110 transition-all duration-200"
       >
         <span className="relative z-[1]">
-          🎁 <span className="inline-block bg-white text-accent-dark text-[0.7rem] font-extrabold uppercase px-2 py-0.5 rounded-[4px] mx-1 tracking-[0.06em]" style={{ animation: "blink 2s ease-in-out infinite" }}>Limited Offer</span> FREE Domain & Hosting for 1 Year with website plans! <span className="hidden sm:inline">→</span>
+          🚀 <span className="inline-block bg-white text-accent-dark text-[0.7rem] font-extrabold uppercase px-2 py-0.5 rounded-[4px] mx-1 tracking-[0.06em]" style={{ animation: "blink 2s ease-in-out infinite" }}>AI-Powered</span> Every website we build comes with AI built in — Get your free strategy call <span className="hidden sm:inline">→</span>
         </span>
         <span
           className="absolute inset-0 z-0 opacity-30"
