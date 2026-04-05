@@ -24,7 +24,7 @@ export function Navbar() {
     <header className="fixed top-0 w-full z-[200]">
       {/* Announcement Bar */}
       <Link
-        href="/#pricing"
+        href="/#contact"
         className="relative block w-full overflow-hidden bg-linear-to-r from-accent-dark via-accent to-accent-light text-white text-center py-2 px-4 text-[0.8rem] sm:text-[0.85rem] font-bold tracking-wide hover:brightness-110 transition-all duration-200"
       >
         <span className="relative z-[1]">
