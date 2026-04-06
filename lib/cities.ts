@@ -674,23 +674,33 @@ export const CITY_SERVICE_CONTENT: CityServiceContent[] = [
   },
 ];
 
+// ── Import Tier 2 & 3 ─────────────────────────────────────────────────
+
+import { TIER2_CITIES, TIER2_CONTENT } from "./cities-tier2";
+import { TIER3_CITIES, TIER3_CONTENT } from "./cities-tier3";
+
+// ── Combined Arrays ───────────────────────────────────────────────────
+
+export const ALL_CITIES: CityItem[] = [...CITIES, ...TIER2_CITIES, ...TIER3_CITIES];
+export const ALL_CONTENT: CityServiceContent[] = [...CITY_SERVICE_CONTENT, ...TIER2_CONTENT, ...TIER3_CONTENT];
+
 // ── Lookup Functions ───────────────────────────────────────────────────
 
 export function getCityBySlug(slug: string): CityItem | undefined {
-  return CITIES.find((c) => c.slug === slug);
+  return ALL_CITIES.find((c) => c.slug === slug);
 }
 
 export function getCityServiceContent(
   citySlug: string,
   serviceSlug: string
 ): CityServiceContent | undefined {
-  return CITY_SERVICE_CONTENT.find(
+  return ALL_CONTENT.find(
     (c) => c.citySlug === citySlug && c.serviceSlug === serviceSlug
   );
 }
 
 export function getAllCityServiceParams(): { slug: string; city: string }[] {
-  return CITY_SERVICE_CONTENT.map((c) => ({
+  return ALL_CONTENT.map((c) => ({
     slug: c.serviceSlug,
     city: c.citySlug,
   }));
