@@ -52,7 +52,7 @@ export function Hero() {
           {/* Heading with word-by-word reveal */}
           <h1 className="font-heading font-[900] text-[clamp(2rem,5vw,3.8rem)] leading-[1.08] tracking-[-0.04em] mb-5">
             <TextReveal delay={0.1}>
-              AI-Powered Software That
+              AI-Powered Software Solutions That
             </TextReveal>{" "}
             <motion.span
               className="bg-linear-to-br from-accent to-accent-light bg-clip-text text-transparent inline-block"
@@ -60,7 +60,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ type: "spring", damping: 18, stiffness: 80, delay: 0.45 }}
             >
-              Actually Grows Your Business
+              Actually Grow Your Business
             </motion.span>
           </h1>
 
