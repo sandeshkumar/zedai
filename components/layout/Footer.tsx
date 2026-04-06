@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { SERVICES } from "@/lib/constants";
-import { CITIES } from "@/lib/cities";
+import { ALL_CITIES } from "@/lib/cities";
 
 export function Footer() {
   return (
@@ -43,7 +43,7 @@ export function Footer() {
               Cities We Serve
             </h4>
             <div className="grid grid-cols-3 sm:grid-cols-4 gap-x-4 gap-y-1.5">
-              {CITIES.map((c) => (
+              {ALL_CITIES.map((c) => (
                 <Link
                   key={c.slug}
                   href={`/services/custom-websites/${c.slug}`}
