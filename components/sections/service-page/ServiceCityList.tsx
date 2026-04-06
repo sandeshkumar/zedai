@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ALL_CITIES, CITY_SERVICES } from "@/lib/cities";
+import { CITIES, CITY_SERVICES } from "@/lib/cities";
 
 interface ServiceCityListProps {
   serviceSlug: string;
@@ -17,7 +17,7 @@ export function ServiceCityList({ serviceSlug }: ServiceCityListProps) {
           Available Across India
         </h3>
         <div className="flex flex-wrap gap-2">
-          {ALL_CITIES.map((city) => (
+          {CITIES.map((city) => (
             <Link
               key={city.slug}
               href={`/services/${serviceSlug}/${city.slug}`}

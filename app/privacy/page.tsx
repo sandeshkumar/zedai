@@ -3,7 +3,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — ZED Labs",
+  title: "Privacy Policy | ZED Labs",
   description:
     "Learn how ZED Labs collects, uses, and protects your personal information. Read our privacy policy.",
   alternates: { canonical: "https://zedai.tech/privacy" },

@@ -12,7 +12,7 @@ export function Results() {
         <SectionHeader
           tag="AI-Driven Results"
           title="What Happens When AI Powers Your Business"
-          description="Real numbers from real clients — powered by AI automation, smart analytics, and intelligent systems."
+          description="Real numbers from real clients, powered by AI automation, smart analytics, and intelligent systems."
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {RESULTS.map((item, i) => (

@@ -52,7 +52,7 @@ const jsonLd = wrapInGraph(
   generateWebSiteSchema(),
   generateWebPageSchema(
     "https://zedai.tech",
-    "ZED Labs — AI-Powered Software Solutions That Grow Your Business",
+    "ZED Labs | AI-Powered Software Solutions That Grow Your Business",
     "ZED Labs builds AI-powered websites, apps, ERP, CRM, chatbots, and automation systems that grow your business. 150+ projects delivered across 20+ industries."
   ),
   generateFAQSchema(FAQ_ITEMS),

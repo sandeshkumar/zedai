@@ -10,7 +10,7 @@ import { wrapInGraph, generateBreadcrumbSchema } from "@/lib/schema";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Blog | ZED Labs — Software Development Insights & Guides",
+  title: "Blog | ZED Labs | Software Development Insights & Guides",
   description:
     "Expert insights on web development, ERP, CRM, AI, mobile apps, and digital marketing. Practical guides to grow your business with technology.",
   keywords: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     canonical: "https://zedai.tech/blog",
   },
   openGraph: {
-    title: "Blog | ZED Labs — Software Development Insights",
+    title: "Blog | ZED Labs | Software Development Insights",
     description:
       "Expert insights on web development, ERP, CRM, AI, and digital marketing.",
     url: "https://zedai.tech/blog",

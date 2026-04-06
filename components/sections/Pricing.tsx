@@ -29,7 +29,7 @@ export function Pricing() {
               Limited Offer
             </span>
             <span className="text-text-primary text-[0.88rem] font-medium">
-              — FREE Domain & Hosting for 1 Year with website plans!
+              FREE Domain & Hosting for 1 Year with website plans!
             </span>
           </div>
         </div>

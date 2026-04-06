@@ -3,7 +3,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — ZED Labs",
+  title: "Terms of Service | ZED Labs",
   description:
     "Read the terms and conditions for using ZED Labs services and website.",
   alternates: { canonical: "https://zedai.tech/terms" },
@@ -46,8 +46,8 @@ export default function TermsPage() {
             3. Intellectual Property
           </h2>
           <p className="mb-4">
-            All content on this website — including text, graphics, logos, and
-            code — is the property of ZED Labs and is protected by intellectual
+            All content on this website, including text, graphics, logos, and
+            code, is the property of ZED Labs and is protected by intellectual
             property laws. You may not reproduce, distribute, or create
             derivative works without our written consent.
           </p>

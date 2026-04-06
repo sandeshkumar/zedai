@@ -21,7 +21,7 @@ export function Services() {
         <SectionHeader
           tag="AI-Powered Solutions"
           title="Every Solution We Build Has AI Inside"
-          description="From smart websites to intelligent ERP — we build AI-powered software that runs, learns, and grows your business."
+          description="From smart websites to intelligent ERP, we build AI-powered software that runs, learns, and grows your business."
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {SERVICES.map((srv, i) => (

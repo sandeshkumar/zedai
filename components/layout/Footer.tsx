@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { SERVICES } from "@/lib/constants";
-import { ALL_CITIES } from "@/lib/cities";
+import { CITIES } from "@/lib/cities";
 
 export function Footer() {
   return (
@@ -25,7 +25,7 @@ export function Footer() {
           ))}
         </div>
         <div className="flex flex-wrap justify-center gap-x-4 gap-y-1.5 mt-3 mb-3">
-          {ALL_CITIES.map((c) => (
+          {CITIES.map((c) => (
             <Link
               key={c.slug}
               href={`/services/custom-websites/${c.slug}`}

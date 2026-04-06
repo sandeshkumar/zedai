@@ -19,11 +19,11 @@ const FAQ_DATA = [
   },
   {
     q: "Is there any investment or joining fee?",
-    a: "Zero. No joining fee, no deposit, no hidden charges. The program is completely free. You earn commission — you never pay anything.",
+    a: "Zero. No joining fee, no deposit, no hidden charges. The program is completely free. You earn commission, and you never pay anything.",
   },
   {
     q: "Can I present this as my own agency to clients?",
-    a: "At Gold tier and above, we offer white-label delivery — meaning we can work behind the scenes while you present the work under your own brand. At Silver, we provide co-branded proposals. At Bronze, projects are delivered under the ZED Labs brand.",
+    a: "At Gold tier and above, we offer white-label delivery, meaning we can work behind the scenes while you present the work under your own brand. At Silver, we provide co-branded proposals. At Bronze, projects are delivered under the ZED Labs brand.",
   },
   {
     q: "When and how do I get paid?",
@@ -31,11 +31,11 @@ const FAQ_DATA = [
   },
   {
     q: "What do I actually need to do?",
-    a: "Identify a business that needs a website, app, or marketing. Connect them to us — either share their contact or forward our details. That's it. We handle the sales call, proposal, design, development, delivery, and support. You earn commission on every project that closes.",
+    a: "Identify a business that needs a website, app, or marketing. Connect them to us by sharing their contact or forwarding our details. That's it. We handle the sales call, proposal, design, development, delivery, and support. You earn commission on every project that closes.",
   },
   {
     q: "Can I do this alongside a full-time job or studies?",
-    a: "Absolutely. Most of our partners work part-time — evenings, weekends, or whenever they meet business owners. There are no fixed hours, no attendance requirements, and no minimum targets.",
+    a: "Absolutely. Most of our partners work part-time: evenings, weekends, or whenever they meet business owners. There are no fixed hours, no attendance requirements, and no minimum targets.",
   },
   {
     q: "Who is ZED Labs?",
@@ -63,7 +63,7 @@ function calcEarnings(d: number) {
   const rc = Math.floor(d * 0.3);
   const tot = d * cr + bon + rc * 500;
   let note: string;
-  if (d <= 3) note = "Part-time effort — a few hours per week";
+  if (d <= 3) note = "Part-time effort, a few hours per week";
   else if (d <= 6)
     note = "Includes ₹2,000 Silver bonus + recurring commissions";
   else if (d <= 10)
@@ -156,14 +156,14 @@ export function PartnerProgramClient({ fontClass }: { fontClass: string }) {
             >
               Earn ₹10,000–₹50,000+ per month in commissions.
             </span>
-            ZED Labs gives you a complete backend team — design, development,
-            and delivery — so you can sell digital services under your own name.
+            ZED Labs gives you a complete backend team: design, development,
+            and delivery. You can sell digital services under your own name.
             No technical skills needed.
           </p>
 
           <div className="free-banner">
             <div className="free-tag">
-              <span className="tag-highlight">FREE</span> to Join — No Fees
+              <span className="tag-highlight">FREE</span> to Join. No Fees
               Ever
             </div>
             <div className="free-tag">
@@ -309,7 +309,7 @@ export function PartnerProgramClient({ fontClass }: { fontClass: string }) {
               <h3>Make the Introduction</h3>
               <p>
                 Connect the business owner to us via WhatsApp, or forward our
-                portfolio. You can pitch them yourself using our sales kit — or
+                portfolio. You can pitch them yourself using our sales kit, or
                 just pass the contact.
               </p>
             </div>
@@ -526,7 +526,7 @@ export function PartnerProgramClient({ fontClass }: { fontClass: string }) {
                 </div>
                 <div>
                   <div className="partner-name">Karthik N.</div>
-                  <div className="partner-role">BBA Student — Chennai</div>
+                  <div className="partner-role">BBA Student, Chennai</div>
                 </div>
               </div>
               <div className="partner-quote">
@@ -551,13 +551,13 @@ export function PartnerProgramClient({ fontClass }: { fontClass: string }) {
                 </div>
                 <div>
                   <div className="partner-name">Anita D.</div>
-                  <div className="partner-role">Homemaker — Jaipur</div>
+                  <div className="partner-role">Homemaker, Jaipur</div>
                 </div>
               </div>
               <div className="partner-quote">
                 &ldquo;My husband&apos;s business network gave me my first 3
                 clients. Word of mouth did the rest. I now treat this as my own
-                consultancy — and the income is real.&rdquo;
+                consultancy, and the income is real.&rdquo;
               </div>
               <div className="partner-metric">
                 Averaging ₹18,000–₹22,000/month
@@ -576,12 +576,12 @@ export function PartnerProgramClient({ fontClass }: { fontClass: string }) {
                 </div>
                 <div>
                   <div className="partner-name">Vijay R.</div>
-                  <div className="partner-role">IT Professional — Pune</div>
+                  <div className="partner-role">IT Professional, Pune</div>
                 </div>
               </div>
               <div className="partner-quote">
                 &ldquo;I keep my full-time job and use weekends to connect with
-                small businesses in my area. Two deals a month — ₹8,000-₹10,000
+                small businesses in my area. Two deals a month, ₹8,000-₹10,000
                 extra without any risk to my career.&rdquo;
               </div>
               <div className="partner-metric">
@@ -602,7 +602,7 @@ export function PartnerProgramClient({ fontClass }: { fontClass: string }) {
                 <div>
                   <div className="partner-name">Meera S.</div>
                   <div className="partner-role">
-                    Freelance Designer — Kochi
+                    Freelance Designer, Kochi
                   </div>
                 </div>
               </div>
@@ -657,7 +657,7 @@ export function PartnerProgramClient({ fontClass }: { fontClass: string }) {
           <div className="reveal">
             <h2 className="section-title">Ready to Build Your Business?</h2>
             <p className="section-desc">
-              Apply to the ZED Labs Partner Program. No investment, no risk —
+              Apply to the ZED Labs Partner Program. No investment, no risk,
               just opportunity.
             </p>
             <div

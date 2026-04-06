@@ -140,7 +140,7 @@ export function EnquiryForm({ defaultService }: EnquiryFormProps = {}) {
             : submitState === "success"
               ? "✓ Sent! We'll Contact You in 2 Hours"
               : submitState === "error"
-                ? "Failed — Try Again"
+                ? "Failed. Try Again"
                 : "Get My Free Quote →"}
         </button>
       </form>

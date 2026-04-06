@@ -21,7 +21,7 @@ export function ServiceCTA({ service, cityName }: { service: ServiceItem; cityNa
           Solution{cityName ? ` in ${cityName}` : ""}
         </h2>
         <p className="text-text-subtle max-w-[500px] mx-auto text-base leading-[1.7] mb-8">
-          Get a free consultation and custom quote. No obligation, no pressure — just honest advice for your business.
+          Get a free consultation and custom quote. No obligation, no pressure, just honest advice for your business.
         </p>
         <div className="flex gap-3 justify-center flex-wrap">
           <ButtonLink href="/#contact" variant="primary" className="text-[1.1rem] py-4.5 px-12">

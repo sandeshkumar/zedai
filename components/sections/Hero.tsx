@@ -71,7 +71,7 @@ export function Hero() {
             transition={{ type: "spring", damping: 22, stiffness: 90, delay: 0.5 }}
             className="text-[1.1rem] text-text-subtle max-w-[500px] leading-[1.7] mb-8 lg:mx-0 mx-auto"
           >
-            We inject AI into every product we build — websites that convert,
+            We inject AI into every product we build: websites that convert,
             apps that learn, chatbots that sell, and systems that automate your
             operations.
           </motion.p>

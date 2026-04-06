@@ -11,7 +11,7 @@ export function Process() {
         <SectionHeader
           tag="How It Works"
           title="From AI Strategy to Launch in 4 Steps"
-          description="We embed AI at every stage — from planning to deployment."
+          description="We embed AI at every stage, from planning to deployment."
           centered
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">

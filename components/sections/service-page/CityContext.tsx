@@ -23,7 +23,7 @@ export function CityContext({
       <div className="max-w-[1200px] mx-auto">
         <SectionHeader
           tag="Local Expertise"
-          title={`${serviceTitle} in ${cityName} — Built for Local Business`}
+          title={`${serviceTitle} in ${cityName}: Built for Local Business`}
         />
         <div className="max-w-[800px] mx-auto lg:mx-0">
           <ScrollReveal variant="fade-up">
