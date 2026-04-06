@@ -50,7 +50,7 @@ export function Hero() {
           </motion.div>
 
           {/* Heading with word-by-word reveal */}
-          <h1 className="font-heading font-[900] text-[clamp(2.2rem,5.8vw,4.5rem)] leading-[1.06] tracking-[-0.045em] mb-5">
+          <h1 className="font-heading font-[900] text-[clamp(2rem,5vw,3.8rem)] leading-[1.08] tracking-[-0.04em] mb-5">
             <TextReveal delay={0.1}>
               AI-Powered Software That
             </TextReveal>{" "}

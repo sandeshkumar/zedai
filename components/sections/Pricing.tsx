@@ -22,17 +22,6 @@ export function Pricing() {
           description="Invest once, profit forever."
           centered
         />
-        <div className="mb-8 text-center">
-          <div className="inline-flex items-center gap-2 bg-linear-to-r from-[rgba(249,115,22,0.12)] to-[rgba(249,115,22,0.04)] border border-border-accent rounded-[var(--radius-full)] py-2.5 px-6">
-            <span className="text-[1.1rem]">🎁</span>
-            <span className="text-accent font-bold text-[0.85rem] tracking-wide uppercase" style={{ animation: "blink 2s ease-in-out infinite" }}>
-              Limited Offer
-            </span>
-            <span className="text-text-primary text-[0.88rem] font-medium">
-              FREE Domain & Hosting for 1 Year with website plans!
-            </span>
-          </div>
-        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {PRICING_TIERS.map((tier, i) => (
             <ScrollReveal key={tier.name} delay={i * 0.1}>
