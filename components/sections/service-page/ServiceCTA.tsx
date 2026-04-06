@@ -3,7 +3,7 @@
 import { ButtonLink } from "@/components/ui/Button";
 import { type ServiceItem, WHATSAPP_URL } from "@/lib/constants";
 
-export function ServiceCTA({ service }: { service: ServiceItem }) {
+export function ServiceCTA({ service, cityName }: { service: ServiceItem; cityName?: string }) {
   return (
     <section className="text-center relative py-16 lg:py-24 px-8 overflow-hidden" id="service-contact">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-[radial-gradient(circle,rgba(30,58,95,0.12)_0%,rgba(249,115,22,0.03)_40%,transparent_65%)] pointer-events-none" />
@@ -18,7 +18,7 @@ export function ServiceCTA({ service }: { service: ServiceItem }) {
           <span className="bg-linear-to-br from-accent to-accent-light bg-clip-text text-transparent">
             {service.title}
           </span>{" "}
-          Solution
+          Solution{cityName ? ` in ${cityName}` : ""}
         </h2>
         <p className="text-text-subtle max-w-[500px] mx-auto text-base leading-[1.7] mb-8">
           Get a free consultation and custom quote. No obligation, no pressure — just honest advice for your business.

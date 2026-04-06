@@ -11,7 +11,15 @@ const fadeUp = (delay: number) => ({
   transition: { duration: 0.5, delay, ease: "easeOut" as const },
 });
 
-export function ServiceHero({ service }: { service: ServiceItem }) {
+interface ServiceHeroProps {
+  service: ServiceItem;
+  heroTitleOverride?: string;
+  heroDescriptionOverride?: string;
+}
+
+export function ServiceHero({ service, heroTitleOverride, heroDescriptionOverride }: ServiceHeroProps) {
+  const title = heroTitleOverride || service.heroTitle;
+  const description = heroDescriptionOverride || service.heroDescription;
   return (
     <section className="min-h-[80vh] flex items-center px-5 lg:px-10 pt-36 pb-16 relative overflow-hidden">
       <div className="absolute -top-[15%] -right-[5%] w-[1000px] h-[1000px] bg-[radial-gradient(circle,rgba(30,58,95,0.2)_0%,rgba(30,58,95,0.05)_40%,transparent_65%)] pointer-events-none" />
@@ -33,9 +41,9 @@ export function ServiceHero({ service }: { service: ServiceItem }) {
             {...fadeUp(0.05)}
             className="font-heading font-[900] text-[clamp(2rem,5vw,3.5rem)] leading-[1.1] tracking-[-0.04em] mb-5"
           >
-            {service.heroTitle.split(" ").slice(0, -2).join(" ")}{" "}
+            {title.split(" ").slice(0, -2).join(" ")}{" "}
             <span className="bg-linear-to-br from-accent to-accent-light bg-clip-text text-transparent">
-              {service.heroTitle.split(" ").slice(-2).join(" ")}
+              {title.split(" ").slice(-2).join(" ")}
             </span>
           </motion.h1>
 
@@ -43,7 +51,7 @@ export function ServiceHero({ service }: { service: ServiceItem }) {
             {...fadeUp(0.1)}
             className="text-[1.05rem] text-text-subtle max-w-[500px] leading-[1.7] mb-8 lg:mx-0 mx-auto"
           >
-            {service.heroDescription}
+            {description}
           </motion.p>
 
           <motion.div {...fadeUp(0.15)} className="flex gap-3 flex-wrap mb-5 lg:justify-start justify-center">

@@ -190,6 +190,34 @@ export function generateReviewSchema(
   }));
 }
 
+export function generateCityServiceSchema(
+  service: ServiceItem,
+  city: { name: string; slug: string; state: string },
+  content: { heroDescription: string }
+) {
+  return {
+    "@type": "Service",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "ZED Labs",
+      url: SITE_URL,
+      "@id": `${SITE_URL}/#organization`,
+    },
+    name: `${service.title} in ${city.name}`,
+    description: content.heroDescription,
+    url: `${SITE_URL}/services/${service.slug}/${city.slug}`,
+    areaServed: {
+      "@type": "City",
+      name: city.name,
+      containedInPlace: {
+        "@type": "State",
+        name: city.state,
+      },
+    },
+    serviceType: service.title,
+  };
+}
+
 export function wrapInGraph(...schemas: Record<string, unknown>[]) {
   return {
     "@context": "https://schema.org",

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SERVICES } from "@/lib/constants";
+import { CITIES } from "@/lib/cities";
 
 export function Footer() {
   return (
@@ -20,6 +21,17 @@ export function Footer() {
               className="text-[0.78rem] text-text-dim hover:text-accent transition-colors"
             >
               {s.title}
+            </Link>
+          ))}
+        </div>
+        <div className="flex flex-wrap justify-center gap-x-4 gap-y-1.5 mt-3 mb-3">
+          {CITIES.map((c) => (
+            <Link
+              key={c.slug}
+              href={`/services/custom-websites/${c.slug}`}
+              className="text-[0.72rem] text-text-dim hover:text-accent transition-colors"
+            >
+              {c.name}
             </Link>
           ))}
         </div>

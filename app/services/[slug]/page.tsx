@@ -19,6 +19,7 @@ import { ServiceCTA } from "@/components/sections/service-page/ServiceCTA";
 import { ServiceBlogPosts } from "@/components/sections/service-page/ServiceBlogPosts";
 import { ServiceRelated } from "@/components/sections/service-page/ServiceRelated";
 import { ServiceFAQ } from "@/components/sections/service-page/ServiceFAQ";
+import { ServiceCityList } from "@/components/sections/service-page/ServiceCityList";
 
 interface ServicePageProps {
   params: Promise<{ slug: string }>;
@@ -94,6 +95,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
           serviceSlugs={service.relatedServices}
           currentSlug={service.slug}
         />
+        <ServiceCityList serviceSlug={service.slug} />
         <SectionDivider variant="mixed" />
         <ServiceCTA service={service} />
       </main>

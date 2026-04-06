@@ -1,9 +1,11 @@
 import type { MetadataRoute } from "next";
 import { SERVICES } from "@/lib/constants";
 import { getAllPosts, getAllCategories } from "@/lib/blog";
+import { getAllCityServiceParams } from "@/lib/cities";
 
 // Static page dates — update these only when you actually change page content
 const SERVICE_PAGES_UPDATED = "2026-03-18";
+const CITY_PAGES_UPDATED = "2026-04-06";
 const PARTNER_PAGE_UPDATED = "2026-03-18";
 const TRUST_PAGES_UPDATED = "2026-03-18";
 
@@ -37,6 +39,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
+  const cityServicePages = getAllCityServiceParams().map(({ slug, city }) => ({
+    url: `https://zedai.tech/services/${slug}/${city}`,
+    lastModified: new Date(CITY_PAGES_UPDATED),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
   return [
     {
       url: "https://zedai.tech",
@@ -51,6 +60,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     ...servicePages,
+    ...cityServicePages,
     ...blogPages,
     ...categoryPages,
     {
