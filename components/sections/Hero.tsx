@@ -4,6 +4,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { ButtonLink } from "@/components/ui/Button";
 import { EnquiryForm } from "@/components/forms/EnquiryForm";
 import { TextReveal } from "@/components/ui/TextReveal";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { WHATSAPP_URL } from "@/lib/constants";
 
 const fadeUp = (delay: number) => ({
@@ -93,7 +94,7 @@ export function Hero() {
               className="px-8 py-4 text-base"
               target="_blank"
             >
-              💬 WhatsApp Us
+              <WhatsAppIcon size={18} className="text-[#25D366]" /> WhatsApp Us
             </ButtonLink>
           </motion.div>
           <motion.div

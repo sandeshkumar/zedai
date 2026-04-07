@@ -2,6 +2,7 @@
 
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { PRICING_TIERS, WHATSAPP_URL } from "@/lib/constants";
 
 export function Pricing() {
@@ -69,7 +70,7 @@ export function Pricing() {
                   target="_blank"
                   className="block w-full py-2.5 mt-2 rounded-[var(--radius-md)] text-[0.82rem] text-center text-text-subtle hover:text-accent transition-colors"
                 >
-                  💬 Or WhatsApp Us
+                  <span className="inline-flex items-center gap-1.5"><WhatsAppIcon size={14} className="text-[#25D366]" /> Or WhatsApp Us</span>
                 </a>
               </div>
             </ScrollReveal>

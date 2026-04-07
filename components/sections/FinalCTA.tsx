@@ -1,6 +1,7 @@
 "use client";
 
 import { ButtonLink } from "@/components/ui/Button";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { WHATSAPP_URL } from "@/lib/constants";
 
 export function FinalCTA() {
@@ -27,7 +28,7 @@ export function FinalCTA() {
             Get My Free Quote →
           </ButtonLink>
           <ButtonLink href={WHATSAPP_URL} variant="ghost" className="text-[1.1rem] py-4.5 px-10" target="_blank">
-            💬 WhatsApp Us
+            <WhatsAppIcon size={20} className="text-[#25D366]" /> WhatsApp Us
           </ButtonLink>
         </div>
       </div>

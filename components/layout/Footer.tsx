@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SERVICES } from "@/lib/constants";
 import { ALL_CITIES } from "@/lib/cities";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 export function Footer() {
   return (
@@ -78,7 +79,7 @@ export function Footer() {
             📞 +91 93803 41684
           </a>
           <a href="https://wa.me/919380341684" target="_blank" className="inline-flex items-center gap-1.5 text-[0.82rem] text-text-subtle hover:text-accent transition-colors font-medium">
-            💬 WhatsApp
+            <WhatsAppIcon size={14} className="text-[#25D366]" /> WhatsApp
           </a>
           <a href="mailto:contact@zedai.tech" className="inline-flex items-center gap-1.5 text-[0.82rem] text-text-subtle hover:text-accent transition-colors font-medium">
             ✉️ contact@zedai.tech

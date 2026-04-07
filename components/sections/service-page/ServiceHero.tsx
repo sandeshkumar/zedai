@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ButtonLink } from "@/components/ui/Button";
 import { EnquiryForm } from "@/components/forms/EnquiryForm";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { type ServiceItem, WHATSAPP_URL } from "@/lib/constants";
 
 const fadeUp = (delay: number) => ({
@@ -59,7 +60,7 @@ export function ServiceHero({ service, heroTitleOverride, heroDescriptionOverrid
               Get Free Quote →
             </ButtonLink>
             <ButtonLink href={WHATSAPP_URL} variant="ghost" className="px-8 py-4 text-base" target="_blank">
-              💬 WhatsApp Us
+              <WhatsAppIcon size={18} className="text-[#25D366]" /> WhatsApp Us
             </ButtonLink>
           </motion.div>
           <motion.div {...fadeUp(0.2)} className="flex items-center gap-4 lg:justify-start justify-center">

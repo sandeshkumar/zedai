@@ -1,6 +1,7 @@
 "use client";
 
 import { ButtonLink } from "@/components/ui/Button";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { type ServiceItem, WHATSAPP_URL } from "@/lib/constants";
 
 export function ServiceCTA({ service, cityName }: { service: ServiceItem; cityName?: string }) {
@@ -28,7 +29,7 @@ export function ServiceCTA({ service, cityName }: { service: ServiceItem; cityNa
             Get My Free Quote →
           </ButtonLink>
           <ButtonLink href={WHATSAPP_URL} variant="ghost" className="text-[1.1rem] py-4.5 px-10" target="_blank">
-            💬 WhatsApp Us
+            <WhatsAppIcon size={20} className="text-[#25D366]" /> WhatsApp Us
           </ButtonLink>
         </div>
       </div>

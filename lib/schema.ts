@@ -1,4 +1,5 @@
 import type { ServiceItem } from "@/lib/constants";
+import type { CityItem, CityServiceContent } from "@/lib/cities";
 import type { BlogPost, HowToStep } from "@/lib/types/blog";
 
 const SITE_URL = "https://zedai.tech";
