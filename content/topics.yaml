@@ -258,8 +258,8 @@ topics:
       - erp-systems
       - cloud-devops
     indiaAngle: Indian mid-market business needs, GST compliance comparison, Tally migration path, TCO in INR over 5 years
-    status: planned
-    publishedAt: null
+    status: published
+    publishedAt: "2026-04-23"
     slug: sap-vs-custom-erp-india
   - id: erp-003
     category: erp-systems
