@@ -26,13 +26,6 @@ const Testimonials = dynamic(
     })),
   { ssr: true }
 );
-const Pricing = dynamic(
-  () =>
-    import("@/components/sections/Pricing").then((m) => ({
-      default: m.Pricing,
-    })),
-  { ssr: true }
-);
 const FAQ = dynamic(
   () =>
     import("@/components/sections/FAQ").then((m) => ({ default: m.FAQ })),
@@ -85,8 +78,6 @@ export default function Home() {
         <Process />
         <SectionDivider variant="mixed" />
         <Testimonials />
-        <SectionDivider variant="accent" />
-        <Pricing />
         <SectionDivider variant="blue" />
         <FAQ />
         <SectionDivider variant="mixed" />
