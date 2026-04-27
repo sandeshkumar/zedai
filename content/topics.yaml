@@ -277,8 +277,8 @@ topics:
     indiaAngle: >-
       Indian manufacturing challenges, multi-plant setups, GST compliance from day one, employee training in Indian
       context
-    status: planned
-    publishedAt: null
+    status: published
+    publishedAt: "2026-04-27"
     slug: erp-implementation-guide-indian-manufacturers
   - id: erp-004
     category: erp-systems
