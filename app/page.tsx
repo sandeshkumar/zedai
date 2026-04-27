@@ -3,7 +3,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { Results } from "@/components/sections/Results";
 import { Services } from "@/components/sections/Services";
-import { BeforeAfter } from "@/components/sections/BeforeAfter";
+import { AIAgents } from "@/components/sections/AIAgents";
 import { Process } from "@/components/sections/Process";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
@@ -73,7 +73,7 @@ export default function Home() {
         <SectionDivider variant="mixed" />
         <Services />
         <SectionDivider variant="accent" />
-        <BeforeAfter />
+        <AIAgents />
         <SectionDivider variant="blue" />
         <Process />
         <SectionDivider variant="mixed" />
