@@ -311,8 +311,8 @@ topics:
       - mobile-apps
       - ui-ux-design
     indiaAngle: INR pricing tiers by app complexity, Android-first India market, UPI integration costs, Play Store listing fees
-    status: planned
-    publishedAt: null
+    status: published
+    publishedAt: "2026-05-07"
     slug: mobile-app-development-cost-india-2026
   - id: ma-002
     category: mobile-apps
