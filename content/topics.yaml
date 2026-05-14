@@ -347,8 +347,8 @@ topics:
     indiaAngle: >-
       Indian startup ecosystem, funding considerations, Play Store India requirements, UPI/Paytm integration, data
       localization
-    status: planned
-    publishedAt: null
+    status: published
+    publishedAt: "2026-05-14"
     slug: app-idea-to-launch-guide-india
   - id: ma-004
     category: mobile-apps
