@@ -364,8 +364,8 @@ topics:
       - mobile-apps
       - cloud-devops
     indiaAngle: Framework adoption trends in Indian dev market, hiring availability in Indian cities, community size in India
-    status: planned
-    publishedAt: null
+    status: published
+    publishedAt: "2026-05-18"
     slug: top-mobile-app-frameworks-2026
   - id: ec-001
     category: ecommerce-solutions
