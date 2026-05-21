@@ -381,8 +381,8 @@ topics:
       - ecommerce-solutions
       - custom-websites
     indiaAngle: INR pricing for WooCommerce, Shopify, custom builds; payment gateway fees (Razorpay, PayU); GST on ecommerce
-    status: planned
-    publishedAt: null
+    status: published
+    publishedAt: "2026-05-21"
     slug: ecommerce-website-cost-india-2026
   - id: ec-002
     category: ecommerce-solutions
