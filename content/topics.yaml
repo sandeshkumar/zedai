@@ -400,8 +400,8 @@ topics:
     indiaAngle: >-
       Shopify India pricing in INR, payment gateway integration, COD handling, Indian shipping API integration
       (Shiprocket, Delhivery)
-    status: planned
-    publishedAt: null
+    status: published
+    publishedAt: "2026-06-01"
     slug: shopify-vs-custom-ecommerce-india
   - id: ec-003
     category: ecommerce-solutions
