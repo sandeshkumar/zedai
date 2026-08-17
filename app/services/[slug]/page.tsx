@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
       title: service.metaTitle,
       description: service.metaDescription,
       url: `https://zedai.tech/services/${service.slug}`,
-      siteName: "ZED Labs",
+      siteName: "ZED LABS",
       locale: "en_IN",
       type: "website",
     },

@@ -25,16 +25,16 @@ export async function generateMetadata({
   const name = service?.title || category.replace(/-/g, " ");
 
   return {
-    title: `${name} Articles | ZED Labs Blog`,
+    title: `${name} Articles | ZED LABS Blog`,
     description: `Expert guides and insights on ${name.toLowerCase()}. Practical tips to help your business grow with ${name.toLowerCase()} solutions.`,
     alternates: {
       canonical: `https://zedai.tech/blog/category/${category}`,
     },
     openGraph: {
-      title: `${name} Articles | ZED Labs Blog`,
+      title: `${name} Articles | ZED LABS Blog`,
       description: `Expert guides and insights on ${name.toLowerCase()}.`,
       url: `https://zedai.tech/blog/category/${category}`,
-      siteName: "ZED Labs",
+      siteName: "ZED LABS",
       locale: "en_IN",
       type: "website",
     },

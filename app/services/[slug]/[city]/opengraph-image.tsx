@@ -3,7 +3,7 @@ import { getServiceBySlug } from "@/lib/constants";
 import { getCityBySlug, getCityServiceContent } from "@/lib/cities";
 
 export const runtime = "nodejs";
-export const alt = "ZED Labs Service";
+export const alt = "ZED LABS Service";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -45,7 +45,7 @@ export default async function OGImage({
             ZED{" "}
           </span>
           <span style={{ color: "#f97316", fontSize: "36px", fontWeight: 900 }}>
-            Labs
+            LABS
           </span>
         </div>
         <div style={{ fontSize: "64px", marginBottom: "16px" }}>

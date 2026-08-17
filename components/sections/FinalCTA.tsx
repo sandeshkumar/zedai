@@ -21,7 +21,7 @@ export function FinalCTA() {
           Don&apos;t Get Left Behind.
         </h2>
         <p className="text-text-subtle max-w-[500px] mx-auto text-base leading-[1.7] mb-8">
-          Join 150+ businesses running on AI-powered software by ZED Labs. Get your free AI strategy call today.
+          Join 150+ businesses running on AI-powered software by ZED LABS. Get your free AI strategy call today.
         </p>
         <div className="flex gap-3 justify-center flex-wrap">
           <ButtonLink href="#contact" variant="primary" className="text-[1.1rem] py-4.5 px-12">

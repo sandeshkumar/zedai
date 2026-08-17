@@ -8,7 +8,7 @@ export function generateOrganizationSchema() {
   return {
     "@type": "Organization",
     "@id": `${SITE_URL}/#organization`,
-    name: "ZED Labs",
+    name: "ZED LABS",
     url: SITE_URL,
     contactPoint: {
       "@type": "ContactPoint",
@@ -36,7 +36,7 @@ export function generateLocalBusinessSchema() {
   return {
     "@type": "LocalBusiness",
     "@id": `${SITE_URL}/#localbusiness`,
-    name: "ZED Labs",
+    name: "ZED LABS",
     telephone: "+91-9380341684",
     email: "contact@zedai.tech",
     url: SITE_URL,
@@ -62,7 +62,7 @@ export function generateWebSiteSchema() {
     "@type": "WebSite",
     "@id": `${SITE_URL}/#website`,
     url: SITE_URL,
-    name: "ZED Labs",
+    name: "ZED LABS",
     publisher: { "@id": `${SITE_URL}/#organization` },
   };
 }
@@ -119,7 +119,7 @@ export function generateServiceSchema(service: ServiceItem) {
     "@type": "Service",
     provider: {
       "@type": "Organization",
-      name: "ZED Labs",
+      name: "ZED LABS",
       url: SITE_URL,
     },
     name: service.title,
@@ -153,12 +153,12 @@ export function generateArticleSchema(post: BlogPost) {
     description: post.excerpt,
     author: {
       "@type": "Organization",
-      name: "ZED Labs",
+      name: "ZED LABS",
       url: SITE_URL,
     },
     publisher: {
       "@type": "Organization",
-      name: "ZED Labs",
+      name: "ZED LABS",
       url: SITE_URL,
     },
     datePublished: post.publishedAt,
@@ -221,7 +221,7 @@ export function generateCityServiceSchema(
     "@type": "Service",
     provider: {
       "@type": "LocalBusiness",
-      name: "ZED Labs",
+      name: "ZED LABS",
       url: SITE_URL,
       "@id": `${SITE_URL}/#organization`,
     },

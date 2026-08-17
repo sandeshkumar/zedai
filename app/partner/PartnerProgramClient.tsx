@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import "./partner-program.css";
 
 const WA_LINK =
-  "https://wa.me/919380341684?text=Hi,%20I'm%20interested%20in%20the%20ZED%20Labs%20Partner%20Program.%20Please%20share%20the%20details.";
+  "https://wa.me/919380341684?text=Hi,%20I'm%20interested%20in%20the%20ZED%20LABS%20Partner%20Program.%20Please%20share%20the%20details.";
 
 const WA_ICON = (
   <svg viewBox="0 0 24 24">
@@ -23,7 +23,7 @@ const FAQ_DATA = [
   },
   {
     q: "Can I present this as my own agency to clients?",
-    a: "At Gold tier and above, we offer white-label delivery, meaning we can work behind the scenes while you present the work under your own brand. At Silver, we provide co-branded proposals. At Bronze, projects are delivered under the ZED Labs brand.",
+    a: "At Gold tier and above, we offer white-label delivery, meaning we can work behind the scenes while you present the work under your own brand. At Silver, we provide co-branded proposals. At Bronze, projects are delivered under the ZED LABS brand.",
   },
   {
     q: "When and how do I get paid?",
@@ -38,8 +38,8 @@ const FAQ_DATA = [
     a: "Absolutely. Most of our partners work part-time: evenings, weekends, or whenever they meet business owners. There are no fixed hours, no attendance requirements, and no minimum targets.",
   },
   {
-    q: "Who is ZED Labs?",
-    a: "ZED Labs is a web development and digital marketing agency. We build websites, mobile apps, e-commerce stores, and provide social media marketing and SEO services for businesses across India. Visit zedai.tech to see our portfolio.",
+    q: "Who is ZED LABS?",
+    a: "ZED LABS is a web development and digital marketing agency. We build websites, mobile apps, e-commerce stores, and provide social media marketing and SEO services for businesses across India. Visit zedai.tech to see our portfolio.",
   },
 ];
 
@@ -117,7 +117,7 @@ export function PartnerProgramClient({ fontClass }: { fontClass: string }) {
       {/* NAV */}
       <nav className="pp-nav">
         <div className="nav-brand">
-          ZED <span>Labs</span>
+          ZED <span>LABS</span>
         </div>
         <a href={WA_LINK} target="_blank" className="nav-cta">
           Become a Partner
@@ -156,7 +156,7 @@ export function PartnerProgramClient({ fontClass }: { fontClass: string }) {
             >
               Earn ₹10,000–₹50,000+ per month in commissions.
             </span>
-            ZED Labs gives you a complete backend team: design, development,
+            ZED LABS gives you a complete backend team: design, development,
             and delivery. You can sell digital services under your own name.
             No technical skills needed.
           </p>
@@ -214,7 +214,7 @@ export function PartnerProgramClient({ fontClass }: { fontClass: string }) {
             </h2>
             <p className="section-desc">
               Starting your own agency requires ₹5–10 lakhs, a team, and years
-              of experience. As a ZED Labs partner, you skip all of that.
+              of experience. As a ZED LABS partner, you skip all of that.
             </p>
           </div>
 
@@ -248,7 +248,7 @@ export function PartnerProgramClient({ fontClass }: { fontClass: string }) {
             </div>
             <div className="value-vs">VS</div>
             <div className="value-col highlight">
-              <h4>ZED Labs Partner</h4>
+              <h4>ZED LABS Partner</h4>
               <ul>
                 <li>
                   <span className="icon">✓</span> Zero investment to start
@@ -608,7 +608,7 @@ export function PartnerProgramClient({ fontClass }: { fontClass: string }) {
               </div>
               <div className="partner-quote">
                 &ldquo;I was already talking to clients about design. Now I
-                offer full website and marketing packages through ZED Labs. My
+                offer full website and marketing packages through ZED LABS. My
                 average project value tripled overnight.&rdquo;
               </div>
               <div className="partner-metric">
@@ -657,7 +657,7 @@ export function PartnerProgramClient({ fontClass }: { fontClass: string }) {
           <div className="reveal">
             <h2 className="section-title">Ready to Build Your Business?</h2>
             <p className="section-desc">
-              Apply to the ZED Labs Partner Program. No investment, no risk,
+              Apply to the ZED LABS Partner Program. No investment, no risk,
               just opportunity.
             </p>
             <div
@@ -702,12 +702,12 @@ export function PartnerProgramClient({ fontClass }: { fontClass: string }) {
       {/* FOOTER */}
       <footer className="pp-footer">
         <div className="footer-brand">
-          ZED <span>Labs</span>
+          ZED <span>LABS</span>
         </div>
         <p>
           <a href="https://zedai.tech">zedai.tech</a> · +91 93803 41684 · contact@zedai.tech
         </p>
-        <p>© 2026 ZED Labs</p>
+        <p>© 2026 ZED LABS</p>
       </footer>
     </div>
   );

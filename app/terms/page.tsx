@@ -3,9 +3,9 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | ZED Labs",
+  title: "Terms of Service | ZED LABS",
   description:
-    "Read the terms and conditions for using ZED Labs services and website.",
+    "Read the terms and conditions for using ZED LABS services and website.",
   alternates: { canonical: "https://zedai.tech/terms" },
 };
 
@@ -26,7 +26,7 @@ export default function TermsPage() {
             1. Acceptance of Terms
           </h2>
           <p className="mb-4">
-            By accessing and using the ZED Labs website (zedai.tech) and our
+            By accessing and using the ZED LABS website (zedai.tech) and our
             services, you agree to be bound by these Terms of Service. If you do
             not agree to these terms, please do not use our website or services.
           </p>
@@ -35,7 +35,7 @@ export default function TermsPage() {
             2. Services
           </h2>
           <p className="mb-4">
-            ZED Labs provides custom software development services including but
+            ZED LABS provides custom software development services including but
             not limited to web development, mobile app development, ERP/CRM
             systems, AI solutions, and digital marketing. Specific deliverables,
             timelines, and costs are agreed upon in individual project proposals
@@ -47,7 +47,7 @@ export default function TermsPage() {
           </h2>
           <p className="mb-4">
             All content on this website, including text, graphics, logos, and
-            code, is the property of ZED Labs and is protected by intellectual
+            code, is the property of ZED LABS and is protected by intellectual
             property laws. You may not reproduce, distribute, or create
             derivative works without our written consent.
           </p>
@@ -89,7 +89,7 @@ export default function TermsPage() {
             6. Limitation of Liability
           </h2>
           <p className="mb-4">
-            ZED Labs shall not be liable for any indirect, incidental, or
+            ZED LABS shall not be liable for any indirect, incidental, or
             consequential damages arising from the use of our website or
             services. Our total liability shall not exceed the amount paid by the
             client for the specific service in question.

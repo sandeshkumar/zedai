@@ -46,7 +46,7 @@ export function Navbar() {
       >
         <Link href="/" className="font-heading font-[900] text-[1.4rem] tracking-[-0.02em]">
           <span className="text-text-primary">ZED </span>
-          <span className="text-accent">Labs</span>
+          <span className="text-accent">LABS</span>
         </Link>
         <div className="flex gap-8 items-center">
           {NAV_LINKS.map((link) => (

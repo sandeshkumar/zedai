@@ -52,7 +52,7 @@ export async function generateMetadata({
       title: content.metaTitle,
       description: content.metaDescription,
       url: `https://zedai.tech/services/${slug}/${city}`,
-      siteName: "ZED Labs",
+      siteName: "ZED LABS",
       locale: "en_IN",
       type: "website",
     },

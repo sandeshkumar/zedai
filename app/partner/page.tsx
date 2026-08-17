@@ -10,22 +10,22 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title:
-    "ZED Labs | White Label Partner Program | Run Your Own Digital Agency",
+    "ZED LABS | White Label Partner Program | Run Your Own Digital Agency",
   description:
-    "Launch your own digital agency with zero investment. ZED Labs handles design, development & delivery. You handle clients & earn 15-18% on every project.",
+    "Launch your own digital agency with zero investment. ZED LABS handles design, development & delivery. You handle clients & earn 15-18% on every project.",
   keywords: [
     "partner program",
     "white label agency",
     "digital agency partner",
     "earn commission",
     "zero investment business",
-    "ZED Labs partner",
+    "ZED LABS partner",
   ],
   alternates: {
     canonical: "https://zedai.tech/partner",
   },
   openGraph: {
-    title: "ZED Labs | Partner Program | Run Your Own Digital Agency",
+    title: "ZED LABS | Partner Program | Run Your Own Digital Agency",
     description:
       "Launch your own digital agency with zero investment. Earn ₹10,000–₹50,000+ per month in commissions.",
     url: "https://zedai.tech/partner",

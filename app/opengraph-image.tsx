@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "nodejs";
-export const alt = "ZED Labs | AI-Powered Software Solutions That Grow Your Business";
+export const alt = "ZED LABS | AI-Powered Software Solutions That Grow Your Business";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -31,7 +31,7 @@ export default function OGImage() {
             ZED{" "}
           </span>
           <span style={{ color: "#f97316", fontSize: "48px", fontWeight: 900 }}>
-            Labs
+            LABS
           </span>
         </div>
         <div

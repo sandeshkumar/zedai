@@ -19,7 +19,7 @@ export function BeforeAfter() {
           <ScrollReveal>
             <div className="bg-card rounded-[var(--radius-lg)] p-9 border border-[rgba(239,68,68,0.15)]">
               <div className="text-[0.7rem] font-bold tracking-[0.15em] uppercase mb-4 flex items-center gap-2 text-error">
-                ✕ Before ZED Labs
+                ✕ Before ZED LABS
               </div>
               <ul className="list-none space-y-1.5">
                 {BEFORE_ITEMS.map((item) => (
@@ -44,7 +44,7 @@ export function BeforeAfter() {
           <ScrollReveal delay={0.15}>
             <div className="bg-card rounded-[var(--radius-lg)] p-9 border border-border-accent">
               <div className="text-[0.7rem] font-bold tracking-[0.15em] uppercase mb-4 flex items-center gap-2 text-accent">
-                ✓ After ZED Labs
+                ✓ After ZED LABS
               </div>
               <ul className="list-none space-y-1.5">
                 {AFTER_ITEMS.map((item) => (

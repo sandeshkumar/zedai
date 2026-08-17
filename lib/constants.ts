@@ -55,8 +55,8 @@ export const SERVICES: ServiceItem[] = [
       "Save ₹2L+ vs hiring an in-house team",
     ],
     useCases: ["Startups & Small Businesses", "Professional Services", "Healthcare & Clinics", "Education & Coaching"],
-    metaTitle: "Custom Website Development India | SEO-Optimized | ZED Labs",
-    metaDescription: "Get a fast, mobile-first custom website that ranks on Google and converts visitors into customers. Built by ZED Labs with SEO, lead capture & modern design.",
+    metaTitle: "Custom Website Development India | SEO-Optimized | ZED LABS",
+    metaDescription: "Get a fast, mobile-first custom website that ranks on Google and converts visitors into customers. Built by ZED LABS with SEO, lead capture & modern design.",
     metaKeywords: ["custom website development", "website design India", "SEO website", "business website", "responsive website"],
     relatedServices: ["ecommerce-solutions", "digital-marketing", "ui-ux-design"],
     faqs: [
@@ -89,8 +89,8 @@ export const SERVICES: ServiceItem[] = [
       "Scale from 10 to 10,000 orders without rebuilding",
     ],
     useCases: ["Retail & Fashion", "Food & Grocery", "Electronics", "D2C Brands"],
-    metaTitle: "eCommerce Website Development India | Online Store | ZED Labs",
-    metaDescription: "Build a powerful eCommerce store with Razorpay, UPI payments, inventory management, and mobile-first design. Sell online 24/7 with ZED Labs.",
+    metaTitle: "eCommerce Website Development India | Online Store | ZED LABS",
+    metaDescription: "Build a powerful eCommerce store with Razorpay, UPI payments, inventory management, and mobile-first design. Sell online 24/7 with ZED LABS.",
     metaKeywords: ["ecommerce website", "online store development", "ecommerce India", "Razorpay integration", "shopping website"],
     relatedServices: ["custom-websites", "digital-marketing", "mobile-apps"],
     faqs: [
@@ -123,8 +123,8 @@ export const SERVICES: ServiceItem[] = [
       "One codebase, two platforms. Save 40% on development",
     ],
     useCases: ["On-Demand Services", "Social & Community", "Fitness & Health", "Education & EdTech"],
-    metaTitle: "Mobile App Development India | Android & iOS | ZED Labs",
-    metaDescription: "Build high-performance Android & iOS mobile apps with push notifications, offline support, and beautiful UI. Cross-platform development by ZED Labs.",
+    metaTitle: "Mobile App Development India | Android & iOS | ZED LABS",
+    metaDescription: "Build high-performance Android & iOS mobile apps with push notifications, offline support, and beautiful UI. Cross-platform development by ZED LABS.",
     metaKeywords: ["mobile app development", "Android app", "iOS app", "cross-platform app", "app development India"],
     relatedServices: ["ui-ux-design", "cloud-devops", "custom-websites"],
     faqs: [
@@ -157,8 +157,8 @@ export const SERVICES: ServiceItem[] = [
       "Scale from 5 to 500 employees without chaos",
     ],
     useCases: ["Manufacturing", "Distribution & Wholesale", "Textile & Garments", "Construction & Real Estate"],
-    metaTitle: "Custom ERP Software Development India | ZED Labs",
-    metaDescription: "Build a custom ERP system for inventory, HR, finance, and production. GST-compliant, role-based access, real-time dashboards. Built by ZED Labs.",
+    metaTitle: "Custom ERP Software Development India | ZED LABS",
+    metaDescription: "Build a custom ERP system for inventory, HR, finance, and production. GST-compliant, role-based access, real-time dashboards. Built by ZED LABS.",
     metaKeywords: ["ERP software", "custom ERP", "ERP development India", "inventory management", "business software"],
     relatedServices: ["crm-software", "ai-solutions", "cloud-devops"],
     faqs: [
@@ -191,8 +191,8 @@ export const SERVICES: ServiceItem[] = [
       "Make data-driven sales decisions with analytics",
     ],
     useCases: ["Real Estate", "Education & Coaching", "Financial Services", "B2B Services"],
-    metaTitle: "Custom CRM Software Development India | ZED Labs",
-    metaDescription: "Build a custom CRM with lead tracking, WhatsApp integration, automated follow-ups, and sales pipeline. Close more deals with ZED Labs CRM solutions.",
+    metaTitle: "Custom CRM Software Development India | ZED LABS",
+    metaDescription: "Build a custom CRM with lead tracking, WhatsApp integration, automated follow-ups, and sales pipeline. Close more deals with ZED LABS CRM solutions.",
     metaKeywords: ["CRM software", "custom CRM", "CRM development India", "lead management", "sales CRM"],
     relatedServices: ["erp-systems", "ai-solutions", "digital-marketing"],
     faqs: [
@@ -225,8 +225,8 @@ export const SERVICES: ServiceItem[] = [
       "Get daily P&L reports without an accountant",
     ],
     useCases: ["Restaurants & Cafes", "Hotels & Resorts", "Cloud Kitchens", "Bars & Lounges"],
-    metaTitle: "Hotel & Restaurant POS Software India | ZED Labs",
-    metaDescription: "Smart POS and hotel management software with GST billing, kitchen display, booking system, and inventory tracking. Built for Indian hospitality by ZED Labs.",
+    metaTitle: "Hotel & Restaurant POS Software India | ZED LABS",
+    metaDescription: "Smart POS and hotel management software with GST billing, kitchen display, booking system, and inventory tracking. Built for Indian hospitality by ZED LABS.",
     metaKeywords: ["restaurant POS", "hotel management software", "hospitality software", "POS system India", "billing software"],
     relatedServices: ["erp-systems", "mobile-apps", "custom-websites"],
     faqs: [
@@ -259,7 +259,7 @@ export const SERVICES: ServiceItem[] = [
       "Built on the same models OpenAI and Anthropic ship to enterprises",
     ],
     useCases: ["Sales & SDR Teams", "Customer Support", "Finance & Accounts", "HR & Internal Ops"],
-    metaTitle: "AI Agent Development India | Custom Business Agents | ZED Labs",
+    metaTitle: "AI Agent Development India | Custom Business Agents | ZED LABS",
     metaDescription: "Build production AI agents on Claude, GPT-4, and open-source models. Sales, support, and ops agents that take actions across WhatsApp, email, and your internal tools.",
     metaKeywords: ["AI agents", "AI agent development", "autonomous agents", "Claude agents", "LangGraph", "OpenAI Agents SDK", "voice agents India"],
     relatedServices: ["ai-solutions", "crm-software", "custom-websites"],
@@ -294,8 +294,8 @@ export const SERVICES: ServiceItem[] = [
       "Stay ahead of competitors with AI-first operations",
     ],
     useCases: ["Customer Support", "Healthcare", "Finance & Banking", "Retail & eCommerce"],
-    metaTitle: "AI Solutions & Chatbot Development India | ZED Labs",
-    metaDescription: "Build AI chatbots, automation workflows, and data analytics solutions. Cut costs, save time, and outperform competitors with ZED Labs AI solutions.",
+    metaTitle: "AI Solutions & Chatbot Development India | ZED LABS",
+    metaDescription: "Build AI chatbots, automation workflows, and data analytics solutions. Cut costs, save time, and outperform competitors with ZED LABS AI solutions.",
     metaKeywords: ["AI solutions", "chatbot development", "AI automation", "machine learning India", "AI for business"],
     relatedServices: ["crm-software", "custom-websites", "digital-marketing"],
     faqs: [
@@ -328,8 +328,8 @@ export const SERVICES: ServiceItem[] = [
       "Dominate local search in your city",
     ],
     useCases: ["Local Businesses", "Professional Services", "eCommerce Brands", "B2B Companies"],
-    metaTitle: "Digital Marketing Services India | SEO & Google Ads | ZED Labs",
-    metaDescription: "Data-driven SEO, Google Ads, and social media marketing that delivers measurable ROI. Track every lead from click to customer with ZED Labs.",
+    metaTitle: "Digital Marketing Services India | SEO & Google Ads | ZED LABS",
+    metaDescription: "Data-driven SEO, Google Ads, and social media marketing that delivers measurable ROI. Track every lead from click to customer with ZED LABS.",
     metaKeywords: ["digital marketing India", "SEO services", "Google Ads", "social media marketing", "online marketing"],
     relatedServices: ["custom-websites", "ecommerce-solutions", "ai-solutions"],
     faqs: [
@@ -362,8 +362,8 @@ export const SERVICES: ServiceItem[] = [
       "Get a scalable design system for future products",
     ],
     useCases: ["SaaS Products", "Mobile Apps", "eCommerce", "Enterprise Software"],
-    metaTitle: "UI/UX Design Services India | User Interface Design | ZED Labs",
-    metaDescription: "Professional UI/UX design with wireframes, prototypes, and design systems. Research-driven design that converts users into customers. By ZED Labs.",
+    metaTitle: "UI/UX Design Services India | User Interface Design | ZED LABS",
+    metaDescription: "Professional UI/UX design with wireframes, prototypes, and design systems. Research-driven design that converts users into customers. By ZED LABS.",
     metaKeywords: ["UI UX design", "user interface design", "UX design India", "wireframing", "prototyping", "design system"],
     relatedServices: ["custom-websites", "mobile-apps", "ecommerce-solutions"],
     faqs: [
@@ -396,8 +396,8 @@ export const SERVICES: ServiceItem[] = [
       "Sleep peacefully with automated monitoring and backups",
     ],
     useCases: ["Growing Startups", "SaaS Companies", "eCommerce Platforms", "Enterprise Applications"],
-    metaTitle: "Cloud & DevOps Services India | AWS Azure GCP | ZED Labs",
-    metaDescription: "Enterprise-grade cloud infrastructure on AWS, Azure, and GCP. CI/CD pipelines, auto-scaling, monitoring, and cost optimization by ZED Labs.",
+    metaTitle: "Cloud & DevOps Services India | AWS Azure GCP | ZED LABS",
+    metaDescription: "Enterprise-grade cloud infrastructure on AWS, Azure, and GCP. CI/CD pipelines, auto-scaling, monitoring, and cost optimization by ZED LABS.",
     metaKeywords: ["cloud services India", "DevOps", "AWS", "Azure", "CI/CD", "cloud migration", "infrastructure"],
     relatedServices: ["cybersecurity", "maintenance-amc", "erp-systems"],
     faqs: [
@@ -430,8 +430,8 @@ export const SERVICES: ServiceItem[] = [
       "Predictable monthly costs, no surprise bills",
     ],
     useCases: ["Business Websites", "eCommerce Stores", "Web Applications", "Mobile Apps"],
-    metaTitle: "Website Maintenance & AMC Services India | ZED Labs",
-    metaDescription: "Annual maintenance contracts for websites and software. Security updates, monitoring, bug fixes, and priority support. Keep your software running with ZED Labs.",
+    metaTitle: "Website Maintenance & AMC Services India | ZED LABS",
+    metaDescription: "Annual maintenance contracts for websites and software. Security updates, monitoring, bug fixes, and priority support. Keep your software running with ZED LABS.",
     metaKeywords: ["website maintenance", "AMC", "annual maintenance contract", "website support", "software maintenance India"],
     relatedServices: ["cloud-devops", "cybersecurity", "custom-websites"],
     faqs: [
@@ -464,8 +464,8 @@ export const SERVICES: ServiceItem[] = [
       "24/7 threat monitoring and rapid incident response",
     ],
     useCases: ["Finance & Banking", "Healthcare", "eCommerce", "Government & Enterprise"],
-    metaTitle: "Cybersecurity Services India | Security Audits | ZED Labs",
-    metaDescription: "Comprehensive cybersecurity — audits, penetration testing, compliance, and 24/7 threat monitoring. Protect your business from cyber threats with ZED Labs.",
+    metaTitle: "Cybersecurity Services India | Security Audits | ZED LABS",
+    metaDescription: "Comprehensive cybersecurity — audits, penetration testing, compliance, and 24/7 threat monitoring. Protect your business from cyber threats with ZED LABS.",
     metaKeywords: ["cybersecurity India", "security audit", "penetration testing", "data protection", "compliance", "GDPR"],
     relatedServices: ["cloud-devops", "maintenance-amc", "erp-systems"],
     faqs: [
@@ -510,7 +510,7 @@ export const PROCESS_STEPS = [
 export const TESTIMONIALS = [
   {
     stars: 5,
-    quote: "ZED Labs completely transformed our online presence. We went from zero online orders to 50+ per week within the first month. Best investment we've made.",
+    quote: "ZED LABS completely transformed our online presence. We went from zero online orders to 50+ per week within the first month. Best investment we've made.",
     name: "Rahul K.",
     initials: "RK",
     role: "E-Commerce Business Owner, Mumbai",
@@ -524,7 +524,7 @@ export const TESTIMONIALS = [
   },
   {
     stars: 5,
-    quote: "Our old website was embarrassing. ZED Labs gave us a site that looks like it cost ₹5 lakhs but at a fraction of the price. Leads come in daily now.",
+    quote: "Our old website was embarrassing. ZED LABS gave us a site that looks like it cost ₹5 lakhs but at a fraction of the price. Leads come in daily now.",
     name: "Amit P.",
     initials: "AP",
     role: "Restaurant Chain Owner, Delhi",
@@ -616,7 +616,7 @@ export const FAQ_ITEMS = [
 
 export const LOGO_NAMES = ["TechVista", "GreenLeaf", "SwiftPay", "UrbanEdge", "CloudNine", "AquaPure"] as const;
 
-export const WHATSAPP_URL = "https://wa.me/919380341684?text=Hi%20ZED%20Labs!%20I%20need%20a%20software%20solution.";
+export const WHATSAPP_URL = "https://wa.me/919380341684?text=Hi%20ZED%20LABS!%20I%20need%20a%20software%20solution.";
 
 export const CONTACT = {
   email: "contact@zedai.tech",

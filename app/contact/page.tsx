@@ -14,15 +14,15 @@ import {
   generateBreadcrumbSchema,
 } from "@/lib/schema";
 
-const PAGE_TITLE = "Contact ZED Labs | Talk to Our Team in Bantwal, Mangalore";
+const PAGE_TITLE = "Contact ZED LABS | Talk to Our Team in Bantwal, Mangalore";
 const PAGE_DESCRIPTION =
-  "Call, WhatsApp, or email ZED Labs for AI-powered websites, apps, ERP, CRM, and automation. Office in Bantwal, Mangalore. We reply within 2 hours on working days.";
+  "Call, WhatsApp, or email ZED LABS for AI-powered websites, apps, ERP, CRM, and automation. Office in Bantwal, Mangalore. We reply within 2 hours on working days.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
   description: PAGE_DESCRIPTION,
   keywords: [
-    "contact ZED Labs",
+    "contact ZED LABS",
     "software company Mangalore",
     "web development Bantwal",
     "AI company Karnataka",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: PAGE_TITLE,
     description: PAGE_DESCRIPTION,
     url: "https://zedai.tech/contact",
-    siteName: "ZED Labs",
+    siteName: "ZED LABS",
     locale: "en_IN",
     type: "website",
   },
@@ -169,7 +169,7 @@ export default function ContactPage() {
                     <span className="text-[1.4rem] leading-none mt-0.5">📍</span>
                     <address className="not-italic text-text-subtle text-[0.95rem] leading-[1.8]">
                       <strong className="block text-text-primary font-heading font-bold text-[1.05rem] mb-1">
-                        ZED Labs
+                        ZED LABS
                       </strong>
                       Ground Floor, Brahmashri Complex
                       <br />

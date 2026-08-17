@@ -32,7 +32,7 @@ export async function generateMetadata({
   if (!post) return {};
 
   return {
-    title: `${post.title} | ZED Labs Blog`,
+    title: `${post.title} | ZED LABS Blog`,
     description: post.excerpt,
     keywords: post.tags,
     alternates: {
@@ -42,7 +42,7 @@ export async function generateMetadata({
       title: post.title,
       description: post.excerpt,
       url: `https://zedai.tech/blog/${post.slug}`,
-      siteName: "ZED Labs",
+      siteName: "ZED LABS",
       locale: "en_IN",
       type: "article",
       publishedTime: post.publishedAt,

@@ -19,9 +19,9 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://zedai.tech"),
-  title: "ZED Labs — AI-Powered Software Solutions That Grow Your Business | Get Free Quote",
+  title: "ZED LABS — AI-Powered Software Solutions That Grow Your Business | Get Free Quote",
   description:
-    "ZED Labs builds AI-powered websites, apps, ERP, CRM, chatbots, and automation systems that grow your business. 150+ projects delivered across 20+ industries.",
+    "ZED LABS builds AI-powered websites, apps, ERP, CRM, chatbots, and automation systems that grow your business. 150+ projects delivered across 20+ industries.",
   keywords: [
     "AI software company India",
     "AI-powered web development",
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     "digital marketing",
     "India",
   ],
-  authors: [{ name: "ZED Labs", url: "https://zedai.tech" }],
-  creator: "ZED Labs",
-  publisher: "ZED Labs",
+  authors: [{ name: "ZED LABS", url: "https://zedai.tech" }],
+  creator: "ZED LABS",
+  publisher: "ZED LABS",
   robots: {
     index: true,
     follow: true,
@@ -55,17 +55,17 @@ export const metadata: Metadata = {
     canonical: "https://zedai.tech",
   },
   openGraph: {
-    title: "ZED Labs — AI-Powered Software Solutions That Grow Your Business",
+    title: "ZED LABS — AI-Powered Software Solutions That Grow Your Business",
     description:
       "AI-powered websites, apps, ERP, CRM, chatbots, and automation systems that grow your business. 150+ projects delivered.",
     url: "https://zedai.tech",
-    siteName: "ZED Labs",
+    siteName: "ZED LABS",
     locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ZED Labs — AI-Powered Software Solutions That Grow Your Business",
+    title: "ZED LABS — AI-Powered Software Solutions That Grow Your Business",
     description:
       "AI-powered websites, apps, ERP, CRM, chatbots, and automation systems that grow your business. 150+ projects delivered.",
   },

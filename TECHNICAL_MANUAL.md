@@ -1,6 +1,6 @@
-# ZED Labs - Technical Manual
+# ZED LABS - Technical Manual
 
-> Developer reference for the ZED Labs landing page built with Next.js, Tailwind CSS, Prisma, and Neon PostgreSQL.
+> Developer reference for the ZED LABS landing page built with Next.js, Tailwind CSS, Prisma, and Neon PostgreSQL.
 
 ---
 
@@ -652,7 +652,7 @@ export const FAQ_ITEMS = [
 export const TESTIMONIALS = [
   {
     stars: 5,
-    quote: "ZED Labs completely transformed our online presence...",
+    quote: "ZED LABS completely transformed our online presence...",
     name: "Rahul K.",
     initials: "RK",
     role: "E-Commerce Business Owner, Mumbai",
@@ -664,7 +664,7 @@ export const TESTIMONIALS = [
 ### WhatsApp Number
 
 ```typescript
-export const WHATSAPP_URL = "https://wa.me/917019581347?text=Hi%20ZED%20Labs!...";
+export const WHATSAPP_URL = "https://wa.me/917019581347?text=Hi%20ZED%20LABS!...";
 ```
 
 Change the phone number after `wa.me/` (format: country code + number, no spaces).
@@ -690,10 +690,10 @@ Edit `app/layout.tsx`:
 
 ```typescript
 export const metadata: Metadata = {
-  title: "ZED Labs — Websites & Apps That Grow Your Business | Get Free Quote",
-  description: "ZED Labs builds fast, SEO-optimized websites...",
+  title: "ZED LABS — Websites & Apps That Grow Your Business | Get Free Quote",
+  description: "ZED LABS builds fast, SEO-optimized websites...",
   openGraph: {
-    title: "ZED Labs — Websites & Apps That Grow Your Business",
+    title: "ZED LABS — Websites & Apps That Grow Your Business",
     description: "Fast, SEO-optimized websites...",
     type: "website",
   },

@@ -11,7 +11,7 @@ export function Footer() {
         <div className="text-center mb-8">
           <div className="font-heading font-[900] text-[1.2rem] mb-1.5">
             <span className="text-text-primary">ZED </span>
-            <span className="text-accent">Labs</span>
+            <span className="text-accent">LABS</span>
           </div>
           <p className="text-text-dim text-[0.78rem]">
             AI-Powered Software · Chatbots · Websites · Apps · ERP · CRM
@@ -109,7 +109,7 @@ export function Footer() {
           </Link>
         </div>
         <p className="text-text-dim text-[0.72rem] text-center">
-          © {new Date().getFullYear()} ZED Labs. All rights reserved.
+          © {new Date().getFullYear()} ZED LABS. All rights reserved.
         </p>
       </div>
     </footer>

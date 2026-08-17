@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { getPostBySlug } from "@/lib/blog";
 
 export const runtime = "nodejs";
-export const alt = "ZED Labs Blog";
+export const alt = "ZED LABS Blog";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -13,7 +13,7 @@ export default async function OGImage({
 }) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
-  const title = post?.title || "ZED Labs Blog";
+  const title = post?.title || "ZED LABS Blog";
   const category = post?.category.replace(/-/g, " ").toUpperCase() || "BLOG";
   const readTime = post?.readingTime || 5;
 
@@ -88,7 +88,7 @@ export default async function OGImage({
             <span
               style={{ color: "#f97316", fontSize: "24px", fontWeight: 900 }}
             >
-              Labs
+              LABS
             </span>
           </div>
           <span
