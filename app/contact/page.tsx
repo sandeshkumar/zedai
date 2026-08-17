@@ -180,15 +180,7 @@ export default function ContactPage() {
                       Karnataka, India
                     </address>
                   </div>
-                  <div className="flex flex-wrap gap-3 mt-5 pt-5 border-t border-border-subtle">
-                    <a
-                      href={CONTACT.address.mapsUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-[0.85rem] font-semibold text-accent hover:text-accent-light transition-colors"
-                    >
-                      Open in Google Maps →
-                    </a>
+                  <div className="mt-5 pt-5 border-t border-border-subtle">
                     <span className="text-[0.85rem] text-text-dim">
                       {CONTACT.hours}
                     </span>

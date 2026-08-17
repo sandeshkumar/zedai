@@ -630,8 +630,6 @@ export const CONTACT = {
     postalCode: "574219",
     country: "IN",
     full: "Ground Floor, Brahmashri Complex, Daribagilu, Kallige, Bantwal, Mangalore - 574219, Karnataka, India",
-    mapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=Brahmashri+Complex%2C+Daribagilu%2C+Kallige%2C+Bantwal%2C+Mangalore+574219",
   },
   hours: "Mon to Sat, 9:30 AM to 7:00 PM IST",
 } as const;
