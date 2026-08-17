@@ -42,6 +42,10 @@ export function generateLocalBusinessSchema() {
     url: SITE_URL,
     address: {
       "@type": "PostalAddress",
+      streetAddress: "Ground Floor, Brahmashri Complex, Daribagilu, Kallige",
+      addressLocality: "Bantwal",
+      addressRegion: "Karnataka",
+      postalCode: "574219",
       addressCountry: "IN",
     },
     areaServed: {
@@ -76,6 +80,23 @@ export function generateWebPageSchema(
     description,
     isPartOf: { "@id": `${SITE_URL}/#website` },
     about: { "@id": `${SITE_URL}/#organization` },
+  };
+}
+
+export function generateContactPageSchema(
+  url: string,
+  name: string,
+  description: string
+) {
+  return {
+    "@type": "ContactPage",
+    "@id": `${url}/#webpage`,
+    url,
+    name,
+    description,
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    about: { "@id": `${SITE_URL}/#organization` },
+    mainEntity: { "@id": `${SITE_URL}/#localbusiness` },
   };
 }
 

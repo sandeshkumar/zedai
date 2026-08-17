@@ -8,6 +8,7 @@ const SERVICE_PAGES_UPDATED = "2026-03-18";
 const CITY_PAGES_UPDATED = "2026-04-06";
 const PARTNER_PAGE_UPDATED = "2026-03-18";
 const TRUST_PAGES_UPDATED = "2026-03-18";
+const CONTACT_PAGE_UPDATED = "2026-08-17";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();
@@ -57,6 +58,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: "https://zedai.tech/blog",
       lastModified: latestPostDate,
       changeFrequency: "daily",
+      priority: 0.9,
+    },
+    {
+      url: "https://zedai.tech/contact",
+      lastModified: new Date(CONTACT_PAGE_UPDATED),
+      changeFrequency: "monthly",
       priority: 0.9,
     },
     ...servicePages,

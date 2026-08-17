@@ -71,6 +71,12 @@ export function Footer() {
           >
             Become a Partner →
           </Link>
+          <Link
+            href="/contact"
+            className="text-[0.8rem] text-accent font-semibold hover:text-accent-light transition-colors"
+          >
+            Contact Us →
+          </Link>
         </div>
 
         {/* Contact */}
@@ -85,6 +91,12 @@ export function Footer() {
             ✉️ contact@zedai.tech
           </a>
         </div>
+
+        {/* Address */}
+        <address className="not-italic text-text-dim text-[0.75rem] text-center mb-4 leading-[1.7]">
+          Ground Floor, Brahmashri Complex, Daribagilu, Kallige,
+          <br className="sm:hidden" /> Bantwal, Mangalore &ndash; 574219, Karnataka
+        </address>
 
         {/* Legal */}
         <div className="flex items-center justify-center gap-4 mb-2">

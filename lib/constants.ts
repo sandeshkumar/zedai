@@ -2,6 +2,7 @@ export const NAV_LINKS = [
   { label: "Services", href: "/#services" },
   { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "/#faq" },
+  { label: "Contact", href: "/contact" },
 ] as const;
 
 export const RESULTS = [
@@ -616,3 +617,21 @@ export const FAQ_ITEMS = [
 export const LOGO_NAMES = ["TechVista", "GreenLeaf", "SwiftPay", "UrbanEdge", "CloudNine", "AquaPure"] as const;
 
 export const WHATSAPP_URL = "https://wa.me/919380341684?text=Hi%20ZED%20Labs!%20I%20need%20a%20software%20solution.";
+
+export const CONTACT = {
+  email: "contact@zedai.tech",
+  phone: "+91 93803 41684",
+  phoneE164: "+919380341684",
+  whatsappUrl: WHATSAPP_URL,
+  address: {
+    street: "Ground Floor, Brahmashri Complex, Daribagilu, Kallige",
+    locality: "Bantwal",
+    region: "Karnataka",
+    postalCode: "574219",
+    country: "IN",
+    full: "Ground Floor, Brahmashri Complex, Daribagilu, Kallige, Bantwal, Mangalore - 574219, Karnataka, India",
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Brahmashri+Complex%2C+Daribagilu%2C+Kallige%2C+Bantwal%2C+Mangalore+574219",
+  },
+  hours: "Mon to Sat, 9:30 AM to 7:00 PM IST",
+} as const;
