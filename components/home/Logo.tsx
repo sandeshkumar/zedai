@@ -1,6 +1,6 @@
 /**
  * ZED LABS wordmark, drawn as vector shapes to match the brand logo exactly:
- * squared letterforms with rounded corners, an A without a crossbar, and an
+ * squared letterforms with rounded corners and an
  * underline that ends in a glowing orange dot. No circle.
  *
  * tone="light" → white ZED, orange LABS, for dark backgrounds (the header)
@@ -57,8 +57,8 @@ export function Logo({
       <g fill={labs} fillRule="evenodd">
         {/* L */}
         <path d="M525 0 H568 V135 H617 V178 H525 Z" />
-        {/* A, no crossbar, notched inner apex */}
-        <path d="M630 178 L678 0 H717 L775 178 H743 L709 75 H691 L663 178 Z" />
+        {/* A, in the same squared style as ZED: rounded top, crossbar, square legs */}
+        <path d="M630 178 V32 Q630 0 662 0 H743 Q775 0 775 32 V178 H732 V110 H673 V178 Z M673 51 V68 H732 V51 Q732 43 724 43 H681 Q673 43 673 51 Z" />
         {/* B, square on the left, two rounded bowls on the right */}
         <path d="M795 0 H882 Q910 0 910 28 V60 Q910 80 896 89 Q918 98 918 120 V150 Q918 178 890 178 H795 Z M838 41 V71 H860 Q869 71 869 62 V50 Q869 41 860 41 Z M838 107 V137 H866 Q876 137 876 127 V117 Q876 107 866 107 Z" />
         {/* S */}
