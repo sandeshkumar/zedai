@@ -17,7 +17,7 @@ export function AmbientOrbs() {
 
   if (prefersReducedMotion) {
     return (
-      <div aria-hidden="true" className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+      <div data-ambient aria-hidden="true" className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         <div
           className="absolute -top-[20%] -right-[10%] w-[600px] h-[600px] rounded-full opacity-[0.07]"
           style={{ background: "radial-gradient(circle, #1E3A5F 0%, transparent 70%)" }}
@@ -35,7 +35,7 @@ export function AmbientOrbs() {
   }
 
   return (
-    <div aria-hidden="true" className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div data-ambient aria-hidden="true" className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
       <motion.div
         className="absolute -top-[20%] -right-[10%] w-[600px] h-[600px] rounded-full opacity-[0.07] will-change-transform"
         style={{

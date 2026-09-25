@@ -111,6 +111,7 @@ export default async function CityServicePage({
           service={service}
           heroTitleOverride={content.heroTitle}
           heroDescriptionOverride={content.heroDescription}
+          cityName={city.name}
         />
         <SectionDivider variant="blue" />
         <CityContext

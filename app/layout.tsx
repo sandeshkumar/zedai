@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
-import { Inter, Outfit } from "next/font/google";
+import { Geist, Geist_Mono, Outfit } from "next/font/google";
 import Script from "next/script";
-import { AmbientOrbs } from "@/components/ui/AmbientOrbs";
-import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const geist = Geist({
+  variable: "--font-geist",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
   subsets: ["latin"],
   display: "swap",
 });
@@ -19,9 +23,9 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://zedai.tech"),
-  title: "ZED LABS — AI-Powered Software Solutions That Grow Your Business | Get Free Quote",
+  title: "ZED LABS | Coastal craft, world-class software from Mangalore",
   description:
-    "ZED LABS builds AI-powered websites, apps, ERP, CRM, chatbots, and automation systems that grow your business. 150+ projects delivered across 20+ industries.",
+    "Software company in Mangalore building websites, mobile apps, ERP, CRM and AI agents for businesses in India and abroad. 150+ projects across 20+ industries.",
   keywords: [
     "AI software company India",
     "AI-powered web development",
@@ -55,9 +59,9 @@ export const metadata: Metadata = {
     canonical: "https://zedai.tech",
   },
   openGraph: {
-    title: "ZED LABS — AI-Powered Software Solutions That Grow Your Business",
+    title: "ZED LABS | Coastal craft, world-class software from Mangalore",
     description:
-      "AI-powered websites, apps, ERP, CRM, chatbots, and automation systems that grow your business. 150+ projects delivered.",
+      "Software company in Mangalore building websites, mobile apps, ERP, CRM and AI agents for businesses in India and abroad. 150+ projects across 20+ industries.",
     url: "https://zedai.tech",
     siteName: "ZED LABS",
     locale: "en_IN",
@@ -65,9 +69,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ZED LABS — AI-Powered Software Solutions That Grow Your Business",
+    title: "ZED LABS | Coastal craft, world-class software from Mangalore",
     description:
-      "AI-powered websites, apps, ERP, CRM, chatbots, and automation systems that grow your business. 150+ projects delivered.",
+      "Software company in Mangalore building websites, mobile apps, ERP, CRM and AI agents for businesses in India and abroad. 150+ projects across 20+ industries.",
   },
 };
 
@@ -77,7 +81,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
+    <html lang="en" className={`${outfit.variable} ${geist.variable} ${geistMono.variable}`}>
       <head>
         {/* Google Analytics 4 */}
         <Script
@@ -127,9 +131,7 @@ export default function RootLayout({
           />
         </noscript>
       </head>
-      <body>
-        <ScrollProgress />
-        <AmbientOrbs />
+      <body className="theme-light">
         {children}
       </body>
     </html>

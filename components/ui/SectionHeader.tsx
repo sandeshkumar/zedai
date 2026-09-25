@@ -1,3 +1,5 @@
+import { MirrorDot } from "@/components/home/motifs";
+
 interface SectionHeaderProps {
   tag: string;
   title: string;
@@ -7,20 +9,20 @@ interface SectionHeaderProps {
 
 export function SectionHeader({ tag, title, description, centered = false }: SectionHeaderProps) {
   return (
-    <div className={`mb-12 ${centered ? "text-center" : ""}`}>
-      <div
-        className={`flex items-center gap-2 text-accent text-[0.7rem] font-bold tracking-[0.18em] uppercase mb-3 ${centered ? "justify-center" : ""}`}
+    <div className={`mb-12 lg:mb-16 ${centered ? "text-center" : ""}`}>
+      <p
+        className={`flex items-center gap-3 font-mono text-[0.72rem] uppercase tracking-[0.12em] text-kumkum mb-5 ${centered ? "justify-center" : ""}`}
       >
-        <span className="w-[18px] h-[2px] bg-accent inline-block" />
+        <MirrorDot className="w-5 h-5 shrink-0" />
         {tag}
-      </div>
+      </p>
       <h2
-        className={`font-heading font-[800] text-[clamp(1.9rem,4vw,3rem)] tracking-[-0.03em] leading-[1.12] mb-3 ${centered ? "max-w-[600px] mx-auto" : ""}`}
+        className={`display text-[clamp(2rem,4.4vw,3.8rem)] text-ink mb-4 ${centered ? "max-w-[18ch] mx-auto" : "max-w-[20ch]"}`}
       >
         {title}
       </h2>
       {description && (
-        <p className={`text-text-subtle max-w-[520px] text-base leading-[1.7] ${centered ? "mx-auto" : ""}`}>
+        <p className={`text-ink-3 max-w-[52ch] text-[1.05rem] leading-[1.65] ${centered ? "mx-auto" : ""}`}>
           {description}
         </p>
       )}

@@ -1,36 +1,58 @@
 "use client";
 
-import { ButtonLink } from "@/components/ui/Button";
-import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { type ServiceItem, WHATSAPP_URL } from "@/lib/constants";
+import { Palm, TileHouse } from "@/components/home/illustrations";
+import { ArrowIcon, MaskLines } from "@/components/home/motion";
+import { MirrorDot } from "@/components/home/motifs";
 
 export function ServiceCTA({ service, cityName }: { service: ServiceItem; cityName?: string }) {
   return (
-    <section className="text-center relative py-16 lg:py-24 px-8 overflow-hidden" id="service-contact">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-[radial-gradient(circle,rgba(30,58,95,0.12)_0%,rgba(249,115,22,0.03)_40%,transparent_65%)] pointer-events-none" />
-
-      <div className="max-w-[1200px] mx-auto relative z-[1]">
-        <div className="flex items-center gap-2 text-accent text-[0.7rem] font-bold tracking-[0.18em] uppercase mb-3 justify-center">
-          <span className="w-[18px] h-[2px] bg-accent inline-block" />
-          Ready to Get Started?
-        </div>
-        <h2 className="font-heading font-[800] text-[clamp(1.9rem,4vw,3rem)] tracking-[-0.03em] leading-[1.12] max-w-[700px] mx-auto mb-2.5">
-          Let&apos;s Build Your{" "}
-          <span className="bg-linear-to-br from-accent to-accent-light bg-clip-text text-transparent">
-            {service.title}
-          </span>{" "}
-          Solution{cityName ? ` in ${cityName}` : ""}
-        </h2>
-        <p className="text-text-subtle max-w-[500px] mx-auto text-base leading-[1.7] mb-8">
-          Get a free consultation and custom quote. No obligation, no pressure, just honest advice for your business.
-        </p>
-        <div className="flex gap-3 justify-center flex-wrap">
-          <ButtonLink href="/#contact" variant="primary" className="text-[1.1rem] py-4.5 px-12">
-            Get My Free Quote →
-          </ButtonLink>
-          <ButtonLink href={WHATSAPP_URL} variant="ghost" className="text-[1.1rem] py-4.5 px-10" target="_blank">
-            <WhatsAppIcon size={20} className="text-[#25D366]" /> WhatsApp Us
-          </ButtonLink>
+    <section className="px-2 lg:px-4" id="service-contact">
+      <div className="relative bg-brand text-white rounded-[28px] lg:rounded-[40px] overflow-hidden">
+        <div className="absolute inset-0 tile-lines-light opacity-[0.06] pointer-events-none [mask-image:linear-gradient(to_bottom,#000,transparent_70%)]" aria-hidden="true" />
+        <div className="relative max-w-[1360px] mx-auto px-5 lg:px-10 py-20 lg:py-28 grid lg:grid-cols-12 gap-10 items-end">
+          <div className="lg:col-span-7">
+            <p className="flex items-center gap-3 font-mono text-[0.72rem] uppercase tracking-[0.12em] text-turmeric mb-6">
+              <MirrorDot className="w-5 h-5" />
+              Encha ullar? Let&apos;s talk
+            </p>
+            <h2 className="display text-[clamp(2.4rem,5.4vw,5rem)]">
+              <MaskLines
+                lines={[
+                  "Let's build your",
+                  <span key="l2" className="text-turmeric">
+                    {service.title}
+                  </span>,
+                  cityName ? `in ${cityName}.` : "the coastal way.",
+                ]}
+              />
+            </h2>
+            <p className="mt-6 text-white/65 max-w-[46ch] text-[1.05rem] leading-[1.65]">
+              A free call, a fixed quote in ₹, and a live link you can check every week. No obligation.
+            </p>
+            <div className="mt-9 flex flex-wrap gap-3">
+              <a
+                href="#service-form"
+                className="group inline-flex items-center gap-2.5 bg-white text-ink font-medium pl-6 pr-5 py-3.5 rounded-full hover:bg-turmeric transition-colors"
+              >
+                Get my fixed quote
+                <ArrowIcon className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+              </a>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-full border border-white/30 text-white font-medium hover:bg-white/10 transition-colors"
+              >
+                Chat on WhatsApp
+              </a>
+            </div>
+          </div>
+          <div className="lg:col-span-5 hidden md:flex items-end justify-end gap-1" aria-hidden="true">
+            <Palm className="w-[80px] h-[140px] -mr-6" lean={-6} color="#0F2238" />
+            <TileHouse id={`cta-${service.slug}`} doorOpen className="w-[260px] h-auto" />
+            <Palm className="w-[70px] h-[120px] -ml-5" lean={6} color="#0F2238" />
+          </div>
         </div>
       </div>
     </section>

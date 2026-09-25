@@ -1,77 +1,117 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ButtonLink } from "@/components/ui/Button";
-import { EnquiryForm } from "@/components/forms/EnquiryForm";
-import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
-import { type ServiceItem, WHATSAPP_URL } from "@/lib/constants";
-
-const fadeUp = (delay: number) => ({
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.5, delay, ease: "easeOut" as const },
-});
+import Link from "next/link";
+import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { type ServiceItem, CONTACT, WHATSAPP_URL } from "@/lib/constants";
+import { EnquiryForm } from "@/components/home/Contact";
+import { HeroCoast } from "@/components/home/HeroCoast";
+import { ArrowIcon, EASE, MaskLines } from "@/components/home/motion";
+import { MirrorDot } from "@/components/home/motifs";
 
 interface ServiceHeroProps {
   service: ServiceItem;
   heroTitleOverride?: string;
   heroDescriptionOverride?: string;
+  cityName?: string;
 }
 
-export function ServiceHero({ service, heroTitleOverride, heroDescriptionOverride }: ServiceHeroProps) {
+/** Split a headline so the last two words can carry the accent colour. */
+function splitTitle(title: string) {
+  const words = title.split(" ");
+  const tail = words.slice(-2).join(" ");
+  const head = words.slice(0, -2).join(" ");
+  return { head, tail };
+}
+
+export function ServiceHero({ service, heroTitleOverride, heroDescriptionOverride, cityName }: ServiceHeroProps) {
+  const reduce = useReducedMotion();
+  const { scrollY } = useScroll();
+  const sunset = useTransform(scrollY, [0, 700], [0, 1]);
   const title = heroTitleOverride || service.heroTitle;
   const description = heroDescriptionOverride || service.heroDescription;
+  const { head, tail } = splitTitle(title);
+
+  const fade = (delay: number) => ({
+    initial: reduce ? false : { opacity: 0, y: 16 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.9, ease: EASE, delay },
+  });
+
   return (
-    <section className="min-h-[80vh] flex items-center px-5 lg:px-10 pt-36 pb-16 relative overflow-hidden">
-      <div className="absolute -top-[15%] -right-[5%] w-[1000px] h-[1000px] bg-[radial-gradient(circle,rgba(30,58,95,0.2)_0%,rgba(30,58,95,0.05)_40%,transparent_65%)] pointer-events-none" />
-      <div className="absolute bottom-[10%] -left-[8%] w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(249,115,22,0.04)_0%,transparent_60%)] pointer-events-none" />
+    <section className="relative overflow-hidden pt-32 lg:pt-40 pb-20 lg:pb-28">
+      <div className="hidden sm:block">
+        <HeroCoast progress={sunset} scenery={false} />
+      </div>
 
-      <div className="max-w-[1200px] mx-auto w-full grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-16 items-center relative z-[1]">
-        <div className="text-center lg:text-left">
-          <motion.div
-            {...fadeUp(0)}
-            className="inline-flex items-center gap-3 bg-card border border-border-medium py-2 pl-2.5 pr-5 rounded-[var(--radius-full)] mb-7 lg:mx-0 mx-auto"
-          >
-            <span className="text-xl">{service.icon}</span>
-            <span className="text-[0.78rem] text-text-muted font-medium">
-              {service.title}
-            </span>
-          </motion.div>
+      <div className="relative z-10 max-w-[1360px] mx-auto px-5 lg:px-10 grid lg:grid-cols-12 gap-12 lg:gap-10 items-start">
+        <div className="lg:col-span-7">
+          <motion.nav {...fade(0)} aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 font-mono text-[0.72rem] uppercase tracking-[0.1em] text-ink-3 mb-8">
+            <Link href="/" className="hover:text-ink">Home</Link>
+            <span className="opacity-40">/</span>
+            <Link href="/#services" className="hover:text-ink">Services</Link>
+            <span className="opacity-40">/</span>
+            {cityName ? (
+              <>
+                <Link href={`/services/${service.slug}`} className="hover:text-ink">{service.title}</Link>
+                <span className="opacity-40">/</span>
+                <span className="text-kumkum">{cityName}</span>
+              </>
+            ) : (
+              <span className="text-kumkum">{service.title}</span>
+            )}
+          </motion.nav>
 
-          <motion.h1
-            {...fadeUp(0.05)}
-            className="font-heading font-[900] text-[clamp(2rem,5vw,3.5rem)] leading-[1.1] tracking-[-0.04em] mb-5"
-          >
-            {title.split(" ").slice(0, -2).join(" ")}{" "}
-            <span className="bg-linear-to-br from-accent to-accent-light bg-clip-text text-transparent">
-              {title.split(" ").slice(-2).join(" ")}
-            </span>
-          </motion.h1>
+          <motion.p {...fade(0.05)} className="flex items-center gap-3 font-mono text-[0.72rem] uppercase tracking-[0.12em] text-kumkum mb-6">
+            <MirrorDot className="w-5 h-5" />
+            {service.title}
+            {cityName ? ` · ${cityName}` : " · Made in Mangalore"}
+          </motion.p>
 
-          <motion.p
-            {...fadeUp(0.1)}
-            className="text-[1.05rem] text-text-subtle max-w-[500px] leading-[1.7] mb-8 lg:mx-0 mx-auto"
-          >
+          <h1 className="display text-[clamp(2.4rem,5.6vw,5.2rem)] text-ink max-w-[16ch]">
+            <MaskLines
+              delay={0.1}
+              lines={[head, <span key="tail" className="text-tile">{tail}</span>].filter(Boolean)}
+            />
+          </h1>
+
+          <motion.p {...fade(0.45)} className="mt-7 text-[1.08rem] leading-[1.65] text-ink-2 max-w-[52ch]">
             {description}
           </motion.p>
 
-          <motion.div {...fadeUp(0.15)} className="flex gap-3 flex-wrap mb-5 lg:justify-start justify-center">
-            <ButtonLink href="#service-contact" variant="primary" className="px-10 py-4 text-base shadow-[0_4px_20px_rgba(249,115,22,0.25)]">
-              Get Free Quote →
-            </ButtonLink>
-            <ButtonLink href={WHATSAPP_URL} variant="ghost" className="px-8 py-4 text-base" target="_blank">
-              <WhatsAppIcon size={18} className="text-[#25D366]" /> WhatsApp Us
-            </ButtonLink>
-          </motion.div>
-          <motion.div {...fadeUp(0.2)} className="flex items-center gap-4 lg:justify-start justify-center">
-            <a href="tel:+919380341684" className="inline-flex items-center gap-2 text-[0.85rem] text-text-muted hover:text-accent transition-colors">
-              📞 <span className="font-semibold">+91 93803 41684</span>
+          <motion.div {...fade(0.55)} className="mt-9 flex flex-wrap items-center gap-3">
+            <a
+              href="#service-form"
+              className="group inline-flex items-center gap-2.5 bg-ink text-paper font-medium pl-6 pr-5 py-3.5 rounded-full hover:bg-tile transition-colors"
+            >
+              Get a fixed quote
+              <ArrowIcon className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+            </a>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-3.5 rounded-full border border-line-strong text-ink font-medium hover:bg-paper-2 transition-colors"
+            >
+              Chat on WhatsApp
+            </a>
+            <a href={`tel:${CONTACT.phoneE164}`} className="px-2 py-3.5 text-ink-3 hover:text-ink tabular-nums text-[0.95rem]">
+              {CONTACT.phone}
             </a>
           </motion.div>
         </div>
 
-        <motion.div {...fadeUp(0.1)}>
-          <EnquiryForm defaultService={service.formServiceName} />
+        <motion.div {...fade(0.3)} id="service-form" className="lg:col-span-5 scroll-mt-28">
+          <div className="relative rounded-[24px] bg-brand text-white p-6 sm:p-8 shadow-[0_40px_80px_-30px_rgba(30,58,95,0.6)] overflow-hidden">
+            <div className="absolute inset-0 tile-lines-light opacity-[0.06] pointer-events-none [mask-image:linear-gradient(to_bottom,#000,transparent_60%)]" aria-hidden="true" />
+            <div className="relative">
+              <p className="font-mono text-[0.7rem] uppercase tracking-[0.12em] text-turmeric mb-2">Encha ullar?</p>
+              <p className="font-display text-[1.6rem] leading-[1.15] tracking-[-0.03em] mb-6">
+                Get a fixed quote for {service.title}
+                {cityName ? ` in ${cityName}` : ""}.
+              </p>
+              <EnquiryForm defaultService={service.formServiceName} />
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

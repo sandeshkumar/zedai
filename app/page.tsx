@@ -1,14 +1,4 @@
-import dynamic from "next/dynamic";
-import { Navbar } from "@/components/layout/Navbar";
-import { Hero } from "@/components/sections/Hero";
-import { Results } from "@/components/sections/Results";
-import { Services } from "@/components/sections/Services";
-import { AIAgents } from "@/components/sections/AIAgents";
-import { Process } from "@/components/sections/Process";
-import { Footer } from "@/components/layout/Footer";
-import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
-import { SectionDivider } from "@/components/ui/SectionDivider";
-import { FAQ_ITEMS, SERVICES, TESTIMONIALS } from "@/lib/constants";
+import { SERVICES, TESTIMONIALS } from "@/lib/constants";
 import {
   wrapInGraph,
   generateOrganizationSchema,
@@ -18,26 +8,23 @@ import {
   generateFAQSchema,
   generateReviewSchema,
 } from "@/lib/schema";
-
-const Testimonials = dynamic(
-  () =>
-    import("@/components/sections/Testimonials").then((m) => ({
-      default: m.Testimonials,
-    })),
-  { ssr: true }
-);
-const FAQ = dynamic(
-  () =>
-    import("@/components/sections/FAQ").then((m) => ({ default: m.FAQ })),
-  { ssr: true }
-);
-const FinalCTA = dynamic(
-  () =>
-    import("@/components/sections/FinalCTA").then((m) => ({
-      default: m.FinalCTA,
-    })),
-  { ssr: true }
-);
+import { SmoothScroll } from "@/components/home/SmoothScroll";
+import { SiteNav } from "@/components/home/SiteNav";
+import { Hero } from "@/components/home/Hero";
+import { Proof } from "@/components/home/Proof";
+import { Capabilities } from "@/components/home/Capabilities";
+import { Work } from "@/components/home/Work";
+import { AIAgentSection } from "@/components/home/AIAgentSection";
+import { Process } from "@/components/home/Process";
+import { Faq } from "@/components/home/Faq";
+import { Rooted } from "@/components/home/Rooted";
+import { FestivalBanner } from "@/components/home/FestivalBanner";
+import { Kambala } from "@/components/home/Kambala";
+import { ChapterRail } from "@/components/home/Chapter";
+import { Contact } from "@/components/home/Contact";
+import { SiteFooter } from "@/components/home/SiteFooter";
+import { FAQS } from "@/components/home/data";
+import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 
 const jsonLd = wrapInGraph(
   generateOrganizationSchema(),
@@ -45,10 +32,10 @@ const jsonLd = wrapInGraph(
   generateWebSiteSchema(),
   generateWebPageSchema(
     "https://zedai.tech",
-    "ZED LABS | AI-Powered Software Solutions That Grow Your Business",
-    "ZED LABS builds AI-powered websites, apps, ERP, CRM, chatbots, and automation systems that grow your business. 150+ projects delivered across 20+ industries."
+    "ZED LABS | Coastal craft, world-class software from Mangalore",
+    "Software company in Mangalore building websites, mobile apps, ERP, CRM and AI agents for businesses in India and abroad. 150+ projects across 20+ industries."
   ),
-  generateFAQSchema(FAQ_ITEMS),
+  generateFAQSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
   ...generateReviewSchema(TESTIMONIALS),
   ...SERVICES.map((service) => ({
     "@type": "Service" as const,
@@ -60,31 +47,29 @@ const jsonLd = wrapInGraph(
 
 export default function Home() {
   return (
-    <>
+    <div className="theme-light relative z-1 bg-paper text-ink space-y-0">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Navbar />
-      <main>
+      <SmoothScroll />
+      <SiteNav />
+      <ChapterRail />
+      <main className="flex flex-col gap-4 lg:gap-6">
         <Hero />
-        <SectionDivider variant="blue" />
-        <Results />
-        <SectionDivider variant="mixed" />
-        <Services />
-        <SectionDivider variant="accent" />
-        <AIAgents />
-        <SectionDivider variant="blue" />
+        <Proof />
+        <Kambala />
+        <Capabilities />
+        <Work />
+        <FestivalBanner />
+        <AIAgentSection />
         <Process />
-        <SectionDivider variant="mixed" />
-        <Testimonials />
-        <SectionDivider variant="blue" />
-        <FAQ />
-        <SectionDivider variant="mixed" />
-        <FinalCTA />
+        <Rooted />
+        <Faq />
+        <Contact />
       </main>
-      <Footer />
+      <SiteFooter />
       <WhatsAppButton />
-    </>
+    </div>
   );
 }

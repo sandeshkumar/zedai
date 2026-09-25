@@ -1,32 +1,33 @@
 "use client";
 
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { Reveal } from "@/components/home/motion";
 import { type ServiceItem } from "@/lib/constants";
 
+/** Features as rooms under one Mangalore tile roof. */
 export function ServiceFeatures({ service }: { service: ServiceItem }) {
   return (
-    <section className="py-16 lg:py-24 px-5 lg:px-10">
-      <div className="max-w-[1200px] mx-auto">
+    <section className="py-20 lg:py-28 px-5 lg:px-10">
+      <div className="max-w-[1360px] mx-auto">
         <SectionHeader
-          tag="Features"
-          title={`What You Get with ${service.title}`}
-          description="Everything built to grow your business, nothing you don't need."
-          centered
+          tag="What you get"
+          title={`Everything in your ${service.title} build`}
+          description="Built to grow your business. Nothing you don't need, nothing left for later."
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-8">
           {service.features.map((feature, i) => (
-            <ScrollReveal key={feature.title} delay={i * 0.08}>
-              <div className="group bg-card/80 backdrop-blur-sm border border-border-subtle rounded-[var(--radius-lg)] p-8 transition-all duration-300 hover:-translate-y-1 hover:border-border-blue hover:shadow-[0_20px_60px_rgba(0,0,0,0.4),0_0_30px_rgba(249,115,22,0.06)] relative overflow-hidden">
-                <div className="absolute top-0 left-0 right-0 h-[2px] bg-linear-to-r from-transparent via-accent/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <h3 className="font-heading font-bold text-[1.05rem] mb-2 text-text-primary">
-                  {feature.title}
-                </h3>
-                <p className="text-text-subtle text-[0.88rem] leading-[1.6]">
-                  {feature.description}
-                </p>
+            <Reveal key={feature.title} delay={(i % 3) * 0.08}>
+              <div className="group h-full flex flex-col">
+                <div className="tile-roof h-3 rounded-t-[10px] transition-[height] duration-500 group-hover:h-5" aria-hidden="true" />
+                <div className="flex-1 bg-white border border-line border-t-0 rounded-b-[16px] p-7 lg:p-8 transition-transform duration-500 group-hover:-translate-y-1">
+                  <p className="font-mono text-[0.72rem] text-ink-4 mb-6">{String(i + 1).padStart(2, "0")}</p>
+                  <h3 className="font-display font-medium text-[1.35rem] tracking-[-0.025em] leading-[1.2] text-ink mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-ink-3 text-[0.95rem] leading-[1.6]">{feature.description}</p>
+                </div>
               </div>
-            </ScrollReveal>
+            </Reveal>
           ))}
         </div>
       </div>

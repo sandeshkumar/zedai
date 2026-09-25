@@ -1,32 +1,35 @@
 "use client";
 
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { Reveal } from "@/components/home/motion";
 import { type ServiceItem } from "@/lib/constants";
 
 export function ServiceUseCases({ service, useCasesOverride }: { service: ServiceItem; useCasesOverride?: string[] }) {
   const useCases = useCasesOverride || service.useCases;
   return (
-    <section className="py-16 lg:py-24 px-5 lg:px-10">
-      <div className="max-w-[1200px] mx-auto">
+    <section className="py-20 lg:py-28 px-5 lg:px-10">
+      <div className="max-w-[1360px] mx-auto">
         <SectionHeader
-          tag="Industries"
-          title={`Who Is ${service.title} For?`}
-          description="Built for businesses like yours, across every industry."
-          centered
+          tag="Who it's for"
+          title={`Businesses we build ${service.title} for`}
+          description="From family shops in Kudla to teams across India and abroad."
         />
-        <ScrollReveal>
-          <div className="flex flex-wrap justify-center gap-4">
-            {useCases.map((useCase) => (
-              <div
+        <Reveal>
+          <ul className="flex flex-wrap gap-3">
+            {useCases.map((useCase, i) => (
+              <li
                 key={useCase}
-                className="bg-card border border-border-blue rounded-[var(--radius-full)] py-3 px-7 text-[0.92rem] font-medium text-text-muted hover:border-accent hover:text-accent transition-colors duration-200"
+                className={`rounded-full px-6 py-3 text-[1rem] font-medium border transition-colors duration-300 ${
+                  i % 4 === 0
+                    ? "bg-ink text-paper border-ink hover:bg-tile hover:border-tile"
+                    : "bg-white text-ink border-line-strong hover:border-tile hover:text-tile"
+                }`}
               >
                 {useCase}
-              </div>
+              </li>
             ))}
-          </div>
-        </ScrollReveal>
+          </ul>
+        </Reveal>
       </div>
     </section>
   );

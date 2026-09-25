@@ -1,7 +1,7 @@
 "use client";
 
-import { SectionHeader } from "@/components/ui/SectionHeader";
-import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { MaskLines, Reveal } from "@/components/home/motion";
+import { MirrorDot } from "@/components/home/motifs";
 
 interface CityContextProps {
   cityName: string;
@@ -11,48 +11,36 @@ interface CityContextProps {
   businessDistricts: string[];
 }
 
-export function CityContext({
-  cityName,
-  serviceTitle,
-  localContext,
-  localProof,
-  businessDistricts,
-}: CityContextProps) {
+export function CityContext({ cityName, serviceTitle, localContext, localProof, businessDistricts }: CityContextProps) {
   return (
-    <section className="py-16 lg:py-24 px-5 lg:px-10">
-      <div className="max-w-[1200px] mx-auto">
-        <SectionHeader
-          tag="Local Expertise"
-          title={`${serviceTitle} in ${cityName}: Built for Local Business`}
-        />
-        <div className="max-w-[800px] mx-auto lg:mx-0">
-          <ScrollReveal variant="fade-up">
-            <p className="text-text-subtle text-[1rem] leading-[1.8] mb-6">
-              {localContext}
-            </p>
-          </ScrollReveal>
-          <ScrollReveal variant="fade-up" delay={0.1}>
-            <p className="text-text-muted text-[0.95rem] leading-[1.7] mb-8 font-medium">
-              {localProof}
-            </p>
-          </ScrollReveal>
-          <ScrollReveal variant="fade-up" delay={0.15}>
-            <div>
-              <h4 className="text-[0.75rem] font-bold tracking-[0.12em] uppercase text-text-dim mb-3">
-                Areas We Serve in {cityName}
-              </h4>
-              <div className="flex flex-wrap gap-2">
-                {businessDistricts.map((district) => (
-                  <span
-                    key={district}
-                    className="px-3 py-1.5 text-[0.8rem] text-text-subtle bg-card border border-border-subtle rounded-[var(--radius-full)]"
-                  >
-                    {district}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </ScrollReveal>
+    <section className="py-20 lg:py-28 px-5 lg:px-10">
+      <div className="max-w-[1360px] mx-auto grid lg:grid-cols-12 gap-10 lg:gap-12">
+        <div className="lg:col-span-6">
+          <p className="flex items-center gap-3 font-mono text-[0.72rem] uppercase tracking-[0.12em] text-kumkum mb-5">
+            <MirrorDot className="w-5 h-5" />
+            Local expertise
+          </p>
+          <h2 className="display text-[clamp(2rem,4.2vw,3.6rem)] text-ink">
+            <MaskLines lines={[`${serviceTitle}`, <span key="c" className="text-tile">for {cityName}.</span>]} />
+          </h2>
+        </div>
+        <div className="lg:col-span-6 lg:pt-12">
+          <Reveal>
+            <p className="text-ink-2 text-[1.05rem] leading-[1.75] mb-6">{localContext}</p>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="text-ink text-[1rem] leading-[1.7] mb-10 font-medium border-l-2 border-tile pl-5">{localProof}</p>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <p className="font-mono text-[0.7rem] uppercase tracking-[0.12em] text-ink-3 mb-4">Areas we serve in {cityName}</p>
+            <ul className="flex flex-wrap gap-2">
+              {businessDistricts.map((district) => (
+                <li key={district} className="px-4 py-2 text-[0.88rem] text-ink bg-white border border-line rounded-full">
+                  {district}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
         </div>
       </div>
     </section>

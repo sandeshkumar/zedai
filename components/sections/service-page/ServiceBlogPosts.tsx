@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getPostsByCategory } from "@/lib/blog";
 import { BlogCard } from "@/components/blog/BlogCard";
 import type { ServiceItem } from "@/lib/constants";
+import { MirrorDot } from "@/components/home/motifs";
 
 interface ServiceBlogPostsProps {
   service: ServiceItem;
@@ -13,21 +14,21 @@ export function ServiceBlogPosts({ service }: ServiceBlogPostsProps) {
   if (posts.length === 0) return null;
 
   return (
-    <section className="py-20 px-5">
-      <div className="max-w-[1100px] mx-auto">
-        <div className="flex items-center gap-2 text-accent text-[0.7rem] font-bold tracking-[0.18em] uppercase mb-3">
-          <span className="w-[18px] h-[2px] bg-accent inline-block" />
-          Resources
-        </div>
-        <div className="flex items-end justify-between mb-8">
-          <h2 className="font-heading font-[800] text-[clamp(1.5rem,3vw,2rem)] tracking-[-0.03em] leading-[1.12]">
-            {service.title} Insights
+    <section className="py-20 px-5 lg:px-10">
+      <div className="max-w-[1360px] mx-auto">
+        <p className="flex items-center gap-3 font-mono text-[0.72rem] uppercase tracking-[0.12em] text-kumkum mb-5">
+          <MirrorDot className="w-5 h-5" />
+          From our notebook
+        </p>
+        <div className="flex items-end justify-between mb-10">
+          <h2 className="display text-[clamp(1.9rem,3.6vw,3rem)] text-ink">
+            {service.title} insights
           </h2>
           <Link
             href={`/blog/category/${service.slug}`}
-            className="text-[0.85rem] text-accent hover:text-accent-light transition-colors font-semibold hidden sm:block"
+            className="text-[0.9rem] text-ink font-medium border-b border-ink/30 pb-0.5 hover:border-ink transition-colors hidden sm:block"
           >
-            View all articles →
+            View all articles
           </Link>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -39,7 +40,7 @@ export function ServiceBlogPosts({ service }: ServiceBlogPostsProps) {
           href={`/blog/category/${service.slug}`}
           className="mt-6 text-[0.85rem] text-accent hover:text-accent-light transition-colors font-semibold sm:hidden block text-center"
         >
-          View all articles →
+          View all articles
         </Link>
       </div>
     </section>

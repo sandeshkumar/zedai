@@ -1,44 +1,68 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* ===== Deep Blue — Trust & authority ===== */
+  /* ===== Legacy tokens, remapped onto the coastal light palette =====
+     Older components still use these names; they now render in the new
+     system (paper, ink, sea blue, Mangalore tile terracotta). */
   --color-db: #1E3A5F;
   --color-db-light: #2D5A8E;
   --color-db-lighter: #4A7DB8;
   --color-db-dark: #152B47;
 
-  /* ===== Orange Accent — Action & energy ===== */
-  --color-accent: #F97316;
-  --color-accent-light: #FB923C;
-  --color-accent-dark: #EA580C;
+  --color-accent: #B4532A;
+  --color-accent-light: #D0703F;
+  --color-accent-dark: #8A3A1C;
 
-  /* ===== Backgrounds — warmer, richer depth ===== */
-  --color-bg-primary: #06090F;
-  --color-bg-secondary: #0A0F1A;
-  --color-bg-tertiary: #0E1525;
-  --color-card: #121A2C;
-  --color-card-alt: #162032;
+  --color-bg-primary: #F7F7F5;
+  --color-bg-secondary: #EFEEEA;
+  --color-bg-tertiary: #E6E4DE;
+  --color-card: #FFFFFF;
+  --color-card-alt: #FBF8F2;
+  --color-surface-card: #FFFFFF;
 
-  /* ===== Text — crisper contrast ===== */
-  --color-text-primary: #F1F5F9;
-  --color-text-muted: #C8D2E0;
-  --color-text-subtle: #8B9CB8;
-  --color-text-faint: #5E7291;
-  --color-text-dim: #3F5573;
+  --color-text-primary: #0B0D12;
+  --color-text-muted: #2A2F3A;
+  --color-text-subtle: #5B6270;
+  --color-text-faint: #7A808C;
+  --color-text-dim: #8A909C;
 
-  /* ===== Semantic ===== */
-  --color-success: #22C55E;
-  --color-error: #EF4444;
+  --color-success: #15803D;
+  --color-error: #B3261E;
 
-  /* ===== Borders — more visible structure ===== */
-  --color-border-subtle: rgba(255, 255, 255, 0.08);
-  --color-border-medium: rgba(255, 255, 255, 0.12);
-  --color-border-blue: rgba(30, 58, 95, 0.45);
-  --color-border-accent: rgba(249, 115, 22, 0.3);
+  --color-border-subtle: rgba(11, 13, 18, 0.1);
+  --color-border-medium: rgba(11, 13, 18, 0.16);
+  --color-border-blue: rgba(30, 58, 95, 0.22);
+  --color-border-accent: rgba(180, 83, 42, 0.3);
 
-  /* ===== Fonts ===== */
-  --font-heading: var(--font-outfit), "Outfit", sans-serif;
-  --font-body: var(--font-inter), "Inter", sans-serif;
+  --font-heading: var(--font-geist), "Geist", system-ui, sans-serif;
+  --font-body: var(--font-geist), "Geist", system-ui, sans-serif;
+
+  /* ===== Editorial light system (redesign) ===== */
+  --color-ink: #0B0D12;
+  --color-ink-2: #2A2F3A;
+  --color-ink-3: #5B6270;
+  --color-ink-4: #8A909C;
+  --color-paper: #F7F7F5;
+  --color-paper-2: #EFEEEA;
+  --color-paper-3: #E6E4DE;
+  --color-line: rgba(11, 13, 18, 0.1);
+  --color-line-strong: rgba(11, 13, 18, 0.18);
+  --color-brand: #1E3A5F;
+  --color-brand-2: #2D5A8E;
+  --color-brand-tint: #E8EEF6;
+  /* Mangalore tile terracotta */
+  --color-tile: #B4532A;
+  --color-tile-2: #D0703F;
+  --color-tile-deep: #8A3A1C;
+  --color-tile-tint: #F5E9DF;
+  /* Coastal Karnataka: Pili Vesha turmeric, Yakshagana kumkum and gold */
+  --color-turmeric: #EDA721;
+  --color-turmeric-deep: #D9791A;
+  --color-kumkum: #B3261E;
+  --color-gold: #D9A43B;
+  --font-display: var(--font-geist), "Geist", system-ui, sans-serif;
+  --font-sans: var(--font-geist), "Geist", system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 
   /* ===== Border Radius ===== */
   --radius-sm: 8px;
@@ -61,20 +85,11 @@ body {
   overflow-x: hidden;
 }
 
-/* Noise texture overlay */
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  opacity: 0.018;
-  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 9999;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+@layer base {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 /* ===== Animations ===== */
@@ -111,6 +126,195 @@ body.partner-page-body {
 }
 body.partner-page-body::after {
   display: none;
+}
+
+/* ===== Editorial light theme (redesign) ===== */
+body:has(.theme-light) {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+body:has(.theme-light)::after,
+body:has(.theme-light) [data-ambient],
+body:has(.theme-light) [data-scroll-progress] {
+  display: none;
+}
+.theme-light {
+  font-family: var(--font-sans);
+  letter-spacing: -0.005em;
+  line-height: 1.55;
+}
+.theme-light ::selection {
+  background: var(--color-brand);
+  color: #fff;
+}
+.theme-light :focus-visible {
+  outline: 2px solid var(--color-brand-2);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+@layer components {
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-ink-3);
+  }
+  .display {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.045em;
+    line-height: 0.98;
+  }
+  .grid-lines {
+    background-image:
+      linear-gradient(to right, var(--color-line) 1px, transparent 1px);
+    background-size: calc(100% / 12) 100%;
+  }
+  .marquee-track {
+    animation: marquee 40s linear infinite;
+  }
+  .marquee-mask {
+    mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+  }
+  /* Staggered rows of curved Mangalore roof tiles, as line art. */
+  .tile-lines {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='24' viewBox='0 0 64 24'%3E%3Cpath d='M0 0a16 12 0 0 0 32 0a16 12 0 0 0 32 0M-16 12a16 12 0 0 0 32 0a16 12 0 0 0 32 0a16 12 0 0 0 32 0' fill='none' stroke='%23B4532A' stroke-width='1.2'/%3E%3C/svg%3E");
+    background-size: 64px 24px;
+  }
+  .tile-lines-light {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='24' viewBox='0 0 64 24'%3E%3Cpath d='M0 0a16 12 0 0 0 32 0a16 12 0 0 0 32 0M-16 12a16 12 0 0 0 32 0a16 12 0 0 0 32 0a16 12 0 0 0 32 0' fill='none' stroke='%23FFFFFF' stroke-width='1'/%3E%3C/svg%3E");
+    background-size: 64px 24px;
+  }
+  /* Solid terracotta roof: fill plus darker tile edges. */
+  .tile-roof {
+    background-color: var(--color-tile);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='16' viewBox='0 0 40 16'%3E%3Cpath d='M0 0a10 8 0 0 0 20 0a10 8 0 0 0 20 0M-10 8a10 8 0 0 0 20 0a10 8 0 0 0 20 0a10 8 0 0 0 20 0' fill='none' stroke='%238A3A1C' stroke-width='1.6'/%3E%3C/svg%3E");
+    background-size: 40px 16px;
+  }
+  .text-outline {
+    color: transparent;
+    -webkit-text-stroke: 1.2px var(--color-ink-4);
+  }
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+@keyframes draw-line {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+/* Globe city labels, pinned to cobe marker anchors (only rendered where supported). */
+.globe-label {
+  position: absolute;
+  bottom: anchor(top);
+  left: anchor(center);
+  translate: -50% -10px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(11, 13, 18, 0.72);
+  color: #fff;
+  font: 500 12px/1.4 var(--font-sans);
+  white-space: nowrap;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.globe-label-home {
+  background: var(--color-tile);
+  border-color: transparent;
+}
+
+/* ===== Illustrations ===== */
+@keyframes palm-sway {
+  from { transform: rotate(-2.5deg); }
+  to { transform: rotate(2.5deg); }
+}
+@keyframes beam {
+  0%, 100% { transform: rotate(-8deg); opacity: 0.35; }
+  50% { transform: rotate(10deg); opacity: 0.9; }
+}
+@keyframes sway {
+  from { transform: rotate(-1.4deg); }
+  to { transform: rotate(1.4deg); }
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+@keyframes glance {
+  0%, 30% { transform: translateX(0); }
+  40%, 60% { transform: translateX(-6px); }
+  70%, 85% { transform: translateX(6px); }
+  100% { transform: translateX(0); }
+}
+@keyframes blink {
+  0%, 92%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.1); }
+}
+@keyframes steam {
+  0% { opacity: 0; transform: translateY(6px); }
+  40% { opacity: 0.9; }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+@keyframes pose-a {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes pose-b {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes splash {
+  0%, 100% { transform: scale(0.9); opacity: 0.6; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+.twinkle { animation: twinkle 2.8s ease-in-out infinite; }
+.glance { animation: glance 7s ease-in-out infinite; }
+.blink { animation: blink 4.5s ease-in-out infinite; }
+.steam { animation: steam 2.4s ease-out infinite; }
+.kambala-pose-a { animation: pose-a 0.34s steps(1, end) infinite; }
+.kambala-pose-b { animation: pose-b 0.34s steps(1, end) infinite; }
+.kambala-splash { transform-origin: 30% 90%; animation: splash 0.34s ease-in-out infinite; }
+
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+
+/* ===== Coast (hero) ===== */
+@keyframes wave-slide {
+  to { background-position-x: calc(-1 * var(--wl)); }
+}
+@keyframes bob {
+  0%, 100% { transform: translateY(0) rotate(-1.5deg); }
+  50% { transform: translateY(2px) rotate(1.5deg); }
+}
+@keyframes drift {
+  from { transform: translateX(0); }
+  to { transform: translateX(var(--drift, 60px)); }
+}
+@keyframes glide {
+  from { transform: translate(0, 0); }
+  to { transform: translate(var(--gx, 240px), var(--gy, -30px)); }
+}
+@keyframes flap {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(0.35); }
+}
+@keyframes shimmer-line {
+  0%, 100% { opacity: 0.25; transform: scaleX(0.7); }
+  50% { opacity: 0.8; transform: scaleX(1); }
+}
+@keyframes flap-in {
+  0% { transform: rotateX(-90deg); opacity: 0.4; }
+  100% { transform: rotateX(0); opacity: 1; }
+}
+@keyframes typing {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+  30% { transform: translateY(-3px); opacity: 1; }
 }
 
 /* ===== Blog Typography ===== */

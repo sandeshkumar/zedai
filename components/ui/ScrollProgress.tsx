@@ -12,6 +12,7 @@ export function ScrollProgress() {
 
   return (
     <motion.div
+      data-scroll-progress
       className="fixed top-0 left-0 right-0 h-[3px] bg-linear-to-r from-accent to-accent-light z-[250] origin-left"
       style={{ scaleX }}
     />
