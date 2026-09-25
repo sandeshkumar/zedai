@@ -2,7 +2,16 @@ import type { ServiceItem } from "@/lib/constants";
 import type { CityItem, CityServiceContent } from "@/lib/cities";
 import type { BlogPost, HowToStep } from "@/lib/types/blog";
 
-const SITE_URL = "https://zedai.tech";
+import { BRAND_DESCRIPTION, SITE_URL, SLOGAN } from "@/lib/brand";
+
+const LOGO = {
+  "@type": "ImageObject",
+  "@id": `${SITE_URL}/#logo`,
+  url: `${SITE_URL}/brand/zedlabs-logo.svg`,
+  contentUrl: `${SITE_URL}/brand/zedlabs-logo.svg`,
+  caption: "ZED LABS",
+};
+const SHARE_IMAGE = `${SITE_URL}/opengraph-image`;
 
 export function generateOrganizationSchema() {
   return {
@@ -10,6 +19,27 @@ export function generateOrganizationSchema() {
     "@id": `${SITE_URL}/#organization`,
     name: "ZED LABS",
     url: SITE_URL,
+    logo: LOGO,
+    image: SHARE_IMAGE,
+    slogan: SLOGAN,
+    description: BRAND_DESCRIPTION,
+    email: "contact@zedai.tech",
+    address: { "@id": `${SITE_URL}/#address` },
+    foundingLocation: { "@type": "Place", name: "Mangalore, Karnataka, India" },
+    areaServed: ["India", "Worldwide"],
+    knowsAbout: [
+      "Website development",
+      "E-commerce development",
+      "Mobile app development",
+      "ERP software",
+      "CRM software",
+      "Hospitality and POS software",
+      "AI agents and chatbots",
+      "Digital marketing",
+      "UI/UX design",
+      "Cloud and DevOps",
+      "Cybersecurity",
+    ],
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+91-9380341684",
@@ -37,23 +67,31 @@ export function generateLocalBusinessSchema() {
     "@type": "LocalBusiness",
     "@id": `${SITE_URL}/#localbusiness`,
     name: "ZED LABS",
+    description: BRAND_DESCRIPTION,
+    slogan: SLOGAN,
+    logo: LOGO,
+    parentOrganization: { "@id": `${SITE_URL}/#organization` },
     telephone: "+91-9380341684",
     email: "contact@zedai.tech",
     url: SITE_URL,
     address: {
       "@type": "PostalAddress",
+      "@id": `${SITE_URL}/#address`,
       streetAddress: "Ground Floor, Brahmashri Complex, Daribagilu, Kallige",
       addressLocality: "Bantwal",
       addressRegion: "Karnataka",
       postalCode: "574219",
       addressCountry: "IN",
     },
-    areaServed: {
-      "@type": "Country",
-      name: "India",
+    areaServed: ["India", "Worldwide"],
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "09:30",
+      closes: "19:00",
     },
-    priceRange: "$$",
-    image: `${SITE_URL}/og-image.png`,
+    priceRange: "₹₹",
+    image: SHARE_IMAGE,
   };
 }
 
@@ -63,6 +101,8 @@ export function generateWebSiteSchema() {
     "@id": `${SITE_URL}/#website`,
     url: SITE_URL,
     name: "ZED LABS",
+    description: BRAND_DESCRIPTION,
+    inLanguage: "en-IN",
     publisher: { "@id": `${SITE_URL}/#organization` },
   };
 }
@@ -158,14 +198,16 @@ export function generateArticleSchema(post: BlogPost) {
     },
     publisher: {
       "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
       name: "ZED LABS",
       url: SITE_URL,
+      logo: LOGO,
     },
     datePublished: post.publishedAt,
     dateModified: post.updatedAt || post.publishedAt,
     url: `${SITE_URL}/blog/${post.slug}`,
     mainEntityOfPage: `${SITE_URL}/blog/${post.slug}`,
-    ...(post.coverImage && { image: `${SITE_URL}${post.coverImage}` }),
+    image: post.coverImage ? `${SITE_URL}${post.coverImage}` : `${SITE_URL}/blog/${post.slug}/opengraph-image`,
     wordCount: post.content.split(/\s+/).length,
   };
 }
