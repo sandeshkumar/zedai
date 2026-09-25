@@ -205,11 +205,13 @@ export function HeroCoast({
   progress,
   scenery = true,
   boat = scenery,
+  boatAt = "left",
   crown = true,
 }: {
   progress: MotionValue<number>;
   scenery?: boolean; // palms and gulls
   boat?: boolean;
+  boatAt?: "left" | "sun"; // foreground left, or sailing through the sun's reflection
   crown?: boolean;
 }) {
   const reduce = useReducedMotion();
@@ -305,8 +307,15 @@ export function HeroCoast({
 
       {/* painted fishing boat in the foreground */}
       {boat && (
-      <motion.div className="absolute hidden sm:block w-[160px]" style={{ left: "7%", top: `calc(${HORIZON}% + 11%)`, x: boatX }}>
-        <div style={{ animation: "drift 30s ease-in-out infinite alternate", ["--drift" as string]: "80px" }}>
+      <motion.div
+        className={`absolute hidden ${boatAt === "sun" ? "min-[1360px]:block w-[110px]" : "sm:block w-[160px]"}`}
+        style={
+          boatAt === "sun"
+            ? { left: `calc(${SUN_X} - 55px)`, top: `calc(${HORIZON}% + 1.5%)` }
+            : { left: "7%", top: `calc(${HORIZON}% + 11%)`, x: boatX }
+        }
+      >
+        <div style={{ animation: "drift 30s ease-in-out infinite alternate", ["--drift" as string]: boatAt === "sun" ? "0px" : "80px" }}>
           <div style={{ animation: "bob 3.2s ease-in-out infinite", transformOrigin: "50% 90%" }}>
             <PaintedBoat className="w-full h-auto" />
           </div>
