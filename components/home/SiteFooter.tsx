@@ -21,7 +21,7 @@ export function SiteFooter() {
       <div className="max-w-[1360px] mx-auto px-5 lg:px-10">
         <div className="grid grid-cols-2 lg:grid-cols-12 gap-10 pb-16 border-b border-line">
           <div className="col-span-2 lg:col-span-4">
-            <Logo tone="dark" className="h-[38px] w-auto mb-8" />
+            <Logo tone="dark" className="h-[28px] w-auto mb-8" />
             <p className="font-display text-[1.6rem] tracking-[-0.03em] leading-[1.2] text-ink max-w-[20ch]">
               Software, AI and growth for businesses, from Mangalore to the world.
             </p>

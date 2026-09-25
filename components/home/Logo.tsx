@@ -10,7 +10,7 @@
 
 export function Logo({
   tone = "dark",
-  underline = true,
+  underline = false,
   className = "",
   title = "ZED LABS",
 }: {

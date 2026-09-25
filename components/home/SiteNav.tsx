@@ -48,7 +48,7 @@ export function SiteNav() {
             aria-label="Main"
           >
             <Link href="/" className="flex items-center" aria-label="ZED LABS home">
-              <Logo tone="light" className="h-[28px] lg:h-[32px] w-auto shrink-0" />
+              <Logo tone="light" className="h-[21px] lg:h-[24px] w-auto shrink-0" />
             </Link>
 
             <ul className="hidden lg:flex items-center gap-1 text-[0.9rem] text-white/80">
