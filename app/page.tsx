@@ -25,6 +25,8 @@ import { Contact } from "@/components/home/Contact";
 import { SiteFooter } from "@/components/home/SiteFooter";
 import { FAQS } from "@/components/home/data";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
+import { OpeningMoment } from "@/components/home/OpeningMoment";
+import { SoundToggle } from "@/components/home/SoundToggle";
 
 const jsonLd = wrapInGraph(
   generateOrganizationSchema(),
@@ -52,6 +54,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <OpeningMoment />
       <SmoothScroll />
       <SiteNav />
       <ChapterRail />
@@ -70,6 +73,7 @@ export default function Home() {
       </main>
       <SiteFooter />
       <WhatsAppButton />
+      <SoundToggle />
     </div>
   );
 }

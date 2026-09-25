@@ -108,7 +108,7 @@ export function Capabilities() {
     <p className="text-ink-2 text-[1rem] leading-[1.6] max-w-[38ch]">
       In Tulunadu, the guthu mane is the family&apos;s ancestral home, where generations live under
       one tiled roof. We work the same way: design, engineering, AI and support in one house.
-      Thirteen services, one family, one contact on WhatsApp.
+      Every service, one family, one contact on WhatsApp.
     </p>
   );
 

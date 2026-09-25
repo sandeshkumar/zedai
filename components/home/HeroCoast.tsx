@@ -153,7 +153,7 @@ const STARS = Array.from({ length: 28 }, (_, i) => ({
   delay: (i % 7) * 0.6,
 }));
 
-function Sun({ sink, glow, look }: { sink: MotionValue<string>; glow: MotionValue<number>; look: (typeof LOOK)[Phase] }) {
+function Sun({ sink, glow, look, crown }: { sink: MotionValue<string>; glow: MotionValue<number>; look: (typeof LOOK)[Phase]; crown: boolean }) {
   return (
     <>
       {/* sky warmth around the sun */}
@@ -171,7 +171,7 @@ function Sun({ sink, glow, look }: { sink: MotionValue<string>; glow: MotionValu
           transition: "background 1.5s ease",
         }}
       />
-      {/* sun wearing a Yakshagana crown, clipped at the horizon */}
+      {/* the sun (optionally wearing a Yakshagana crown), clipped at the horizon */}
       <div className="absolute overflow-hidden" style={{ left: `calc(${SUN_X} - 320px)`, top: 0, height: `${HORIZON}%`, width: 640 }}>
         <motion.div
           className="absolute"
@@ -184,7 +184,9 @@ function Sun({ sink, glow, look }: { sink: MotionValue<string>; glow: MotionValu
             y: sink,
           }}
         >
-          <Prabhavali className="absolute -inset-[62%] w-[224%] h-[224%]" spin={90} style={{ opacity: look.crown, transition: "opacity 1.5s ease" }} />
+          {crown && (
+            <Prabhavali className="absolute -inset-[62%] w-[224%] h-[224%]" spin={90} style={{ opacity: look.crown, transition: "opacity 1.5s ease" }} />
+          )}
           <div
             className="absolute inset-0 rounded-full"
             style={{
@@ -199,7 +201,17 @@ function Sun({ sink, glow, look }: { sink: MotionValue<string>; glow: MotionValu
   );
 }
 
-export function HeroCoast({ progress, scenery = true }: { progress: MotionValue<number>; scenery?: boolean }) {
+export function HeroCoast({
+  progress,
+  scenery = true,
+  boat = scenery,
+  crown = true,
+}: {
+  progress: MotionValue<number>;
+  scenery?: boolean; // palms and gulls
+  boat?: boolean;
+  crown?: boolean;
+}) {
   const reduce = useReducedMotion();
   const { scrollY } = useScroll();
   const phase = usePhase();
@@ -242,7 +254,7 @@ export function HeroCoast({ progress, scenery = true }: { progress: MotionValue<
           />
         ))}
 
-      <Sun sink={sink} glow={glow} look={look} />
+      <Sun sink={sink} glow={glow} look={look} crown={crown} />
 
       {/* sea tint */}
       <div
@@ -291,9 +303,8 @@ export function HeroCoast({ progress, scenery = true }: { progress: MotionValue<
         />
       ))}
 
-      {scenery && (
-        <>
       {/* painted fishing boat in the foreground */}
+      {boat && (
       <motion.div className="absolute hidden sm:block w-[160px]" style={{ left: "7%", top: `calc(${HORIZON}% + 11%)`, x: boatX }}>
         <div style={{ animation: "drift 30s ease-in-out infinite alternate", ["--drift" as string]: "80px" }}>
           <div style={{ animation: "bob 3.2s ease-in-out infinite", transformOrigin: "50% 90%" }}>
@@ -301,8 +312,11 @@ export function HeroCoast({ progress, scenery = true }: { progress: MotionValue<
           </div>
         </div>
       </motion.div>
+      )}
 
       {/* coconut palms, silhouetted against the sun */}
+      {scenery && (
+        <>
       <div className="absolute hidden lg:block right-[-50px] bottom-[6%] w-[230px] h-[380px]">
         <Palm className="w-full h-full" lean={-9} color="#16271D" />
       </div>

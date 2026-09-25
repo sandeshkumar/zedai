@@ -28,7 +28,7 @@ export function Hero() {
 
   return (
     <section id="home" className="relative pt-32 lg:pt-44 overflow-hidden">
-      <HeroCoast progress={sunset} scenery={false} />
+      <HeroCoast progress={sunset} scenery={false} boat crown={false} />
       <div className="relative z-10 max-w-[1360px] mx-auto px-5 lg:px-10">
         <motion.div {...fade(0)} className="flex flex-wrap items-center gap-x-6 gap-y-2 mb-8 lg:mb-10">
           <span className="inline-flex items-center gap-2 text-[0.8rem] text-ink-2">

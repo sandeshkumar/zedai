@@ -11,7 +11,7 @@ export const CAPABILITIES = [
     name: "Build",
     headline: "Websites and apps your customers actually use.",
     body: "Fast sites that rank, stores that sell, and mobile apps people keep on their phones. Designed and built in-house.",
-    services: bySlug(["custom-websites", "ecommerce-solutions", "mobile-apps", "ui-ux-design"]),
+    services: bySlug(["ecommerce-solutions", "mobile-apps", "ui-ux-design"]),
   },
   {
     index: "02",

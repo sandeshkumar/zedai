@@ -445,7 +445,7 @@ const STRIPES = [
   taper(174, 252, 22, 7, -110, -3),
 ].join("");
 
-export function TigerFace({ stage = 4, className = "" }: { stage?: number; className?: string }) {
+export function TigerFace({ stage = 4, className = "", sketch = INK }: { stage?: number; className?: string; sketch?: string }) {
   const show = (n: number) => ({
     opacity: stage >= n ? 1 : 0,
     transition: "opacity 0.7s ease, transform 0.7s ease",
@@ -457,7 +457,7 @@ export function TigerFace({ stage = 4, className = "" }: { stage?: number; class
   return (
     <svg viewBox="0 0 300 300" className={className} role="img" aria-label="Illustration of a Pili Vesha tiger face being painted">
       {/* stage 0: the sketch */}
-      <path d={HEAD} fill="none" stroke={INK} strokeWidth="2" strokeDasharray="6 6" opacity={stage >= 1 ? 0 : 0.6} style={{ transition: "opacity 0.5s" }} />
+      <path d={HEAD} fill="none" stroke={sketch} strokeWidth="2.5" strokeDasharray="6 6" opacity={stage >= 1 ? 0 : 0.9} style={{ transition: "opacity 0.5s" }} />
       {/* stage 1: turmeric base coat and ears */}
       <g style={show(1)}>
         {[78, 222].map((cx) => (

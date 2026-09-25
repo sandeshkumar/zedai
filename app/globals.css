@@ -280,6 +280,77 @@ body:has(.theme-light) [data-scroll-progress] {
 .kambala-pose-b { animation: pose-b 0.34s steps(1, end) infinite; }
 .kambala-splash { transform-origin: 30% 90%; animation: splash 0.34s ease-in-out infinite; }
 
+/* ===== Opening moment (first visit) ===== */
+.zl-intro-overlay { display: none; }
+html.zl-intro body { overflow: hidden; }
+html.zl-intro .zl-intro-overlay {
+  display: grid;
+  place-items: center;
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  pointer-events: none;
+  transition: opacity 0.45s ease;
+}
+html.zl-intro-out .zl-intro-overlay { opacity: 0; }
+.zl-curtain {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50.5%;
+  background-color: var(--color-kumkum);
+  animation: curtain-open 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.95s forwards;
+}
+.zl-curtain-l { left: 0; --curtain-to: -100%; }
+.zl-curtain-r { right: 0; --curtain-to: 100%; }
+.zl-intro-centre {
+  position: relative;
+  display: grid;
+  place-items: center;
+  animation: centre-out 0.5s ease 1.05s forwards;
+}
+.zl-crown {
+  width: min(38vw, 220px);
+  height: auto;
+  animation: crown-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.zl-pulse {
+  position: absolute;
+  width: min(38vw, 220px);
+  aspect-ratio: 1;
+  border-radius: 999px;
+  border: 2px solid var(--color-gold);
+  opacity: 0;
+  animation: chande-pulse 0.7s ease-out both;
+}
+.zl-intro-word {
+  position: absolute;
+  bottom: -3.2rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.4em;
+  color: #F4D27A;
+}
+@keyframes curtain-open { to { transform: translateX(var(--curtain-to)); } }
+@keyframes centre-out { to { opacity: 0; transform: scale(1.15); } }
+@keyframes crown-in {
+  from { transform: scale(0.4) rotate(-90deg); opacity: 0; }
+  to { transform: scale(1) rotate(0); opacity: 1; }
+}
+@keyframes chande-pulse {
+  0% { transform: scale(0.8); opacity: 0.9; }
+  100% { transform: scale(1.9); opacity: 0; }
+}
+
+/* ===== Custom cursor (fine pointers only) ===== */
+html.zl-cursor, html.zl-cursor * { cursor: none !important; }
+html.zl-cursor input, html.zl-cursor textarea { cursor: text !important; }
+
+@keyframes sound-bar {
+  from { height: 25%; }
+  to { height: 100%; }
+}
+
 @keyframes spin-slow {
   to { transform: rotate(360deg); }
 }
