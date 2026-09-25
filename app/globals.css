@@ -342,10 +342,6 @@ html.zl-intro-out .zl-intro-overlay { opacity: 0; }
   100% { transform: scale(1.9); opacity: 0; }
 }
 
-/* ===== Custom cursor (fine pointers only) ===== */
-html.zl-cursor, html.zl-cursor * { cursor: none !important; }
-html.zl-cursor input, html.zl-cursor textarea { cursor: text !important; }
-
 @keyframes sound-bar {
   from { height: 25%; }
   to { height: 100%; }

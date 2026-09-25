@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Outfit } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-import { CustomCursor } from "@/components/home/CustomCursor";
 
 const geist = Geist({
   variable: "--font-geist",
@@ -133,7 +132,6 @@ export default function RootLayout({
         </noscript>
       </head>
       <body className="theme-light">
-        <CustomCursor />
         {children}
       </body>
     </html>
